@@ -17,8 +17,9 @@ ________________________________________________________________________________
 * [Misc](#misc)
 * [References](#references)
 
-Use toolkit.py to discover and download tools from the list.
-</br>Use 'help' command or -h argument on the toolkit.py to get more info how to use it
+
+<br/>You can use **toolkit.py** to navigate and interact with synchronized tools.
+<br/>Synchorized tools are the tools described bellow. When a tool is being added to the list, the toolkit stores the description and lately looks for the matching strings from your search in it. If you tool is a git repository then it can be downloaded using the 'download' command. Use -h or 'help' command in the interactive prompt for more details.
 </br></br><img src="https://i.imgur.com/uU089CT.jpg" />
 
 
