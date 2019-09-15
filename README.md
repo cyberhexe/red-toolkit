@@ -18,7 +18,7 @@ ________________________________________________________________________________
 * [References](#references)
 
 
-<br/>You can use **toolkit.py** to navigate and interact with synchronized tools.
+<br/>This collection provides a toolkit to operate and download the listed (synchronized) tools.
 <br/>Synchorized tools are the tools described bellow. When a tool is being added to the list, the toolkit stores the description and lately looks for the matching strings from your search in it. If you tool is a git repository then it can be downloaded using the 'download' command. Use -h or 'help' command in the interactive prompt for more details.
 </br></br><img src="https://i.imgur.com/uU089CT.jpg" />
 
