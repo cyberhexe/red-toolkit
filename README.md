@@ -260,6 +260,8 @@ ________________________________________________________________________________
 * **Powershell RAT** python based backdoor that uses Gmail to exfiltrate data as an e-mail attachment. https://github.com/Viralmaniar/Powershell-RAT
 
 ## Misc
+### Anonymization
+* **kali-anonsurf** Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well. https://github.com/Und3rf10w/kali-anonsurf
 ### Adversary Simulation
 * **MITRE CALDERA** - An automated adversary emulation system that performs post-compromise adversarial behavior within Windows Enterprise networks. https://github.com/mitre/caldera
 * **APTSimulator** - A Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised. https://github.com/NextronSystems/APTSimulator
@@ -307,6 +309,7 @@ ________________________________________________________________________________
 * **Sheepl** Creating realistic user behaviour for supporting tradecraft development within lab environments. https://github.com/SpiderLabs/sheepl
 
 ### Scripts
+  * https://github.com/Und3rf10w
   * https://github.com/invokethreatguy/CSASC
   * https://github.com/secgroundzero/CS-Aggressor-Scripts
   * https://github.com/Und3rf10w/Aggressor-scripts
