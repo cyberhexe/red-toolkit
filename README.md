@@ -23,6 +23,7 @@ ________________________________________________________________________________
 ### Active Intelligence Gathering
 * **Reconnoitre** A reconnaissance tool made for the OSCP labs to automate information gathering and service enumeration whilst creating a directory structure to store  results, findings and exploits used for each host, recommended commands to execute and directory structures for storing loot and flags. https://github.com/codingo/Reconnoitre
 * **sharesearch** ShareSearch tool goes through hosts with SMB, NFS, checking credentials, looking for interesting stuff and greping sensitive data in it. WARNING! Alfa version, a lot of bugs and spaghetti code. https://github.com/nikallass/sharesearch
+* **smbclient_cheatsheet** This is a list of useful commands/tricks using smbclient and nmap smb scripts - very useful on a pentesting https://sharingsec.blogspot.com https://github.com/irgoncalves/smbclient_cheatsheet
 * **enumapis** Discovery of hidden API's through traversing web applications https://github.com/infosec-au/enumapis
 * **jsearch** Jsearch a simple script that grep infos from javascript files https://github.com/incogbyte/jsearch
 * **altdns** Altdns is a DNS recon tool that allows for the discovery of subdomains that conform to patterns. Altdns takes in words that could be present in subdomains under a domain (such as test, dev, staging) as well as takes in a list of subdomains that you know of.https://github.com/urbanadventurer/altdns
@@ -67,6 +68,7 @@ ________________________________________________________________________________
 * **Evil-Droid** Evil-Droid is a framework that create & generate & embed apk payload to penetrate android platforms. https://github.com/M4sc3r4n0/Evil-Droid
 * **TheFatRat** An Easy tool to Generate Backdoor for bypass AV and Easy Tool For Post exploitation attack like browser attack,dll . This tool compiles a malware with popular payload  and then the compiled malware can be execute on windows, android, mac . . https://github.com/Screetsec/TheFatRat
 * **Microsploit** a Simple tool and not very special but this tool fast and easy create backdoor office exploitation using module metasploit packet. Like Microsoft Office in windows or mac , Open Office in linux  , Macro attack , Buffer Overflow in word . Work in kali rolling , Parrot , Backbox .. https://github.com/Screetsec/Microsploit
+* **IPObfuscator** A simple tool to convert the IP to different obfuscated forms https://github.com/OsandaMalith/IPObfuscator
 * **WinRAR Remote Code Execution** Proof of Concept exploit for CVE-2018-20250. https://github.com/WyAtu/CVE-2018-20250
 * **Composite Moniker** Proof of Concept exploit for CVE-2017-8570. https://github.com/rxwx/CVE-2017-8570
 * **Exploit toolkit CVE-2017-8759** is a handy python script which provides pentesters and security researchers a quick and effective way to test Microsoft .NET Framework RCE. https://github.com/bhdresh/CVE-2017-8759
@@ -119,10 +121,12 @@ ________________________________________________________________________________
 * **avet** (AntiVirusEvasionTool) is targeting windows machines with executable files using different evasion techniques. https://github.com/govolution/avet
 * **EvilClippy** A cross-platform assistant for creating malicious MS Office documents. Can hide VBA macros, stomp VBA code (via P-Code) and confuse macro analysis tools. Runs on Linux, OSX and Windows. https://github.com/outflanknl/EvilClippy
 * **CallObfuscator** Obfuscate windows apis from static analysis tools and debuggers. https://github.com/d35ha/CallObfuscator
+* **CScriptShell** CScriptShell, a Powershell Host running within cscript.exe. This code let's you Bypass Application Whitelisting and Powershell.exe restrictions and gives you a shell that almost looks and feels like a normal Powershell session (Get-Credential, PSSessions -> Works). https://github.com/Cn33liz/CScriptShell
 * **Donut** is a shellcode generation tool that creates position-independant shellcode payloads from .NET Assemblies. This shellcode may be used to inject the Assembly into arbitrary Windows processes. https://github.com/TheWover/donut
 
 ## Delivery
 * **flask-filebox** Basic file upload Web UI. Make sure to update config.py according to your needs. https://github.com/mtalimanchuk/flask-filebox
+
 ### Phishing
 * **King Phisher** is a tool for testing and promoting user awareness by simulating real world phishing attacks. https://github.com/securestate/king-phisher
 * **FiercePhish** is a full-fledged phishing framework to manage all phishing engagements. It allows you to track separate phishing campaigns, schedule sending of emails, and much more. https://github.com/Raikia/FiercePhish
@@ -138,6 +142,7 @@ ________________________________________________________________________________
 ## Command and Control
 ### Remote Access Tools
 * **Empire** is a post-exploitation framework that includes a pure-PowerShell2.0 Windows agent, and a pure Python 2.6/2.7 Linux/OS X agent. https://github.com/EmpireProject/Empire
+* **Spidernet** SSH Botnet C&C Using Python https://github.com/Und3rf10w/Spidernet
 * **SILENTTRINITY** A post-exploitation agent powered by Python, IronPython, C#/.NET. https://github.com/byt3bl33d3r/SILENTTRINITY
 * **Pupy** is an opensource, cross-platform (Windows, Linux, OSX, Android) remote administration and post-exploitation tool mainly written in python. https://github.com/n1nj4sec/pupy
 * **Koadic** or COM Command & Control, is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. https://github.com/zerosum0x0/koadic
@@ -181,6 +186,7 @@ ________________________________________________________________________________
 
 ## Lateral Movement
 * **CrackMapExec** is a swiss army knife for pentesting networks. https://github.com/byt3bl33d3r/CrackMapExec
+* **Invoke-Phant0m** This script walks thread stacks of Event Log Service process (spesific svchost.exe) and identify Event Log Threads to kill Event Log Service Threads. So the system will not be able to collect logs and at the same time the Event Log Service will appear to be running. https://github.com/Und3rf10w/Invoke-Phant0m
 * **PowerLessShell** rely on MSBuild.exe to remotely execute PowerShell scripts and commands without spawning powershell.exe. https://github.com/Mr-Un1k0d3r/PowerLessShell
 * **GoFetch** is a tool to automatically exercise an attack plan generated by the BloodHound application. https://github.com/GoFetchAD/GoFetch
 * **DeathStar** is a Python script that uses Empire's RESTful API to automate gaining Domain Admin rights in Active Directory environments using a variety of techinques. https://github.com/byt3bl33d3r/DeathStar
@@ -214,13 +220,13 @@ ________________________________________________________________________________
 * **nishang** Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security, penetration testing and red teaming. Nishang is useful during all phases of penetration testing. https://github.com/samratashok/nishang
 
 ## Pivoting and Tunneling
+* **Tunna** is a set of tools which will wrap and tunnel any TCP communication over HTTP. It can be used to bypass network restrictions in fully firewalled environments. https://github.com/SECFORCE/Tunna
 * **http-tunnel** A program to tunnel TCP connection through HTTP connection. https://github.com/khuevu/http-tunnel
 * **microsocks** a SOCKS5 service that you can run on your remote boxes to tunnel connections through them, if for some reason SSH doesn't cut it for you. https://github.com/derstolz/microsocks
 * **pyrexecd** PyRexecd is a standalone SSH server for Windows. https://github.com/euske/pyrexecd.git
 
 ## Establish Foothold
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
-* **Tunna** is a set of tools which will wrap and tunnel any TCP communication over HTTP. It can be used to bypass network restrictions in fully firewalled environments. https://github.com/SECFORCE/Tunna
 * **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
 * **Blade** is a webshell connection tool based on console, currently under development and aims to be a choice of replacement of Chooper. https://github.com/wonderqs/Blade
 * **PowerLurk** is a PowerShell toolset for building malicious WMI Event Subsriptions. https://github.com/Sw4mpf0x/PowerLurk
@@ -262,6 +268,7 @@ ________________________________________________________________________________
 ## Misc
 ### Anonymization
 * **kali-anonsurf** Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well. https://github.com/Und3rf10w/kali-anonsurf
+
 ### Adversary Simulation
 * **MITRE CALDERA** - An automated adversary emulation system that performs post-compromise adversarial behavior within Windows Enterprise networks. https://github.com/mitre/caldera
 * **APTSimulator** - A Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised. https://github.com/NextronSystems/APTSimulator
@@ -273,6 +280,7 @@ ________________________________________________________________________________
 ### Wireless Networks
 * **Wifiphisher** is a security tool that performs Wi-Fi automatic association attacks to force wireless clients to unknowingly connect to an attacker-controlled Access Point. https://github.com/wifiphisher/wifiphisher
 * **mana** toolkit for wifi rogue AP attacks and MitM. https://github.com/sensepost/mana
+* **wifite** An automated wireless attack tool https://github.com/Und3rf10w/wifite
 
 ### Embedded & Peripheral Devices Hacking
 * **magspoof** a portable device that can spoof/emulate any magnetic stripe, credit card or hotel card "wirelessly", even on standard magstripe (non-NFC/RFID) readers. https://github.com/samyk/magspoof
@@ -293,6 +301,9 @@ ________________________________________________________________________________
 * **Red Team Telemetry** A collection of scripts and configurations to enable centralized logging of red team infrastructure. https://github.com/ztgrace/red_team_telemetry
 * **Elastic for Red Teaming** Repository of resources for configuring a Red Team SIEM using Elastic. https://github.com/SecurityRiskAdvisors/RedTeamSIEM
 * **Ghostwriter** is a Django project written in Python 3.7 and is designed to be used by a team of operators. https://github.com/GhostManager/Ghostwriter
+
+### Cloud Computing
+* **kali-cloud-build** This script bootstraps a barebones Kali installation to create either an Amazon machine image or a Google Compute Engine image. The image contains no latent logfiles no .bash_history or even the apt package cache. https://github.com/Und3rf10w/kali-cloud-build
 
 ### C# Offensive Framework
 * **SharpSploit** is a .NET post-exploitation library written in C# that aims to highlight the attack surface of .NET and make the use of offensive .NET easier for red teamers. https://github.com/cobbr/SharpSploit
