@@ -27,6 +27,8 @@ ________________________________________________________________________________
 
 ## Reconnaissance
 ### Active Intelligence Gathering
+* **Osmedeus** Fully automated offensive security framework for reconnaissance and vulnerability scanning https://github.com/j3ssie/Osmedeus
+* **cve-2019-1040-scanner** Checks for CVE-2019-1040 vulnerability over SMB. https://github.com/fox-it/cve-2019-1040-scanner
 * **bfac** BFAC (Backup File Artifacts Checker): An automated tool that checks for backup artifacts that may disclose the web-application's source code. https://github.com/mazen160/bfac
 * **Reconnoitre** A reconnaissance tool made for the OSCP labs to automate information gathering and service enumeration whilst creating a directory structure to store  results, findings and exploits used for each host, recommended commands to execute and directory structures for storing loot and flags. https://github.com/codingo/Reconnoitre
 * **nullinux** Nullinux is an internal penetration testing tool for Linux that can be used to enumerate OS information, domain information, shares, directories, and users through SMB. https://github.com/m8r0wn/nullinux
@@ -45,8 +47,12 @@ ________________________________________________________________________________
 * **spoofcheck** a program that checks if a domain can be spoofed from. The program checks SPF and DMARC records for weak configurations that allow spoofing. https://github.com/BishopFox/spoofcheck
 * **dnsrecon** a tool DNS Enumeration Script. https://github.com/darkoperator/dnsrecon
 * **dirsearch** is a simple command line tool designed to brute force directories and files in websites. https://github.com/maurosoria/dirsearch
+* **masscan-web-ui** MASSCAN Web UI from Offensive Security https://github.com/offensive-security/masscan-web-ui
+
 
 ### Passive Intelligence Gathering
+* **ODIN** Automated network asset, email, and social media profile discovery and cataloguing https://github.com/chrismaddalena/ODIN
+* **Awesome-Asset-Discovery** List of Awesome Open Source Intelligence Resources https://github.com/redhuntlabs/Awesome-Asset-Discovery
 * **gitrob** Gitrob is a tool to help find potentially sensitive files pushed to public repositories on Github. Gitrob will clone repositories belonging to a user or organization down to a configurable depth and iterate through the commit history and flag files that match signatures for potentially sensitive files. https://github.com/michenriksen/gitrob
 * **security-focus-dataset** A tool to scrape the security-focus, a public exploits database. https://github.com/derstolz/security-focus-dataset
 * **shodan-eye** Shodan Eye This tool collects all the information about all devices directly connected to the internet using the specified keywords that you enter. https://github.com/BullsEye0/shodan-eye
@@ -55,6 +61,7 @@ ________________________________________________________________________________
 * **pymeta** Pymeta uses specially crafted search queries to identify and download the following file types (pdf, xls, xlsx, doc, docx, ppt, pptx) from a given domain using Google and Bing. https://github.com/m8r0wn/pymeta
 * **GoogleScraper** Scraping search engines professionally https://github.com/NikolaiT/GoogleScraper
 * **cloud_enum** Multi-cloud OSINT tool. Enumerate public resources in AWS, Azure, and Google Cloud. https://github.com/initstring/cloud_enum
+* **SiteBroker** A cross-platform python based utility for information gathering and penetration automation! https://github.com/Anon-Exploiter/SiteBroker
 * **Social Mapper** OSINT Social Media Mapping Tool, takes a list of names & images (or LinkedIn company name) and performs automated target searching on a huge scale across multiple social media sites. Not restricted by APIs as it instruments a browser using Selenium. Outputs reports to aid in correlating targets across sites. https://github.com/SpiderLabs/social_mapper
 * **skiptracer** OSINT scraping framework, utilizes some basic python webscraping (BeautifulSoup) of PII paywall sites to compile passive information on a target on a ramen noodle budget. https://github.com/xillwillx/skiptracer
 * **FOCA** (Fingerprinting Organizations with Collected Archives) is a tool used mainly to find metadata and hidden information in the documents its scans. https://github.com/ElevenPaths/FOCA
@@ -73,10 +80,15 @@ ________________________________________________________________________________
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
 ## Weaponization
+* **Perfect-Malware-Samples** Fresh malware samples caught in the wild daily from random places https://github.com/Perfectdotexe/Perfect-Malware-Samples
+* **DLLREVERSESHELL** A CUSTOM CODED FUD DLL, CODED IN C , WHEN LOADED , VIA A DECOY WEB-DELIVERY MODULE( FIRING A DECOY PROGRAM), WILL GIVE A REVERSE SHELL (POWERSHELL) FROM THE VICTIM MACHINE TO THE ATTACKER CONSOLE , OVER LAN AND WAN.  https://github.com/1captainnemo1/DLLREVERSESHELL
+* **tactical-exploitation** Modern tactical exploitation toolkit. https://github.com/0xdea/tactical-exploitation
 * **PayloadsAllTheThings** A list of useful payloads and bypass for Web Application Security and Pentest/CTF  https://github.com/swisskyrepo/PayloadsAllTheThings
 * **Sickle** Sickle is a shellcode development tool created to speed up the various steps needed to create functioning shellcode. https://github.com/wetw0rk/Sickle
-* **Pandoras-Box** This repo will contain random scripts that I used/use during my offensive testing. It can contain scripts ranging from extremely stupid and basic stuf to some extremely awesome and elite stuff.... Stay tuned :) https://github.com/paranoidninja/Pandoras-Box.git
+* **Cheatsheets** Helped during my OSCP lab days. (REALLY GOOD STUFF) https://github.com/slyth11907/Cheatsheets
+* **Pandoras-Box** (OSCP) This repo will contain random scripts that I used/use during my offensive testing. It can contain scripts ranging from extremely stupid and basic stuf to some extremely awesome and elite stuff.... Stay tuned :) https://github.com/paranoidninja/Pandoras-Box.git
 * **Evil-Droid** Evil-Droid is a framework that create & generate & embed apk payload to penetrate android platforms. https://github.com/M4sc3r4n0/Evil-Droid
+* **PhoneSploit** Using open ADB ports we can exploit an android device  https://github.com/metachar/PhoneSploit
 * **TheFatRat** An Easy tool to Generate Backdoor for bypass AV and Easy Tool For Post exploitation attack like browser attack,dll . This tool compiles a malware with popular payload  and then the compiled malware can be execute on windows, android, mac . . https://github.com/Screetsec/TheFatRat
 * **Microsploit** a Simple tool and not very special but this tool fast and easy create backdoor office exploitation using module metasploit packet. Like Microsoft Office in windows or mac , Open Office in linux  , Macro attack , Buffer Overflow in word . Work in kali rolling , Parrot , Backbox .. https://github.com/Screetsec/Microsploit
 * **IPObfuscator** A simple tool to convert the IP to different obfuscated forms https://github.com/OsandaMalith/IPObfuscator
@@ -86,8 +98,10 @@ ________________________________________________________________________________
 * **CVE-2017-11882 Exploit** accepts over 17k bytes long command/code in maximum. https://github.com/unamer/CVE-2017-11882
 * **Adobe Flash Exploit** CVE-2018-4878. https://github.com/anbai-inc/CVE-2018-4878
 * **Exploit toolkit CVE-2017-0199** is a handy python script which provides pentesters and security researchers a quick and effective way to test Microsoft Office RCE. https://github.com/bhdresh/CVE-2017-0199
+* **ExtensionSpoofer** Simple program to spoof file extensions and icons in Windows https://github.com/henriksb/ExtensionSpoofer
 * **demiguise** is a HTA encryption tool for RedTeams. https://github.com/nccgroup/demiguise
 * **Office-DDE-Payloads** collection of scripts and templates to generate Office documents embedded with the DDE, macro-less command execution technique. https://github.com/0xdeadbeefJERKY/Office-DDE-Payloads
+* **lnkexploit** Spoofing an executable payload as a LNK file https://github.com/mortychannel/lnkexploit
 * **CACTUSTORCH** Payload Generation for Adversary Simulations. https://github.com/mdsecactivebreach/CACTUSTORCH
 * **SharpShooter** is a payload creation framework for the retrieval and execution of arbitrary CSharp source code. https://github.com/mdsecactivebreach/SharpShooter
 * **Don't kill my cat** is a tool that generates obfuscated shellcode that is stored inside of polyglot images. The image is 100% valid and also 100% valid shellcode. https://github.com/Mr-Un1k0d3r/DKMC
@@ -106,10 +120,10 @@ ________________________________________________________________________________
 * **ClickOnceGenerator** Quick Malicious ClickOnceGenerator for Red Team. The default application a simple WebBrowser widget that point to a website of your choice. https://github.com/Mr-Un1k0d3r/ClickOnceGenerator
 * **macro_pack** is a tool by @EmericNasi used to automatize obfuscation and generation of MS Office documents, VB scripts, and other formats for pentest, demo, and social engineering assessments. https://github.com/sevagas/macro_pack
 * **StarFighters** a JavaScript and VBScript Based Empire Launcher. https://github.com/Cn33liz/StarFighters
+* **bsr** A trojan with features: 1 - Kills explorer.exe so the user cant shutdown or open anything on desktop; 2- Constantly kills taskmgr.exe so the user cant end the process; 3 - At the end it kills critical processes so it causes a blue screen https://github.com/Artucuno/bsr
 * **nps_payload** this script will generate payloads for basic intrusion detection avoidance. It utilizes publicly demonstrated techniques from several different sources. https://github.com/trustedsec/nps_payload
 * **SocialEngineeringPayloads** a collection of social engineering tricks and payloads being used for credential theft and spear phishing attacks. https://github.com/bhdresh/SocialEngineeringPayloads
 * **The Social-Engineer Toolkit** is an open-source penetration testing framework designed for social engineering. https://github.com/trustedsec/social-engineer-toolkit
-* **Phishery** is a Simple SSL Enabled HTTP server with the primary purpose of phishing credentials via Basic Authentication.  https://github.com/ryhanson/phishery
 * **PowerShdll** run PowerShell with rundll32. Bypass software restrictions. https://github.com/p3nt4/PowerShdll
 * **Ultimate AppLocker ByPass List** The goal of this repository is to document the most common techniques to bypass AppLocker. https://github.com/api0cradle/UltimateAppLockerByPassList
 * **Ruler** is a tool that allows you to interact with Exchange servers remotely, through either the MAPI/HTTP or RPC/HTTP protocol. https://github.com/sensepost/ruler
@@ -140,6 +154,7 @@ ________________________________________________________________________________
 * **flask-filebox** Basic file upload Web UI. Make sure to update config.py according to your needs. https://github.com/mtalimanchuk/flask-filebox
 
 ### Phishing
+* **Phishery** is a Simple SSL Enabled HTTP server with the primary purpose of phishing credentials via Basic Authentication.  https://github.com/ryhanson/phishery
 * **King Phisher** is a tool for testing and promoting user awareness by simulating real world phishing attacks. https://github.com/securestate/king-phisher
 * **FiercePhish** is a full-fledged phishing framework to manage all phishing engagements. It allows you to track separate phishing campaigns, schedule sending of emails, and much more. https://github.com/Raikia/FiercePhish
 * **ReelPhish** is a Real-Time Two-Factor Phishing Tool. https://github.com/fireeye/ReelPhish/
@@ -153,6 +168,7 @@ ________________________________________________________________________________
 
 ## Command and Control
 ### Remote Access Tools
+* **KeyPlexer** Keyplexer is a Remote Access Trojan (RAT) written in Python. It combines the functionalities of Keylogger with remote access abilities. Meaning, that not only the program records all movements of the user, but also has access to the machine live through the created backdoor or Trojan. https://github.com/nairuzabulhul/KeyPlexer
 * **Empire** is a post-exploitation framework that includes a pure-PowerShell2.0 Windows agent, and a pure Python 2.6/2.7 Linux/OS X agent. https://github.com/EmpireProject/Empire
 * **Spidernet** SSH Botnet C&C Using Python https://github.com/Und3rf10w/Spidernet
 * **SILENTTRINITY** A post-exploitation agent powered by Python, IronPython, C#/.NET. https://github.com/byt3bl33d3r/SILENTTRINITY
@@ -170,6 +186,7 @@ ________________________________________________________________________________
 * **EggShell** is a post exploitation surveillance tool written in Python. It gives you a command line session with extra functionality between you and a target machine. https://github.com/neoneggplant/EggShell
 
 ### Staging
+* **NetWorm** Python network worm that spreads on the local network and gives the attacker control of these machines. https://github.com/pylyf/NetWorm
 * **Vegile** This tool will set up your backdoor/rootkits when backdoor is already setup it will be hidden, unlimited. Even when it is killed, it will re-run again. There will always be a procces which will run another process, so we can assume that this procces is unstopable like a Ghost in The Shell. https://github.com/Screetsec/Vegile
 * **Rapid Attack Infrastructure (RAI)** Red Team Infrastructure... Quick... Fast... Simplified <br/> One of the most tedious phases of a Red Team Operation is usually the infrastructure setup. This usually entails <br/>a teamserver or controller, domains, redirectors, and a Phishing server. https://github.com/obscuritylabs/RAI
 * **Red Baron** is a set of modules and custom/third-party providers for Terraform which tries to automate creating resilient, disposable, secure and agile infrastructure for Red Teams. https://github.com/byt3bl33d3r/Red-Baron
@@ -197,6 +214,7 @@ ________________________________________________________________________________
 * **HTran** is a connection bouncer, a kind of proxy server. A “listener” program is hacked stealthily onto an unsuspecting host anywhere on the Internet. https://github.com/HiwinCN/HTran
 
 ## Lateral Movement
+* **evil-winrm** This program can be used on any Microsoft Windows Servers with this feature enabled (usually at port 5985), of course only if you have credentials and permissions to use it. https://github.com/Hackplayers/evil-winrm
 * **CrackMapExec** is a swiss army knife for pentesting networks. https://github.com/byt3bl33d3r/CrackMapExec
 * **Invoke-Phant0m** This script walks thread stacks of Event Log Service process (spesific svchost.exe) and identify Event Log Threads to kill Event Log Service Threads. So the system will not be able to collect logs and at the same time the Event Log Service will appear to be running. https://github.com/Und3rf10w/Invoke-Phant0m
 * **PowerLessShell** rely on MSBuild.exe to remotely execute PowerShell scripts and commands without spawning powershell.exe. https://github.com/Mr-Un1k0d3r/PowerLessShell
@@ -282,6 +300,8 @@ ________________________________________________________________________________
 
 ## Misc
 ### Anonymization
+* **torghost** Tor anonymizer https://github.com/susmithHCK/torghost
+* **docker-onion-nmap** Scan .onion hidden services with nmap using Tor, proxychains and dnsmasq in a minimal alpine Docker container. https://github.com/milesrichardson/docker-onion-nmap
 * **kali-anonsurf** Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well. https://github.com/Und3rf10w/kali-anonsurf
 
 ### Adversary Simulation
@@ -293,11 +313,16 @@ ________________________________________________________________________________
 * **Red Team Automation (RTA)** - RTA provides a framework of scripts designed to allow blue teams to test their detection capabilities against malicious tradecraft, modeled after MITRE ATT&CK. https://github.com/endgameinc/RTA
 
 ### Wireless Networks
+* **WiFiBroot** A WiFi Pentest Cracking tool for WPA/WPA2 (Handshake, PMKID, Cracking, EAPOL, Deauthentication) https://github.com/hash3liZer/WiFiBroot
+* **apple_bleee** These scripts are experimental PoCs that show what an attacker get from Apple devices if they sniff Bluetooth traffic. https://github.com/hexway/apple_bleee
+* **IMSI-catcher** This program shows you IMSI numbers, country, brand and operator of cellphones around you. https://github.com/marcinguy/IMSI-catcher
+* **Awesome-Cellular-Hacking** A list of resources about cellular hacking https://github.com/W00t3k/Awesome-Cellular-Hacking
 * **Wifiphisher** is a security tool that performs Wi-Fi automatic association attacks to force wireless clients to unknowingly connect to an attacker-controlled Access Point. https://github.com/wifiphisher/wifiphisher
 * **mana** toolkit for wifi rogue AP attacks and MitM. https://github.com/sensepost/mana
 * **wifite** An automated wireless attack tool https://github.com/Und3rf10w/wifite
 
 ### Embedded & Peripheral Devices Hacking
+* **USBTrojan** Super simple loader that spreads over removable drives (USB flash drives, portable and network drives, SD cards). Features: You can add the HWID of your PC to the whitelist and trojan will ignore it; You can add any payload (executable file); Slient work. Ideal for school, university or office. https://github.com/mashed-potatoes/USBTrojan
 * **USB-Rubber-Ducky** The USB Rubber Ducky is a Human Interface Device programmable with a simple scripting language allowing penetration testers to quickly and easily craft and deploy security auditing payloads that mimic human keyboard input. https://github.com/hak5darren/USB-Rubber-Ducky
 * **magspoof** a portable device that can spoof/emulate any magnetic stripe, credit card or hotel card "wirelessly", even on standard magstripe (non-NFC/RFID) readers. https://github.com/samyk/magspoof
 * **WarBerryPi** was built to be used as a hardware implant during red teaming scenarios where we want to obtain as much information as possible in a short period of time with being as stealth as possible. https://github.com/secgroundzero/warberry
@@ -362,6 +387,7 @@ ________________________________________________________________________________
   * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
 
 ## References
+* **PENTESTING-BIBLE** hundreds of ethical hacking & penetration testing & red team & cyber security & computer science resources. https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE/
 * **awesome-python** A curated list of awesome Python frameworks, libraries, software and resources. https://github.com/vinta/awesome-python
 * **awesome-reversing** A curated list of awesome reversing resources https://github.com/tylerha97/awesome-reversing 
 * **Cheatsheets** Penetration Testing/Security Cheatsheets that I have collated over the years. https://github.com/rmusser01/Cheatsheets
