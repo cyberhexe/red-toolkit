@@ -100,6 +100,10 @@ options = get_arguments()
 
 logging.basicConfig(format='[%(asctime)s %(levelname)s]: %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p',
+                    handlers=[
+                       logging.FileHandler('toolkit.log'),
+                       logging.StreamHandler()
+                    ],
                     level=options.logging)
 
 git_sources = [
