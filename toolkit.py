@@ -95,12 +95,7 @@ class colors:
     def print_green(text):
         print(colors.green(text))
 
-def print_fading(message):
-    from time import sleep
-    for char in message:
-        print(char, end='', flush=True)
-        sleep(0.0095)
-    print()
+
 """
    Download tools asynchronously
 """
@@ -115,38 +110,22 @@ class BatchAsyncDownloader:
         pass
 
     """
-       Spawn a process to download a tool
-    """
-
-    async def clone(self, *args):
-        """
-           Run command in subprocess.
-        """
-        process = await asyncio.create_subprocess_exec(
-                    *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-
-        tool_name = args[3].split('/')[-1]
-
-        logging.info("Cloning %s", tool_name)
-
-        stdout, stderr = await process.communicate()
-        if process.returncode == 0:
-            logging.info(colors.green('{} has been downloaded'.format(tool_name)))
-        else:
-            logging.error(colors.red("{} failed to download".format(tool_name)))
-            logging.debug('{}: {} / {}'.format(tool_name, stdout, stderr))
-        result = stdout.decode().strip()
-
-        return result
-
-    """
        Clones a list of tools
     """
 
     def download_tools(self, tools: list):
+        filtered_tools = [t for t in tools if not t.is_downloaded()]
+        for tool in filtered_tools:
+            if not any(host in tool.url for host in git_sources):
+                logging.warning(colors.yellow(
+                            'Skipping {} / {} downloading, as it doesn\'t look like a git repository'.format(tool.name,
+                                                                                                             tool.url)))
+                return
+
+            logging.info('Downloading %s', tool.name)
+            tool.path.mkdir(parents=True, exist_ok=True)
         start = time.time()
-        commands = [['git', 'clone', tool.url, str(tool.path)] for tool in tools]
+        commands = [['git', 'clone', tool.url, str(tool.path)] for tool in filtered_tools]
 
         tasks = []
         for command in commands:
@@ -201,9 +180,36 @@ class BatchAsyncDownloader:
         results = run_asyncio_commands(tasks, max_concurrent_tasks=20)  # At most 20 parallel tasks
         logging.debug("Results: " + os.linesep.join(results))
 
-        end = time.time()
-        rounded_end = "{0:.4f}".format(round(end - start, 4))
-        logging.info(f"Async downloader ran in about {rounded_end} seconds")
+        if len(results) > 0:
+            end = time.time()
+            rounded_end = "{0:.4f}".format(round(end - start, 4))
+            logging.info(f"Async downloader ran in about {rounded_end} seconds")
+
+    """
+       Spawn a process to download a tool
+    """
+
+    async def clone(self, *args):
+        """
+           Run command in subprocess.
+        """
+        process = await asyncio.create_subprocess_exec(
+                    *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )
+
+        tool_name = args[3].split('/')[-1]
+
+        logging.info("Downloading %s", tool_name)
+
+        stdout, stderr = await process.communicate()
+        if process.returncode == 0:
+            logging.info(colors.green('{} has been downloaded'.format(tool_name)))
+        else:
+            logging.error(colors.red("{} failed to download".format(tool_name)))
+            logging.debug('{}: {} / {}'.format(tool_name, stdout, stderr))
+        result = stdout.decode().strip()
+
+        return result
 
 
 options = get_arguments()
@@ -220,6 +226,8 @@ git_sources = [
     'github.com',
     'bitbucket.com'
 ]
+
+prefix = colors.colored('/red-teaming-toolkit:>> ', colors.BG_GRAY)
 
 
 class Tool:
@@ -254,20 +262,6 @@ class Tool:
     def is_downloaded(self):
         return os.path.exists(self.path) and os.listdir(self.path)
 
-    def can_download(self):
-        if self.is_downloaded():
-            logging.info('%s is already downloaded', self.name)
-            return
-        if not any(host in self.url for host in git_sources):
-            logging.warning(colors.yellow(
-                        'Skipping {} / {} downloading, as it doesn\'t look like a git repository'.format(self.name,
-                                                                                                         self.url)))
-            return
-
-        logging.info('Downloading %s', self.name)
-        self.path.mkdir(parents=True, exist_ok=True)
-        return True
-
     def update(self):
         if not self.is_downloaded():
             logging.debug(colors.red('{} is not downloaded'.format(self.name)))
@@ -293,7 +287,7 @@ def download_tool(tool_name, tools):
     tools_to_download_list = []
 
     for tool in tools:
-        if tool.name == tool_name or tool_name == 'DOWNLOAD_ALL' and tool.can_download():
+        if tool.name == tool_name or tool_name == 'DOWNLOAD_ALL':
             tools_to_download_list.append(tool)
     asyncgit = BatchAsyncDownloader()
     asyncgit.download_tools(tools_to_download_list)
@@ -304,6 +298,22 @@ def update_tool(tool_name, tools):
     for tool in tools:
         if tool.name == tool_name or tool_name == 'UPDATE_ALL':
             tool.update()
+
+
+def show_tool_info(tool_name, tools):
+    tool_found = False
+    for tool in tools:
+        if tool_name == tool.name:
+            tool_found = True
+            tool.printout(True)
+    if not tool_found:
+        logging.error(colors.red('%s wasn\'t found in the toolkit context' % tool_name))
+
+
+def use_tool(tool_name, tools):
+    for tool in tools:
+        if tool_name == tool.name:
+            tool.use()
 
 
 def get_tools_from_readme(readme_file):
@@ -317,16 +327,6 @@ def get_tools_from_readme(readme_file):
     return tools
 
 
-def show_tool_info(tool_name, tools):
-    tool_found = False
-    for tool in tools:
-        if tool_name == tool.name:
-            tool_found = True
-            tool.printout(True)
-    if not tool_found:
-        logging.error(colors.red('%s wasn\'t found in the toolkit context' % tool_name))
-
-
 def get_scripts_from_readme(readme_file):
     scripts_url = []
     with open(readme_file, 'r', encoding='utf-8') as file:
@@ -338,8 +338,6 @@ def get_scripts_from_readme(readme_file):
 
 
 def interact(tools):
-    prefix = colors.colored('/red-teaming-toolkit:>> ', colors.BG_GRAY)
-
     def search(command, tools):
         query = command.replace('search ', '')
         search_in_tools(query, tools)
@@ -372,10 +370,10 @@ def interact(tools):
             search(command, tools)
         if command.startswith('download '):
             download(command, tools)
-        if command.startswith('show '):
-            show(command, tools)
         if command.startswith('update '):
             update(command, tools)
+        if command.startswith('show '):
+            show(command, tools)
 
 
 def print_categories(tools):
@@ -451,12 +449,11 @@ if __name__ == "__main__":
     if options.drop_deprecated:
         drop_deprecated_tools(deprecated_tools)
 
-
-    print_fading("## Red-Teaming-Toolkit initialized")
-    print_fading('%s categories discovered' % len(categories))
-    print_fading('%s tools synchronized' % len(tools))
-    print_fading('%s tools downloaded' % len(downloaded_tools))
-    print_fading('%s scripts synchronized' % len(scripts))
+    logging.info(colors.green('## Red-Teaming-Toolkit initialized'))
+    logging.info('%s categories discovered', len(categories))
+    logging.info('%s tools synchronized', len(tools))
+    logging.info('%s tools downloaded', len(downloaded_tools))
+    logging.info('%s scripts synchronized', len(scripts))
 
     try:
         if options.search:
