@@ -114,14 +114,8 @@ class BatchAsyncDownloader:
     """
 
     def download_tools(self, tools: list):
-        filtered_tools = [t for t in tools if not t.is_downloaded()]
+        filtered_tools = [t for t in tools if not t.is_downloaded() and any(host in t.url for host in git_sources)]
         for tool in filtered_tools:
-            if not any(host in tool.url for host in git_sources):
-                logging.warning(colors.yellow(
-                            'Skipping {} / {} downloading, as it doesn\'t look like a git repository'.format(tool.name,
-                                                                                                             tool.url)))
-                return
-
             logging.info('Downloading %s', tool.name)
             tool.path.mkdir(parents=True, exist_ok=True)
         start = time.time()
@@ -202,6 +196,7 @@ class BatchAsyncDownloader:
         logging.info("Downloading %s", tool_name)
 
         stdout, stderr = await process.communicate()
+
         if process.returncode == 0:
             logging.info(colors.green('{} has been downloaded'.format(tool_name)))
         else:
