@@ -105,7 +105,7 @@ import platform
 import asyncio
 
 
-class AsyncDownloader:
+class BatchAsyncDownloader:
     def __init__(self):
         pass
 
@@ -241,7 +241,6 @@ class Tool:
         assert line and line.strip() != ''
         self.name = line.split('**')[1].split('**')[0]
         self.description = line.split('**')[2].split('http')[0].strip()
-        # self.url = 'http' + line.split('http')[1]
         self.url = line.split(' ')[-1]
         self.category = self.find_category(self.url, file_content_as_string)
         self.path = Path(os.getcwd() + '/' + self.category['alias'] + '/' + self.name)
@@ -291,7 +290,7 @@ def download_tool(tool_name, tools):
     for tool in tools:
         if tool.name == tool_name or tool_name == 'DOWNLOAD_ALL' and tool.can_download():
             tools_to_download_list.append(tool)
-    asyncgit = AsyncDownloader()
+    asyncgit = BatchAsyncDownloader()
     asyncgit.download_tools(tools_to_download_list)
 
 
