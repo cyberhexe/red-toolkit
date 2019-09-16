@@ -21,7 +21,9 @@ ________________________________________________________________________________
 
 ## Reconnaissance
 ### Active Intelligence Gathering
+* **bfac** BFAC (Backup File Artifacts Checker): An automated tool that checks for backup artifacts that may disclose the web-application's source code. https://github.com/mazen160/bfac
 * **Reconnoitre** A reconnaissance tool made for the OSCP labs to automate information gathering and service enumeration whilst creating a directory structure to store  results, findings and exploits used for each host, recommended commands to execute and directory structures for storing loot and flags. https://github.com/codingo/Reconnoitre
+* **nullinux** Nullinux is an internal penetration testing tool for Linux that can be used to enumerate OS information, domain information, shares, directories, and users through SMB. https://github.com/m8r0wn/nullinux
 * **sharesearch** ShareSearch tool goes through hosts with SMB, NFS, checking credentials, looking for interesting stuff and greping sensitive data in it. WARNING! Alfa version, a lot of bugs and spaghetti code. https://github.com/nikallass/sharesearch
 * **enumapis** Discovery of hidden API's through traversing web applications https://github.com/infosec-au/enumapis
 * **jsearch** Jsearch a simple script that grep infos from javascript files https://github.com/incogbyte/jsearch
@@ -38,6 +40,8 @@ ________________________________________________________________________________
 * **dirsearch** is a simple command line tool designed to brute force directories and files in websites. https://github.com/maurosoria/dirsearch
 
 ### Passive Intelligence Gathering
+* **gitrob** Gitrob is a tool to help find potentially sensitive files pushed to public repositories on Github. Gitrob will clone repositories belonging to a user or organization down to a configurable depth and iterate through the commit history and flag files that match signatures for potentially sensitive files. https://github.com/michenriksen/gitrob
+* **security-focus-dataset** A tool to scrape the security-focus, a public exploits database. https://github.com/derstolz/security-focus-dataset
 * **shodan-eye** Shodan Eye This tool collects all the information about all devices directly connected to the internet using the specified keywords that you enter. https://github.com/BullsEye0/shodan-eye
 * **userrecon-py** Find usernames in **187** social networks. https://github.com/decoxviii/userrecon-py
 * **sherlock-js** Node-JS enumeration tool to find accounts in social networks by a given username. https://github.com/GitSquared/sherlock-js
@@ -62,6 +66,7 @@ ________________________________________________________________________________
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
 ## Weaponization
+* **PayloadsAllTheThings** A list of useful payloads and bypass for Web Application Security and Pentest/CTF  https://github.com/swisskyrepo/PayloadsAllTheThings
 * **Sickle** Sickle is a shellcode development tool created to speed up the various steps needed to create functioning shellcode. https://github.com/wetw0rk/Sickle
 * **Pandoras-Box** This repo will contain random scripts that I used/use during my offensive testing. It can contain scripts ranging from extremely stupid and basic stuf to some extremely awesome and elite stuff.... Stay tuned :) https://github.com/paranoidninja/Pandoras-Box.git
 * **Evil-Droid** Evil-Droid is a framework that create & generate & embed apk payload to penetrate android platforms. https://github.com/M4sc3r4n0/Evil-Droid
@@ -83,6 +88,7 @@ ________________________________________________________________________________
 * **Invoke-CradleCrafter** PowerShell remote download cradle generator and obfuscator. https://github.com/danielbohannon/Invoke-CradleCrafter
 * **Invoke-DOSfuscation** cmd.exe Command Obfuscation Generator & Detection Test Harness. https://github.com/danielbohannon/Invoke-DOSfuscation
 * **Unicorn** is a simple tool for using a PowerShell downgrade attack and inject shellcode straight into memory. https://github.com/trustedsec/unicorn
+* **PyFuscation** Obfuscate powershell scripts by replacing Function names, Variables and Parameters. https://github.com/CBHue/PyFuscation
 * **EmbedInHTML** Embed and hide any file in an HTML file. https://github.com/Arno0x/EmbedInHTML
 * **SigThief** Stealing Signatures and Making One Invalid Signature at a Time. https://github.com/secretsquirrel/SigThief
 * **Veil** is a tool designed to generate metasploit payloads that bypass common anti-virus solutions. https://github.com/Veil-Framework/Veil
@@ -228,6 +234,7 @@ ________________________________________________________________________________
 
 ## Escalate Privileges
 ### Domain Escalation
+* **linikatz** linikatz is a tool to attack AD on UNIX https://github.com/portcullislabs/linikatz
 * **Invoke-ACLpwn** is a tool that automates the discovery and pwnage of ACLs in Active Directory that are unsafe configured. https://github.com/fox-it/Invoke-ACLPwn
 * **BloodHound** uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment. https://github.com/BloodHoundAD/BloodHound
 * **Grouper** a PowerShell script for helping to find vulnerable settings in AD Group Policy. https://github.com/l0ss/Grouper
@@ -242,6 +249,8 @@ ________________________________________________________________________________
 * **kekeo** is a little toolbox I have started to manipulate Microsoft Kerberos in C (and for fun). https://github.com/gentilkiwi/kekeo
 
 ### Local Escalation
+* **Linux_Exploit_Suggester** Linux exploit suggester for Privilege Escalation && Local Enumeration  https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
+* **linux-kernel-exploits** A number of Linux kernel exploits for Privilege Escalation && Local Enumeration https://github.com/SecWiki/linux-kernel-exploits
 * **LinEnum** Scripted Local Linux Enumeration & Privilege Escalation Checks https://github.com/rebootuser/LinEnum
 * **wesng** WES-NG is a tool based on the output of Windows' `systeminfo` utility which provides the list of vulnerabilities the OS is vulnerable to, including any exploits for these vulnerabilities. Every Windows OS between Windows XP and Windows 10, including their Windows Server counterparts, is supported. https://github.com/bitsadmin/wesng
 * **Windows-Exploit-Suggester** This tool compares a targets patch levels against the Microsoft vulnerability database in order to detect potential missing patches on the target. It also notifies the user if there are public exploits and Metasploit modules available for the missing bulletins. https://github.com/GDSSecurity/Windows-Exploit-Suggester
@@ -273,6 +282,7 @@ ________________________________________________________________________________
 * **mana** toolkit for wifi rogue AP attacks and MitM. https://github.com/sensepost/mana
 
 ### Embedded & Peripheral Devices Hacking
+* **USB-Rubber-Ducky** The USB Rubber Ducky is a Human Interface Device programmable with a simple scripting language allowing penetration testers to quickly and easily craft and deploy security auditing payloads that mimic human keyboard input. https://github.com/hak5darren/USB-Rubber-Ducky
 * **magspoof** a portable device that can spoof/emulate any magnetic stripe, credit card or hotel card "wirelessly", even on standard magstripe (non-NFC/RFID) readers. https://github.com/samyk/magspoof
 * **WarBerryPi** was built to be used as a hardware implant during red teaming scenarios where we want to obtain as much information as possible in a short period of time with being as stealth as possible. https://github.com/secgroundzero/warberry
 * **P4wnP1** is a highly customizable USB attack platform, based on a low cost Raspberry Pi Zero or Raspberry Pi Zero W (required for HID backdoor). https://github.com/mame82/P4wnP1
@@ -332,6 +342,10 @@ ________________________________________________________________________________
   * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
 
 ## References
+* **awesome-python** A curated list of awesome Python frameworks, libraries, software and resources. https://github.com/vinta/awesome-python
+* **awesome-reversing** A curated list of awesome reversing resources https://github.com/tylerha97/awesome-reversing 
+* **Cheatsheets** Penetration Testing/Security Cheatsheets that I have collated over the years. https://github.com/rmusser01/Cheatsheets
+* **awesome-nginx-security** A curated list of awesome links related to application/API security in NGINX environment.  https://github.com/wallarm/awesome-nginx-security
 * **MITRE’s ATT&CK™** is a curated knowledge base and model for cyber adversary behavior, reflecting the various phases of an adversary’s lifecycle and the platforms they are known to target. https://attack.mitre.org/wiki/Main_Page
 * **Cheat Sheets** for various projects (Beacon/Cobalt Strike,PowerView, PowerUp, Empire, and PowerSploit). https://github.com/HarmJ0y/CheatSheets
 * **PRE-ATT&CK** Adversarial Tactics, Techniques & Common Knowledge for Left-of-Exploit. https://attack.mitre.org/pre-attack/index.php/Main_Page
