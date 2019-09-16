@@ -95,7 +95,12 @@ class colors:
     def print_green(text):
         print(colors.green(text))
 
-
+def print_fading(message):
+    from time import sleep
+    for char in message:
+        print(char, end='', flush=True)
+        sleep(0.0095)
+    print()
 """
    Download tools asynchronously
 """
@@ -194,7 +199,7 @@ class BatchAsyncDownloader:
             return all_results
 
         results = run_asyncio_commands(tasks, max_concurrent_tasks=20)  # At most 20 parallel tasks
-        logging.debug("Results: " + "\n".join(results))
+        logging.debug("Results: " + os.linesep.join(results))
 
         end = time.time()
         rounded_end = "{0:.4f}".format(round(end - start, 4))
@@ -224,7 +229,7 @@ class Tool:
             sections = file.read().split('## ')
             for sec in sections:
                 if url in sec:
-                    category = sec.split('\n')[0]
+                    category = sec.split(os.linesep)[0]
                     return {
                         'name': category,
                         'alias': category.lower().replace(' ', '-')
@@ -304,7 +309,7 @@ def update_tool(tool_name, tools):
 def get_tools_from_readme(readme_file):
     tools = []
     with open(readme_file, 'r', encoding='utf-8') as file:
-        lines = [line.replace('\n', '') for line in file.readlines()]
+        lines = [line.replace(os.linesep, '') for line in file.readlines()]
         for line in lines:
             if line.startswith('* **'):
                 tool = Tool(line, readme_file)
@@ -325,7 +330,7 @@ def show_tool_info(tool_name, tools):
 def get_scripts_from_readme(readme_file):
     scripts_url = []
     with open(readme_file, 'r', encoding='utf-8') as file:
-        file_content_as_string = [line.replace('\n', '') for line in file.readlines()]
+        file_content_as_string = [line.replace(os.linesep, '') for line in file.readlines()]
         for line in file_content_as_string:
             if line.startswith('  * '):
                 scripts_url.append(line.replace('  * ', ''))
@@ -395,7 +400,7 @@ def mark_deprecated_tools(synchronized_tools, categories):
     for category in categories:
         if os.path.isdir(category):
             for t in os.listdir('./' + category + '/'):
-                if t.replace('\n', '').strip() != '':
+                if t.replace(os.linesep, '').strip() != '':
                     stored_tools_names.append(t)
     for tool in stored_tools_names:
         if not any(tool in sync_tool.name for sync_tool in synchronized_tools):
@@ -446,11 +451,12 @@ if __name__ == "__main__":
     if options.drop_deprecated:
         drop_deprecated_tools(deprecated_tools)
 
-    logging.info(colors.green('## Red-Teaming-Toolkit initialized'))
-    logging.info('%s categories discovered', len(categories))
-    logging.info('%s tools synchronized', len(tools))
-    logging.info('%s tools downloaded', len(downloaded_tools))
-    logging.info('%s scripts synchronized', len(scripts))
+
+    print_fading("## Red-Teaming-Toolkit initialized")
+    print_fading('%s categories discovered' % len(categories))
+    print_fading('%s tools synchronized' % len(tools))
+    print_fading('%s tools downloaded' % len(downloaded_tools))
+    print_fading('%s scripts synchronized' % len(scripts))
 
     try:
         if options.search:
