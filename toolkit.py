@@ -5,7 +5,29 @@ from argparse import ArgumentParser
 from pathlib import Path
 
 from git.repo.base import Repo
-import asyncgit
+
+
+def get_arguments():
+    parser = ArgumentParser()
+    parser.add_argument('--search', dest='search', required=False,
+                        help='Optional. A query to search within the toolkit.')
+    parser.add_argument('--download', dest='download', required=False,
+                        help='Optional. Download a tool by it\'s name. The tool will be downloaded in a newly created '
+                             'directory. Pass DOWNLOAD_ALL to download everything.')
+    parser.add_argument('--update', dest='update', required=False, help='Optional. Update a given tool. '
+                                                                        'Pass UPDATE_ALL to update all downloaded '
+                                                                        'tools')
+    parser.add_argument('--show', dest='show', required=False,
+                        help='Optional. Show details about the downloaded tool.')
+    parser.add_argument('--drop-deprecated', action='store_true', required=False,
+                        help='Optional. Define when the toolkit should clean up deprecated tools (a tool will be '
+                             'marked as deprecated when it doesn\'t stored anymore in the root README.md file)')
+    parser.add_argument('--logging', dest='logging', choices=['INFO', 'DEBUG', 'WARNING', 'ERROR'], default='INFO',
+                        help='Optional. Logging level.')
+    options = parser.parse_args()
+
+    return options
+
 
 class colors:
     BLACK = "\u001b[30m"
@@ -74,26 +96,109 @@ class colors:
         print(colors.green(text))
 
 
-def get_arguments():
-    parser = ArgumentParser()
-    parser.add_argument('--search', dest='search', required=False,
-                        help='Optional. A query to search within the toolkit.')
-    parser.add_argument('--download', dest='download', required=False,
-                        help='Optional. Download a tool by it\'s name. The tool will be downloaded in a newly created '
-                             'directory. Pass DOWNLOAD_ALL to download everything.')
-    parser.add_argument('--update', dest='update', required=False, help='Optional. Update a given tool. '
-                                                                        'Pass UPDATE_ALL to update all downloaded '
-                                                                        'tools')
-    parser.add_argument('--show', dest='show', required=False,
-                        help='Optional. Show details about the downloaded tool.')
-    parser.add_argument('--drop-deprecated', action='store_true', required=False,
-                        help='Optional. Define when the toolkit should clean up deprecated tools (a tool will be '
-                             'marked as deprecated when it doesn\'t stored anymore in the root README.md file)')
-    parser.add_argument('--logging', dest='logging', choices=['INFO', 'DEBUG', 'WARNING', 'ERROR'], default='INFO',
-                        help='Optional. Logging level.')
-    options = parser.parse_args()
+"""
+   Download tools asynchronously
+"""
 
-    return options
+import time
+import platform
+import asyncio
+
+
+class AsyncDownloader:
+    def __init__(self):
+        pass
+
+    """
+       Spawn a process to download a tool
+    """
+
+    async def clone(self, *args):
+        """
+           Run command in subprocess.
+        """
+        process = await asyncio.create_subprocess_exec(
+                    *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )
+
+        tool_name = args[3].split('/')[-1]
+
+        logging.info("Cloning %s", tool_name)
+
+        stdout, stderr = await process.communicate()
+        if process.returncode == 0:
+            logging.info(colors.green('{} has been downloaded'.format(tool_name)))
+        else:
+            logging.error(colors.red("{} failed to download".format(tool_name)))
+            logging.debug('{}: {} / {}'.format(tool_name, stdout, stderr))
+        result = stdout.decode().strip()
+
+        return result
+
+    """
+       Clones a list of tools
+    """
+
+    def download_tools(self, tools: list):
+        start = time.time()
+        commands = [['git', 'clone', tool.url, str(tool.path)] for tool in tools]
+
+        tasks = []
+        for command in commands:
+            tasks.append(self.clone(*command))
+
+        def run_asyncio_commands(tasks, max_concurrent_tasks=0):
+            def make_chunks(l, n):
+                """Yield successive n-sized chunks from l.
+
+                Note:
+                    Taken from https://stackoverflow.com/a/312464
+                """
+                for i in range(0, len(l), n):
+                    yield l[i: i + n]
+
+            """Run tasks asynchronously using asyncio and return results.
+
+            If max_concurrent_tasks are set to 0, no limit is applied.
+
+            Note:
+                By default, Windows uses SelectorEventLoop, which does not support
+                subprocesses. Therefore ProactorEventLoop is used on Windows.
+                https://docs.python.org/3/library/asyncio-eventloops.html#windows
+            """
+            all_results = []
+
+            if max_concurrent_tasks == 0:
+                chunks = [tasks]
+                num_chunks = len(chunks)
+            else:
+                chunks = make_chunks(l=tasks, n=max_concurrent_tasks)
+                num_chunks = len(list(make_chunks(l=tasks, n=max_concurrent_tasks)))
+
+            if asyncio.get_event_loop().is_closed():
+                asyncio.set_event_loop(asyncio.new_event_loop())
+            if platform.system() == "Windows":
+                asyncio.set_event_loop(asyncio.ProactorEventLoop())
+            loop = asyncio.get_event_loop()
+
+            for i, tasks_in_chunk in enumerate(chunks):
+                chunk = i + 1
+                logging.debug(f"Beginning work on chunk {chunk}/{num_chunks}")
+                commands = asyncio.gather(*tasks_in_chunk)
+                # TODO queueing instead of chunking?
+                results = loop.run_until_complete(commands)
+                all_results += results
+                logging.debug(f"Completed work on chunk {chunk}/{num_chunks}")
+
+            loop.close()
+            return all_results
+
+        results = run_asyncio_commands(tasks, max_concurrent_tasks=20)  # At most 20 parallel tasks
+        logging.debug("Results: " + "\n".join(results))
+
+        end = time.time()
+        rounded_end = "{0:.4f}".format(round(end - start, 4))
+        logging.info(f"Async downloader ran in about {rounded_end} seconds")
 
 
 options = get_arguments()
@@ -101,8 +206,8 @@ options = get_arguments()
 logging.basicConfig(format='[%(asctime)s %(levelname)s]: %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p',
                     handlers=[
-                       logging.FileHandler('toolkit.log'),
-                       logging.StreamHandler()
+                        logging.FileHandler('toolkit.log'),
+                        logging.StreamHandler()
                     ],
                     level=options.logging)
 
@@ -181,14 +286,13 @@ class Tool:
 
 
 def download_tool(tool_name, tools):
-    download_list = []
+    tools_to_download_list = []
 
     for tool in tools:
         if tool.name == tool_name or tool_name == 'DOWNLOAD_ALL' and tool.can_download():
-            download_list.append(tool.url)
-    
-    asyncgit.download_tools(download_list)
-    
+            tools_to_download_list.append(tool)
+    asyncgit = AsyncDownloader()
+    asyncgit.download_tools(tools_to_download_list)
 
 
 def update_tool(tool_name, tools):
