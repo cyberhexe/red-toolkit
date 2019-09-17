@@ -333,8 +333,8 @@ class Tool:
         import pty
 
         os.chdir(self.path)
-        print('Spawning a new shell')
-        print(os.getcwd())
+        print('Spawning a new shell for ' + self.name)
+        print(self.path)
 
         # FIXME: port to windows
         pty.spawn('/bin/bash')
