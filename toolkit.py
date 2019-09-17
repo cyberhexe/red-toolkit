@@ -103,6 +103,12 @@ class colors:
 import time
 import platform
 import asyncio
+from enum import Enum
+
+
+class SynchronizationMode(Enum):
+    DOWNLOAD = "DOWNLOAD",
+    UPDATE = "UPDATE"
 
 
 class BatchAsyncDownloader:
@@ -110,20 +116,84 @@ class BatchAsyncDownloader:
         pass
 
     """
+       Updates a list of tools
+    """
+
+    def update_tools(self, tools: list):
+        self.generate_and_run_commands(
+                    [t for t in tools if t.is_downloaded() and t.is_git_repository()],
+                    SynchronizationMode.UPDATE)
+
+    """
        Clones a list of tools
     """
 
     def download_tools(self, tools: list):
-        filtered_tools = [t for t in tools if not t.is_downloaded() and any(host in t.url for host in git_sources)]
-        for tool in filtered_tools:
-            logging.info('Downloading %s', tool.name)
-            tool.path.mkdir(parents=True, exist_ok=True)
-        start = time.time()
-        commands = [['git', 'clone', tool.url, str(tool.path)] for tool in filtered_tools]
+        self.generate_and_run_commands(
+                    [t for t in tools if not t.is_downloaded() and any(host in t.url for host in git_sources)],
+                    SynchronizationMode.DOWNLOAD)
 
+    """
+       Spawn a process to download/update a tool
+    """
+
+    async def sync_tool(self, mode: SynchronizationMode, tool):
+        """
+           Run tool synchronization in subprocess
+        """
+
+        if mode == SynchronizationMode.DOWNLOAD:
+            tool.path.mkdir(parents=True, exist_ok=True)
+            command = ['git', 'clone', tool.url, str(tool.path)]
+        elif mode == SynchronizationMode.UPDATE:
+            command = ['git', '-C', str(tool.path), 'pull']
+        else:
+            raise Exception("Unsupported synchornization mode: " + str(mode))
+
+        logging.debug('Executing %s command: %s', mode, str(command))
+        process = await asyncio.create_subprocess_exec(
+                    *command, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )
+
+        tool_name = tool.name
+
+        if mode == SynchronizationMode.DOWNLOAD:
+            logging.info('Downloading %s', tool_name)
+        if mode == SynchronizationMode.UPDATE:
+            logging.info('Updating %s', tool_name)
+
+        stdout, stderr = await process.communicate()
+
+        if process.returncode == 0:
+            if mode == SynchronizationMode.DOWNLOAD:
+                logging.info(colors.green('{} has been downloaded'.format(tool_name)))
+            if mode == SynchronizationMode.UPDATE:
+                logging.info(colors.green('{} has been updated'.format(tool_name)))
+
+        else:
+            if mode == SynchronizationMode.DOWNLOAD:
+                logging.error(colors.red("{} failed to download".format(tool_name)))
+                logging.debug('{}: {} / {}'.format(tool_name, stdout, stderr))
+            if mode == SynchronizationMode.UPDATE:
+                logging.error(colors.red("{} failed to update".format(tool_name)))
+                logging.debug('{}: {} / {}'.format(tool_name, stdout, stderr))
+        result = stdout.decode().strip()
+
+        return result
+
+    def generate_and_run_commands(self, tools: list, mode: SynchronizationMode):
+        start_time = time.time()
+        logging.debug('%s tool(s) received for %s', len(tools), mode)
         tasks = []
-        for command in commands:
-            tasks.append(self.clone(*command))
+        for tool in tools:
+            if mode == SynchronizationMode.DOWNLOAD:
+                logging.info('Downloading %s', tool.name)
+            elif mode == SynchronizationMode.UPDATE:
+                logging.info('Updating %s', tool.name)
+            else:
+                raise Exception('Unsupported service name "{}"'.format(mode))
+            result = self.sync_tool(mode, tool)
+            tasks.append(result)
 
         def run_asyncio_commands(tasks, max_concurrent_tasks=0):
             def make_chunks(l, n):
@@ -176,35 +246,11 @@ class BatchAsyncDownloader:
 
         if len(results) > 0:
             end = time.time()
-            rounded_end = "{0:.4f}".format(round(end - start, 4))
-            logging.info(f"Async downloader ran in about {rounded_end} seconds")
-
-    """
-       Spawn a process to download a tool
-    """
-
-    async def clone(self, *args):
-        """
-           Run command in subprocess.
-        """
-        process = await asyncio.create_subprocess_exec(
-                    *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-
-        tool_name = args[3].split('/')[-1]
-
-        logging.info("Downloading %s", tool_name)
-
-        stdout, stderr = await process.communicate()
-
-        if process.returncode == 0:
-            logging.info(colors.green('{} has been downloaded'.format(tool_name)))
-        else:
-            logging.error(colors.red("{} failed to download".format(tool_name)))
-            logging.debug('{}: {} / {}'.format(tool_name, stdout, stderr))
-        result = stdout.decode().strip()
-
-        return result
+            rounded_end = "{0:.4f}".format(round(end - start_time, 4))
+            logging.info(
+                        f"Async tools {'downloader' if mode == SynchronizationMode.DOWNLOAD else 'updater'} ran in "
+                        f"about" +
+                        f" {rounded_end} seconds")
 
 
 options = get_arguments()
@@ -257,6 +303,12 @@ class Tool:
     def is_downloaded(self):
         return os.path.exists(self.path) and os.listdir(self.path)
 
+    def is_git_repository(self):
+        try:
+            return Repo(self.path) != None
+        except:
+            return False
+
     def update(self):
         if not self.is_downloaded():
             logging.debug(colors.red('{} is not downloaded'.format(self.name)))
@@ -281,7 +333,11 @@ class Tool:
         import pty
 
         os.chdir(self.path)
-        pty.spawn('/bin/sh')
+        print('Spawning a new shell')
+        print(os.getcwd())
+
+        # FIXME: port to windows
+        pty.spawn('/bin/bash')
 
 
 def download_tool(tool_name, tools):
@@ -295,10 +351,12 @@ def download_tool(tool_name, tools):
 
 
 def update_tool(tool_name, tools):
-    logging.info('Starting update of %s', tool_name)
+    tools_to_update_list = []
     for tool in tools:
         if tool.name == tool_name or tool_name == 'UPDATE_ALL':
-            tool.update()
+            tools_to_update_list.append(tool)
+    asyncgit = BatchAsyncDownloader()
+    asyncgit.update_tools(tools_to_update_list)
 
 
 def show_tool_info(tool_name, tools):
@@ -477,5 +535,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         logging.info('Keyboard interrupt, exiting')
         exit(0)
-    except Exception as e:
-        logging.error(colors.red('Unexpected error: ' + str(e)))
+    # except Exception as e:
+    #     logging.error(colors.red('Unexpected error: ' + str(e)))
