@@ -277,6 +277,12 @@ class Tool:
             if self.tool_readme:
                 print(self.tool_readme)
 
+    def use(self):
+        import pty
+
+        os.chdir(self.path)
+        pty.spawn('/bin/sh')
+
 
 def download_tool(tool_name, tools):
     tools_to_download_list = []
@@ -349,11 +355,16 @@ def interact(tools):
         tool_name = command.replace('show ', '')
         show_tool_info(tool_name, tools)
 
+    def use(command, tools):
+        tool_name = command.replace('use ', '')
+        use_tool(tool_name, tools)
+
     def help():
         print('search <case insensitive query> "search dns"')
         print('download <tool name> "download SharpSploit"/"download DOWNLOAD_ALL"')
         print('update <tool name> "update SharpSploit"/"update UPDATE_ALL"')
         print('show <tool name> "show SharpSploit"')
+        print('use <tool name> "use SharpSploit"')
 
     while True:
         command = input(prefix)
@@ -369,6 +380,8 @@ def interact(tools):
             update(command, tools)
         if command.startswith('show '):
             show(command, tools)
+        if command.startswith('use '):
+            use(command, tools)
 
 
 def print_categories(tools):
@@ -379,7 +392,7 @@ def print_categories(tools):
             categories[category] += 1
         else:
             categories[category] = 1
-    colors.print_bold('Categories statistic:')
+    colors.print_bold('Categories:')
     for category, entries in dict([(k, categories[k]) for k in
                                    sorted(categories, key=categories.get, reverse=True)]
                                   ).items():
