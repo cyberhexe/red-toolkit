@@ -490,7 +490,8 @@ def search_in_tools(search, tools):
     for tool in tools:
         pattern = search.lower()
         if pattern in tool.name.lower() \
-                    or pattern in tool.description.lower():
+                    or pattern in tool.description.lower()\
+                    or pattern in tool.category['name'].lower():
             matched_tools.append(tool)
     matched_tools_count = len(matched_tools)
     logging.info("%s tools found", matched_tools_count)
