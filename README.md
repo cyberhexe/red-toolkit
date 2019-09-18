@@ -17,8 +17,6 @@ ________________________________________________________________________________
 * [Misc](#misc)
 * [References](#references)
 
-<br/><br/><img src="https://i.imgur.com/uU089CT.jpg" />
-
 
 ## Reconnaissance
 ### Active Intelligence Gathering
