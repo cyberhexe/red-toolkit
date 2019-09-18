@@ -186,12 +186,6 @@ class BatchAsyncDownloader:
         logging.debug('%s tool(s) received for %s', len(tools), mode)
         tasks = []
         for tool in tools:
-            if mode == SynchronizationMode.DOWNLOAD:
-                logging.info('Downloading %s', tool.name)
-            elif mode == SynchronizationMode.UPDATE:
-                logging.info('Updating %s', tool.name)
-            else:
-                raise Exception('Unsupported service name "{}"'.format(mode))
             result = self.sync_tool(mode, tool)
             tasks.append(result)
 
