@@ -327,6 +327,7 @@ ________________________________________________________________________________
 * **PhanTap** is an ‘invisible’ network tap aimed at red teams. With limited physical access to a target building, this tap can be installed inline between a network device and the corporate network. https://github.com/nccgroup/phantap
 
 ### Software For Team Communication
+* **shhh**  Flask app to share encrypted secrets with people using custom links, passphrases and expiration dates.  https://github.com/smallwat3r/shhh
 * **RocketChat** is free, unlimited and open source. Replace email & Slack with the ultimate team chat software solution. https://rocket.chat
 * **Etherpad** is an open source, web-based collaborative real-time editor, allowing authors to simultaneously edit a text document https://etherpad.net
 
