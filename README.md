@@ -44,6 +44,7 @@ ________________________________________________________________________________
 
 
 ### Passive Intelligence Gathering
+* **Amass** In-depth Attack Surface Mapping and Asset Discovery https://github.com/OWASP/Amass
 * **ODIN** Automated network asset, email, and social media profile discovery and cataloguing https://github.com/chrismaddalena/ODIN
 * **Awesome-Asset-Discovery** List of Awesome Open Source Intelligence Resources https://github.com/redhuntlabs/Awesome-Asset-Discovery
 * **gitrob** Gitrob is a tool to help find potentially sensitive files pushed to public repositories on Github. Gitrob will clone repositories belonging to a user or organization down to a configurable depth and iterate through the commit history and flag files that match signatures for potentially sensitive files. https://github.com/michenriksen/gitrob
