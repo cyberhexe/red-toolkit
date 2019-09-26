@@ -22,6 +22,7 @@ ________________________________________________________________________________
 
 ## Reconnaissance
 ### Active Intelligence Gathering
+* **XSStrike** XSStrike is a Cross Site Scripting detection suite equipped with four hand written parsers, an intelligent payload generator, a powerful fuzzing engine and an incredibly fast crawler. https://github.com/s0md3v/XSStrike
 * **Osmedeus** Fully automated offensive security framework for reconnaissance and vulnerability scanning https://github.com/j3ssie/Osmedeus
 * **cve-2019-1040-scanner** Checks for CVE-2019-1040 vulnerability over SMB. https://github.com/fox-it/cve-2019-1040-scanner
 * **bfac** BFAC (Backup File Artifacts Checker): An automated tool that checks for backup artifacts that may disclose the web-application's source code. https://github.com/mazen160/bfac
@@ -75,6 +76,8 @@ ________________________________________________________________________________
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
 ## Weaponization
+* **TIDoS-Framework** The Offensive Manual Web Application Penetration Testing Framework. https://github.com/0xInfection/TIDoS-Framework
+* **webshells** A collection of web shells https://github.com/tennc/webshell
 * **Perfect-Malware-Samples** Fresh malware samples caught in the wild daily from random places https://github.com/Perfectdotexe/Perfect-Malware-Samples
 * **DLLREVERSESHELL** A CUSTOM CODED FUD DLL, CODED IN C , WHEN LOADED , VIA A DECOY WEB-DELIVERY MODULE( FIRING A DECOY PROGRAM), WILL GIVE A REVERSE SHELL (POWERSHELL) FROM THE VICTIM MACHINE TO THE ATTACKER CONSOLE , OVER LAN AND WAN.  https://github.com/1captainnemo1/DLLREVERSESHELL
 * **tactical-exploitation** Modern tactical exploitation toolkit. https://github.com/0xdea/tactical-exploitation
@@ -245,10 +248,15 @@ ________________________________________________________________________________
 * **nishang** Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security, penetration testing and red teaming. Nishang is useful during all phases of penetration testing. https://github.com/samratashok/nishang
 
 ## Pivoting and Tunneling
+* **rpivot** This is a method of traversing NAT connections. Rpivot is a reverse socks proxy tool that allows you to tunnel traffic via socks proxy. It connects back to your machine and binds a socks proxy on it. It works just like `ssh -D` but in opposite direction https://github.com/artkond/rpivot
+* **redsocks** Redsocks is the tool that allows you to proxify(redirect) network traffic through a SOCKS4, SOCKS5 or HTTPs proxy server. It works on the lowest level, the kernel level (iptables). The other possible way is to use application level proxy, when the proxy client is implemented in the same language as an application is written in. Redsocks operates on the lowest system level, that’s why all running application don’t even have an idea that network traffic is sent through a proxy server, as a result it is called a transparent proxy redirector. https://github.com/darkk/redsocks
+* **3proxy** 3proxy - tiny free proxy server https://github.com/z3APA3A/3proxy 
 * **Tunna** is a set of tools which will wrap and tunnel any TCP communication over HTTP. It can be used to bypass network restrictions in fully firewalled environments. https://github.com/SECFORCE/Tunna
 * **http-tunnel** A program to tunnel TCP connection through HTTP connection. https://github.com/khuevu/http-tunnel
 * **microsocks** a SOCKS5 service that you can run on your remote boxes to tunnel connections through them, if for some reason SSH doesn't cut it for you. https://github.com/derstolz/microsocks
 * **pyrexecd** PyRexecd is a standalone SSH server for Windows. https://github.com/euske/pyrexecd.git
+* **win-sshd** A native windows ssh2 server https://github.com/saju/win-sshd
+* **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
 
 ## Establish Foothold
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
@@ -382,6 +390,7 @@ ________________________________________________________________________________
   * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
 
 ## References
+* **Awesome-WAF** Everything awesome about web application firewalls (WAFs). https://github.com/0xInfection/Awesome-WAF
 * **PENTESTING-BIBLE** hundreds of ethical hacking & penetration testing & red team & cyber security & computer science resources. https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE/
 * **awesome-python** A curated list of awesome Python frameworks, libraries, software and resources. https://github.com/vinta/awesome-python
 * **awesome-reversing** A curated list of awesome reversing resources https://github.com/tylerha97/awesome-reversing 
@@ -404,6 +413,32 @@ ________________________________________________________________________________
 * **TIBER-EU FRAMEWORK** The European Framework for Threat Intelligence-based Ethical Red Teaming (TIBER-EU), which is the first Europe-wide framework for controlled and bespoke tests against cyber attacks in the financial market. http://www.ecb.europa.eu/pub/pdf/other/ecb.tiber_eu_framework.en.pdf
 * **CBEST Implementation Guide** CBEST is a framework to deliver controlled, bespoke, intelligence-led cyber security tests. The tests replicate behaviours of threat actors, assessed by the UK Government and commercial intelligence providers as posing a genuine threat to systemically important financial institutions. https://www.crest-approved.org/wp-content/uploads/2014/07/CBEST-Implementation-Guide.pdf
 * **Red Team: Adversarial Attack Simulation Exercise Guidelines for the Financial Industry in Singapore** The Association of Banks in Singapore (ABS), with support from the Monetary Authority of Singapore (MAS), has developed a set of cybersecurity assessment guidelines today to strengthen the cyber resilience of the financial sector in Singapore. Known as the Adversarial Attack Simulation Exercises (AASE) Guidelines or “Red Teaming” Guidelines, the Guidelines provide financial institutions (FIs) with best practices and guidance on planning and conducting Red Teaming exercises to enhance their security testing. https://abs.org.sg/docs/library/abs-red-team-adversarial-attack-simulation-exercises-guidelines-v1-06766a69f299c69658b7dff00006ed795.pdf
+
+### Exploit Databases
+* **EXPLOIT-DB-165** Microsoft Windows - UAC Protection Bypass (Via Slui File Handler Hijack) (Metasploit): https://www.exploit-db.com/download/44830.rb
+* **EXPLOIT-DB-197** Microsoft Windows 10 - Child Process Restriction Mitigation Bypass: https://www.exploit-db.com/download/44888.txt
+* **EXPLOIT-DB-198** Microsoft Windows - Token Process Trust SID Access Check Bypass Privilege Escalation: https://www.exploit-db.com/download/44630.txt
+* **EXPLOIT-DB-583** Microsoft Windows 10 - Child Process Restriction Mitigation Bypass: https://www.exploit-db.com/download/44888.txt
+* **EXPLOIT-DB-1020** Exploit Title: [Files Containing E-mail and Associated Password Lists]: https://www.exploit-db.com/ghdb/4262/?source=ghdbid
+* **EXPLOIT-DB-1052** Error-based SQL injection: https://www.exploit-db.com/docs/37953.pdf
+* **EXPLOIT-DB-1054** Active Directory Enumeration with PowerShell: https://www.exploit-db.com/docs/46990
+* **EXPLOIT-DB-1055** Buffer Overflows, C Programming, NSA GHIDRA and More: https://www.exploit-db.com/docs/47032
+* **EXPLOIT-DB-1056** Analysis of CVE-2019-0708 (BlueKeep): https://www.exploit-db.com/docs/46947
+* **EXPLOIT-DB-1057** Windows Privilege Escalations: https://www.exploit-db.com/docs/46131
+* **EXPLOIT-DB-1058** The Ultimate Guide For Subdomain Takeover with Practical: https://www.exploit-db.com/docs/46415
+* **EXPLOIT-DB-1059** File transfer skills in the red team post penetration test: https://www.exploit-db.com/docs/46515
+* **EXPLOIT-DB-1060** How To Exploit PHP Remotely To Bypass Filters & WAF Rules: https://www.exploit-db.com/docs/46049
+* **EXPLOIT-DB-1061** Flying under the radar: https://www.exploit-db.com/docs/45898
+* **EXPLOIT-DB-1136** Metasploit's detailed communication and protocol writeup: https://www.exploit-db.com/docs/english/27935-metasploit---the-exploit-learning-tree.pdf
+* **EXPLOIT-DB-1143** Detecting Behavioral Personas with OSINT and Datasploit: https://www.exploit-db.com/docs/45543
+* **EXPLOIT-DB-1144** WordPress Penetration Testing using WPScan and MetaSploit: https://www.exploit-db.com/docs/45556
+* **EXPLOIT-DB-1145** Bulk SQL Injection using Burp-to-SQLMap: https://www.exploit-db.com/docs/45428
+* **EXPLOIT-DB-1146** XML External Entity Injection - Explanation and Exploitation: https://www.exploit-db.com/docs/45374
+* **EXPLOIT-DB-1147**   Web Application Firewall (WAF) Evasion Techniques #3 (CloudFlare and ModSecurity OWASP CRS3): https://www.exploit-db.com/docs/45368
+* **EXPLOIT-DB-1148** File Upload Restrictions Bypass: https://www.exploit-db.com/docs/45074
+* **EXPLOIT-DB-1149** VLAN Hopping Attack: https://www.exploit-db.com/docs/45050
+* **EXPLOIT-DB-1543** An Internal Pentest Audit Against Active Directory: https://www.exploit-db.com/docs/46019
+
 
 ## License
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
