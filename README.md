@@ -1,6 +1,6 @@
 # Red Teaming/Adversary Simulation Toolkit
 
-A collection of open source and commercial tools that aid in red team operations. This repository will help you during your red team engagement.
+A collection of open source and commercial penetration testing tools. This repository will help you during your red team engagement.
 _________________________________________________________________________________________________________
 
 <img src="https://camo.githubusercontent.com/7ed924f85b775db73958b443a8798b401c40cdd2/68747470733a2f2f75706c6f6164732d73736c2e776562666c6f772e636f6d2f3538383636636165616263383364356537633537346337312f3538626534333132646331336239646537343638363132615f5265642d5465616d2d41747461636b2d4c6966656379636c652e6a7067" width="800">
@@ -16,8 +16,6 @@ ________________________________________________________________________________
 * [Data Exfiltration](#data-exfiltration)
 * [Misc](#misc)
 * [References](#references)
-
-<br/><br/><img src="https://i.imgur.com/uU089CT.jpg" />
 
 
 ## Reconnaissance
@@ -47,6 +45,7 @@ ________________________________________________________________________________
 
 
 ### Passive Intelligence Gathering
+* **Amass** In-depth Attack Surface Mapping and Asset Discovery https://github.com/OWASP/Amass
 * **ODIN** Automated network asset, email, and social media profile discovery and cataloguing https://github.com/chrismaddalena/ODIN
 * **Awesome-Asset-Discovery** List of Awesome Open Source Intelligence Resources https://github.com/redhuntlabs/Awesome-Asset-Discovery
 * **gitrob** Gitrob is a tool to help find potentially sensitive files pushed to public repositories on Github. Gitrob will clone repositories belonging to a user or organization down to a configurable depth and iterate through the commit history and flag files that match signatures for potentially sensitive files. https://github.com/michenriksen/gitrob
@@ -337,6 +336,7 @@ ________________________________________________________________________________
 * **PhanTap** is an ‘invisible’ network tap aimed at red teams. With limited physical access to a target building, this tap can be installed inline between a network device and the corporate network. https://github.com/nccgroup/phantap
 
 ### Software For Team Communication
+* **shhh**  Flask app to share encrypted secrets with people using custom links, passphrases and expiration dates.  https://github.com/smallwat3r/shhh
 * **RocketChat** is free, unlimited and open source. Replace email & Slack with the ultimate team chat software solution. https://rocket.chat
 * **Etherpad** is an open source, web-based collaborative real-time editor, allowing authors to simultaneously edit a text document https://etherpad.net
 
