@@ -414,31 +414,6 @@ ________________________________________________________________________________
 * **CBEST Implementation Guide** CBEST is a framework to deliver controlled, bespoke, intelligence-led cyber security tests. The tests replicate behaviours of threat actors, assessed by the UK Government and commercial intelligence providers as posing a genuine threat to systemically important financial institutions. https://www.crest-approved.org/wp-content/uploads/2014/07/CBEST-Implementation-Guide.pdf
 * **Red Team: Adversarial Attack Simulation Exercise Guidelines for the Financial Industry in Singapore** The Association of Banks in Singapore (ABS), with support from the Monetary Authority of Singapore (MAS), has developed a set of cybersecurity assessment guidelines today to strengthen the cyber resilience of the financial sector in Singapore. Known as the Adversarial Attack Simulation Exercises (AASE) Guidelines or “Red Teaming” Guidelines, the Guidelines provide financial institutions (FIs) with best practices and guidance on planning and conducting Red Teaming exercises to enhance their security testing. https://abs.org.sg/docs/library/abs-red-team-adversarial-attack-simulation-exercises-guidelines-v1-06766a69f299c69658b7dff00006ed795.pdf
 
-### Exploit Databases
-* **EXPLOIT-DB-165** Microsoft Windows - UAC Protection Bypass (Via Slui File Handler Hijack) (Metasploit): https://www.exploit-db.com/download/44830.rb
-* **EXPLOIT-DB-197** Microsoft Windows 10 - Child Process Restriction Mitigation Bypass: https://www.exploit-db.com/download/44888.txt
-* **EXPLOIT-DB-198** Microsoft Windows - Token Process Trust SID Access Check Bypass Privilege Escalation: https://www.exploit-db.com/download/44630.txt
-* **EXPLOIT-DB-583** Microsoft Windows 10 - Child Process Restriction Mitigation Bypass: https://www.exploit-db.com/download/44888.txt
-* **EXPLOIT-DB-1020** Exploit Title: [Files Containing E-mail and Associated Password Lists]: https://www.exploit-db.com/ghdb/4262/?source=ghdbid
-* **EXPLOIT-DB-1052** Error-based SQL injection: https://www.exploit-db.com/docs/37953.pdf
-* **EXPLOIT-DB-1054** Active Directory Enumeration with PowerShell: https://www.exploit-db.com/docs/46990
-* **EXPLOIT-DB-1055** Buffer Overflows, C Programming, NSA GHIDRA and More: https://www.exploit-db.com/docs/47032
-* **EXPLOIT-DB-1056** Analysis of CVE-2019-0708 (BlueKeep): https://www.exploit-db.com/docs/46947
-* **EXPLOIT-DB-1057** Windows Privilege Escalations: https://www.exploit-db.com/docs/46131
-* **EXPLOIT-DB-1058** The Ultimate Guide For Subdomain Takeover with Practical: https://www.exploit-db.com/docs/46415
-* **EXPLOIT-DB-1059** File transfer skills in the red team post penetration test: https://www.exploit-db.com/docs/46515
-* **EXPLOIT-DB-1060** How To Exploit PHP Remotely To Bypass Filters & WAF Rules: https://www.exploit-db.com/docs/46049
-* **EXPLOIT-DB-1061** Flying under the radar: https://www.exploit-db.com/docs/45898
-* **EXPLOIT-DB-1136** Metasploit's detailed communication and protocol writeup: https://www.exploit-db.com/docs/english/27935-metasploit---the-exploit-learning-tree.pdf
-* **EXPLOIT-DB-1143** Detecting Behavioral Personas with OSINT and Datasploit: https://www.exploit-db.com/docs/45543
-* **EXPLOIT-DB-1144** WordPress Penetration Testing using WPScan and MetaSploit: https://www.exploit-db.com/docs/45556
-* **EXPLOIT-DB-1145** Bulk SQL Injection using Burp-to-SQLMap: https://www.exploit-db.com/docs/45428
-* **EXPLOIT-DB-1146** XML External Entity Injection - Explanation and Exploitation: https://www.exploit-db.com/docs/45374
-* **EXPLOIT-DB-1147**   Web Application Firewall (WAF) Evasion Techniques #3 (CloudFlare and ModSecurity OWASP CRS3): https://www.exploit-db.com/docs/45368
-* **EXPLOIT-DB-1148** File Upload Restrictions Bypass: https://www.exploit-db.com/docs/45074
-* **EXPLOIT-DB-1149** VLAN Hopping Attack: https://www.exploit-db.com/docs/45050
-* **EXPLOIT-DB-1543** An Internal Pentest Audit Against Active Directory: https://www.exploit-db.com/docs/46019
-
 
 ## License
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
