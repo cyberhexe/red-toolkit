@@ -315,7 +315,7 @@ class Tool:
 
     def printout(self, verbose=False):
         colors.print_red(colors.bold(self.name) + ' // ' + self.category['name'])
-        colors.print_bold(colors.green('DOWNLOADED - ' + colors.RESET + str(self.path)) if self.is_downloaded()
+        colors.print_bold(colors.green('DOWNLOADED - ' + colors.RESET + colors.yellow(str(self.path))) if self.is_downloaded()
                           else colors.colored('NOT_DOWNLOADED', colors.MAGENTA))
         print(self.url)
         print(self.description)
