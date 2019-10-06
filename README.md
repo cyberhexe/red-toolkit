@@ -69,8 +69,6 @@ ________________________________________________________________________________
 * **GitHarvester** This tool is used for harvesting information from GitHub like google dork. https://github.com/metac0rtex/GitHarvester
 * **pwndb** is a python command-line tool for searching leaked credentials using the Onion service with the same name. https://github.com/davidtavarez/pwndb/
 * **CrossLinked** LinkedIn enumeration tool to extract valid employee names from an organization through search engine scraping. https://github.com/m8r0wn/CrossLinked
-
-### Frameworks
 * **SpiderFoot** the open source footprinting and intelligence-gathering tool. https://github.com/smicallef/spiderfoot
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
@@ -87,6 +85,7 @@ ________________________________________________________________________________
 * **Evil-Droid** Evil-Droid is a framework that create & generate & embed apk payload to penetrate android platforms. https://github.com/M4sc3r4n0/Evil-Droid
 * **PhoneSploit** Using open ADB ports we can exploit an android device  https://github.com/metachar/PhoneSploit
 * **TheFatRat** An Easy tool to Generate Backdoor for bypass AV and Easy Tool For Post exploitation attack like browser attack,dll . This tool compiles a malware with popular payload  and then the compiled malware can be execute on windows, android, mac . . https://github.com/Screetsec/TheFatRat
+* **NetWorm** Python network worm that spreads on the local network and gives the attacker control of these machines. https://github.com/pylyf/NetWorm
 * **Microsploit** a Simple tool and not very special but this tool fast and easy create backdoor office exploitation using module metasploit packet. Like Microsoft Office in windows or mac , Open Office in linux  , Macro attack , Buffer Overflow in word . Work in kali rolling , Parrot , Backbox .. https://github.com/Screetsec/Microsploit
 * **IPObfuscator** A simple tool to convert the IP to different obfuscated forms https://github.com/OsandaMalith/IPObfuscator
 * **WinRAR Remote Code Execution** Proof of Concept exploit for CVE-2018-20250. https://github.com/WyAtu/CVE-2018-20250
@@ -184,7 +183,6 @@ ________________________________________________________________________________
 * **EggShell** is a post exploitation surveillance tool written in Python. It gives you a command line session with extra functionality between you and a target machine. https://github.com/neoneggplant/EggShell
 
 ### Staging
-* **NetWorm** Python network worm that spreads on the local network and gives the attacker control of these machines. https://github.com/pylyf/NetWorm
 * **Vegile** This tool will set up your backdoor/rootkits when backdoor is already setup it will be hidden, unlimited. Even when it is killed, it will re-run again. There will always be a procces which will run another process, so we can assume that this procces is unstopable like a Ghost in The Shell. https://github.com/Screetsec/Vegile
 * **Rapid Attack Infrastructure (RAI)** Red Team Infrastructure... Quick... Fast... Simplified <br/> One of the most tedious phases of a Red Team Operation is usually the infrastructure setup. This usually entails <br/>a teamserver or controller, domains, redirectors, and a Phishing server. https://github.com/obscuritylabs/RAI
 * **Red Baron** is a set of modules and custom/third-party providers for Terraform which tries to automate creating resilient, disposable, secure and agile infrastructure for Red Teams. https://github.com/byt3bl33d3r/Red-Baron
@@ -259,6 +257,7 @@ ________________________________________________________________________________
 * **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
 
 ## Establish Foothold
+* **MS17-010** This repository is for public my work on MS17-010. I have no plan to do any support. All support issues will not get response from me. https://github.com/worawit/MS17-010
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
 * **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
 * **Blade** is a webshell connection tool based on console, currently under development and aims to be a choice of replacement of Chooper. https://github.com/wonderqs/Blade
@@ -300,6 +299,9 @@ ________________________________________________________________________________
 * **Egress-Assess** is a tool used to test egress data detection capabilities. https://github.com/ChrisTruncer/Egress-Assess
 * **LNKUp** This tool will allow you to generate LNK payloads. Upon rendering or being run, they will exfiltrate data. https://github.com/Plazmaz/LNKUp
 * **Powershell RAT** python based backdoor that uses Gmail to exfiltrate data as an e-mail attachment. https://github.com/Viralmaniar/Powershell-RAT
+
+## Social Engineering
+* **FakeID** Fake identity generator https://github.com/Manisso/FakeID
 
 ## Misc
 ### Anonymization
