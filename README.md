@@ -258,7 +258,7 @@ ________________________________________________________________________________
 * **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
 
 ## Establish Foothold
-* **AutoBlue-MS17-010** This is some no-bs public exploit code that generates valid shellcode for the eternal blue exploit and scripts out the event listener with the metasploit multi-handler.  https://github.com/3ndG4me/AutoBlue-MS17-010
+* **eternalblue** EternalBlue MS17-010 scanner / sendNexecute exploit https://github.com/derstolz/eternalblue.git
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
 * **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
 * **Blade** is a webshell connection tool based on console, currently under development and aims to be a choice of replacement of Chooper. https://github.com/wonderqs/Blade
