@@ -249,11 +249,11 @@ ________________________________________________________________________________
 ## Pivoting and Tunneling
 * **rpivot** This is a method of traversing NAT connections. Rpivot is a reverse socks proxy tool that allows you to tunnel traffic via socks proxy. It connects back to your machine and binds a socks proxy on it. It works just like `ssh -D` but in opposite direction https://github.com/artkond/rpivot
 * **redsocks** Redsocks is the tool that allows you to proxify(redirect) network traffic through a SOCKS4, SOCKS5 or HTTPs proxy server. It works on the lowest level, the kernel level (iptables). The other possible way is to use application level proxy, when the proxy client is implemented in the same language as an application is written in. Redsocks operates on the lowest system level, that’s why all running application don’t even have an idea that network traffic is sent through a proxy server, as a result it is called a transparent proxy redirector. https://github.com/darkk/redsocks
-* **3proxy** 3proxy - tiny free proxy server https://github.com/z3APA3A/3proxy 
 * **Tunna** is a set of tools which will wrap and tunnel any TCP communication over HTTP. It can be used to bypass network restrictions in fully firewalled environments. https://github.com/SECFORCE/Tunna
 * **http-tunnel** A program to tunnel TCP connection through HTTP connection. https://github.com/khuevu/http-tunnel
 * **microsocks** a SOCKS5 service that you can run on your remote boxes to tunnel connections through them, if for some reason SSH doesn't cut it for you. https://github.com/derstolz/microsocks
 * **pyrexecd** PyRexecd is a standalone SSH server for Windows. https://github.com/euske/pyrexecd.git
+* **3proxy** is a tiny free proxy server https://github.com/z3APA3A/3proxy
 * **win-sshd** A native windows ssh2 server https://github.com/saju/win-sshd
 * **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
 
