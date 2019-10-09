@@ -309,7 +309,7 @@ class Tool:
 
     @staticmethod
     def fetch_tool_readme(tool_path, tool_name):
-        readme_files_candidates = ['README.md', 'README']
+        readme_files_candidates = ['README.md', 'README', 'README.MD', 'readme', 'readme.md']
         for readme in readme_files_candidates:
             readme_path = str(tool_path) + '/' + readme
             if os.path.exists(readme_path):
