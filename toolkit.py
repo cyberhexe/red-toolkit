@@ -6,6 +6,35 @@ from pathlib import Path
 
 from git.repo.base import Repo
 
+print("""MMMMMMMMMMMMMMMNmdhyyssooosssyhhdmNMMMMMMMMMMMMMMM
+MMMMMMMMmhs+:-``````````````````````.-/ohMMMMMMMMM
+MMMMMMN/`````````````````````````````````-hMMMMMMM
+MMMMMM+````````````````````````````````````sMMMMMM
+MMMMMd````.-::--.````````````````.--::-.````hMMMMM
+MMMMM+``-ydmmmdhs/.````````````-+yhmmmmh+```.MMMMM
+MMMMM.`-o/:::/oydNNy-````````/hMmhy+/:::++```hMMMM
+MMMMm```````````-/ohd/``````ydy+:.```````````+MMMM
+MMMMh```````.-:-.`.:/```````./-``..-.````````:MMMM
+MMMMy`.```/osyhhddy+-.``````--+shhhyso+-`````.MMMM
+MMMMs``/+ysyhdmmmddd+`.````.`yddmNNNmdsys//``.MMMM
+MMMMs`..``.:/++///-```-````-``.:///+++:.`.--`-MMMM
+MMMMy````````````````--````:.````````````````/MMMM
+MMMMd```````````````---````--.```````````````oMMMM
+MMMMN```````````....`..````-``.`.````````````hMMMM
+MMMMM:`:-....----`.``..````-```..----....-:`.MMMMM
+MMMMMs`-+:mm-```````+::...-:+:```````:mh-+-`+MMMMM
+MMMMMN.`-/-mN:``````:dMMhmMMy-`````.yMs./-``mMMMMM
+MMMMMMs``-/-hMmdddmNMMN+``oMMMNmmddNm/-/-``oMMMMMM
+MMMMMMM:``./:-:/:::/sy+++++oys//::/:.:/.``-MMMMMMM
+MMMMMMMN:```--.````            `````-:```.mMMMMMMM
+MMMMMMMMMo```.-```````.yhho````````-.```/NMMMMMMMM
+MMMMMMMMMMm+```.```````+MM-```````.```-hMMMMMMMMMM
+MMMMMMMMMMMMm+`````````dMMs`````````:hMMMMMMMMMMMM
+MMMMMMMMMMMMMMm+```````mMMs```````+dMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMNs.````sMM/````-sNMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMh+.`-Mm``-odMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMmdmmmNMMMMMMMMMMMMMMMMMMMMMM
+""")
 
 def get_arguments():
     parser = ArgumentParser()
@@ -280,10 +309,12 @@ class Tool:
 
     @staticmethod
     def fetch_tool_readme(tool_path, tool_name):
-        readme_path = str(tool_path) + '/README.md'
-        if os.path.exists(readme_path):
-            logging.debug('README.md file has been extracted for %s', tool_name)
-            return open(readme_path, 'r', encoding='utf-8').read()
+        readme_files_candidates = ['README.md', 'README']
+        for readme in readme_files_candidates:
+            readme_path = str(tool_path) + '/' + readme
+            if os.path.exists(readme_path):
+                logging.debug('README file has been extracted for %s', tool_name)
+                return open(readme_path, 'r', encoding='utf-8').read()
 
     def __init__(self, line, file_content_as_string):
         assert line and line.strip() != ''
