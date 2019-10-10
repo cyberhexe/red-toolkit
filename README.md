@@ -104,6 +104,7 @@ ________________________________________________________________________________
 * **Malicious Macro Generator Utility** Simple utility design to generate obfuscated macro that also include a AV / Sandboxes escape mechanism. https://github.com/Mr-Un1k0d3r/MaliciousMacroGenerator
 * **Invoke-Obfuscation** PowerShell Obfuscator. https://github.com/danielbohannon/Invoke-Obfuscation
 * **Invoke-CradleCrafter** PowerShell remote download cradle generator and obfuscator. https://github.com/danielbohannon/Invoke-CradleCrafter
+* **eternalblue** EternalBlue MS17-010 scanner / sendNexecute exploit https://github.com/derstolz/eternalblue.git
 * **Invoke-DOSfuscation** cmd.exe Command Obfuscation Generator & Detection Test Harness. https://github.com/danielbohannon/Invoke-DOSfuscation
 * **Unicorn** is a simple tool for using a PowerShell downgrade attack and inject shellcode straight into memory. https://github.com/trustedsec/unicorn
 * **PyFuscation** Obfuscate powershell scripts by replacing Function names, Variables and Parameters. https://github.com/CBHue/PyFuscation
@@ -258,7 +259,6 @@ ________________________________________________________________________________
 * **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
 
 ## Establish Foothold
-* **eternalblue** EternalBlue MS17-010 scanner / sendNexecute exploit https://github.com/derstolz/eternalblue.git
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
 * **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
 * **Blade** is a webshell connection tool based on console, currently under development and aims to be a choice of replacement of Chooper. https://github.com/wonderqs/Blade
