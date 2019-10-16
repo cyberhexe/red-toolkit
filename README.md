@@ -87,6 +87,7 @@ ________________________________________________________________________________
 * **PhoneSploit** Using open ADB ports we can exploit an android device  https://github.com/metachar/PhoneSploit
 * **TheFatRat** An Easy tool to Generate Backdoor for bypass AV and Easy Tool For Post exploitation attack like browser attack,dll . This tool compiles a malware with popular payload  and then the compiled malware can be execute on windows, android, mac . . https://github.com/Screetsec/TheFatRat
 * **NetWorm** Python network worm that spreads on the local network and gives the attacker control of these machines. https://github.com/pylyf/NetWorm
+* **cryptondie** CryptonDie is a ransomware developed for study purposes.  https://github.com/zer0dx/cryptondie
 * **Microsploit** a Simple tool and not very special but this tool fast and easy create backdoor office exploitation using module metasploit packet. Like Microsoft Office in windows or mac , Open Office in linux  , Macro attack , Buffer Overflow in word . Work in kali rolling , Parrot , Backbox .. https://github.com/Screetsec/Microsploit
 * **IPObfuscator** A simple tool to convert the IP to different obfuscated forms https://github.com/OsandaMalith/IPObfuscator
 * **WinRAR Remote Code Execution** Proof of Concept exploit for CVE-2018-20250. https://github.com/WyAtu/CVE-2018-20250
