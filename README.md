@@ -284,6 +284,7 @@ ________________________________________________________________________________
 * **kekeo** is a little toolbox I have started to manipulate Microsoft Kerberos in C (and for fun). https://github.com/gentilkiwi/kekeo
 
 ### Local Escalation
+* **Privesc** Windows batch script that finds misconfiguration issues which can lead to privilege escalation.  https://github.com/enjoiz/Privesc
 * **windows-privesc-check** Windows-privesc-check is standalone executable that runs on Windows systems. It tries to find misconfigurations that could allow local unprivileged users to escalate privileges to other users or to access local apps (e.g. databases)  https://github.com/pentestmonkey/windows-privesc-check
 * **Linux_Exploit_Suggester** Linux exploit suggester for Privilege Escalation && Local Enumeration  https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
 * **linux-kernel-exploits** A number of Linux kernel exploits for Privilege Escalation && Local Enumeration https://github.com/SecWiki/linux-kernel-exploits
