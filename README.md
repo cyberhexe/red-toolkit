@@ -74,6 +74,7 @@ ________________________________________________________________________________
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
 ## Weaponization
+* **PayloadsAllTheThings**  A list of useful payloads and bypass for Web Application Security and Pentest/CTF  https://github.com/swisskyrepo/PayloadsAllTheThings
 * **TIDoS-Framework** The Offensive Manual Web Application Penetration Testing Framework. https://github.com/0xInfection/TIDoS-Framework
 * **webshells** A collection of web shells https://github.com/tennc/webshell
 * **Perfect-Malware-Samples** Fresh malware samples caught in the wild daily from random places https://github.com/Perfectdotexe/Perfect-Malware-Samples
