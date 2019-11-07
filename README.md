@@ -20,8 +20,7 @@ ________________________________________________________________________________
 
 ## Reconnaissance
 ### Active Intelligence Gathering
-* **async-connect-scanner** A python script to perform a TCP Connect scan with a number of parallel threads  https://github.com/derstolz/async-connect-scanner
-* **async-web-scan** Python script to perform a directory bruteforce attack in parallel threads on the given list of IP addresses https://github.com/derstolz/async-web-scan
+* **async-intrusion** Asynchronic python scripts for network reconnaissance https://github.com/derstolz/async-intrusion
 * **XSStrike** XSStrike is a Cross Site Scripting detection suite equipped with four hand written parsers, an intelligent payload generator, a powerful fuzzing engine and an incredibly fast crawler. https://github.com/s0md3v/XSStrike
 * **Osmedeus** Fully automated offensive security framework for reconnaissance and vulnerability scanning https://github.com/j3ssie/Osmedeus
 * **cve-2019-1040-scanner** Checks for CVE-2019-1040 vulnerability over SMB. https://github.com/fox-it/cve-2019-1040-scanner
