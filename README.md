@@ -170,6 +170,7 @@ ________________________________________________________________________________
 
 ## Command and Control
 ### Remote Access Tools
+* **flask-reverse-shell** Python HTTPS reverse shell with Flask https://github.com/derstolz/flask-reverse-shell
 * **tsh** Tiny SHell - An open-source UNIX backdoor https://github.com/creaktive/tsh
 * **KeyPlexer** Keyplexer is a Remote Access Trojan (RAT) written in Python. It combines the functionalities of Keylogger with remote access abilities. Meaning, that not only the program records all movements of the user, but also has access to the machine live through the created backdoor or Trojan. https://github.com/nairuzabulhul/KeyPlexer
 * **Empire** is a post-exploitation framework that includes a pure-PowerShell2.0 Windows agent, and a pure Python 2.6/2.7 Linux/OS X agent. https://github.com/EmpireProject/Empire
