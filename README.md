@@ -300,7 +300,7 @@ ________________________________________________________________________________
 * **Tokenvator** a tool to elevate privilege with Windows Tokens. https://github.com/0xbadjuju/Tokenvator
 
 ## Data Exfiltration
-* **ftp-transfer** A script to quickly generate a lot of FTP uninteractive commands to be executed on the compomised system. Both downloading and uplocading are supported. https://github.com/derstolz/ftp-transfer
+* **red-transfers** A script to quickly generate a lot of echo uninteractive commands to be executed on the compomised system. Both downloading and uplocading are supported. https://github.com/derstolz/red-transfers
 * **CloakifyFactory** & the Cloakify Toolset - Data Exfiltration & Infiltration In Plain Sight; Evade DLP/MLS Devices; Social Engineering of Analysts; Defeat Data Whitelisting Controls; Evade AV Detection. https://github.com/TryCatchHCF/Cloakify
 * **DET** (is provided AS IS), is a proof of concept to perform Data Exfiltration using either single or multiple channel(s) at the same time. https://github.com/sensepost/DET
 * **DNSExfiltrator** allows for transfering (exfiltrate) a file over a DNS request covert channel. This is basically a data leak testing tool allowing to exfiltrate data over a covert channel. https://github.com/Arno0x/DNSExfiltrator
