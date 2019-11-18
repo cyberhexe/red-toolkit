@@ -403,6 +403,7 @@ ________________________________________________________________________________
   * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
 
 ## References
+* **Cheatsheet-God** Penetration Testing Biggest Reference Bank - OSCP / PTP & PTX Cheatsheet https://github.com/OlivierLaflamme/Cheatsheet-God
 * **RedTeam-Tactics-and-Techniques** This is publicly accessible personal notes at https://ired.team about my pentesting / red teaming experiments in a controlled environment that involve playing with various tools and techniques used by penetration testers, red teams and advanced adversaries. https://github.com/mantvydasb/RedTeam-Tactics-and-Techniques
 * **Awesome-WAF** Everything awesome about web application firewalls (WAFs). https://github.com/0xInfection/Awesome-WAF
 * **PENTESTING-BIBLE** hundreds of ethical hacking & penetration testing & red team & cyber security & computer science resources. https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE/
