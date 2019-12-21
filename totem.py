@@ -36,6 +36,7 @@ MMMMMMMMMMMMMMMMMMMh+.`-Mm``-odMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMmdmmmNMMMMMMMMMMMMMMMMMMMMMM
 """)
 
+
 def get_arguments():
     parser = ArgumentParser()
     parser.add_argument('--search', dest='search', required=False,
@@ -280,10 +281,6 @@ options = get_arguments()
 
 logging.basicConfig(format='[%(asctime)s %(levelname)s]: %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p',
-                    handlers=[
-                        logging.FileHandler('toolkit.log'),
-                        logging.StreamHandler()
-                    ],
                     level=options.logging)
 
 git_sources = [
@@ -291,7 +288,7 @@ git_sources = [
     'bitbucket.com'
 ]
 
-prefix = colors.colored('/red-teaming-toolkit:>> ', colors.BG_GRAY)
+prefix = colors.colored('red-totem >> ', colors.RED)
 
 
 class Tool:
@@ -346,8 +343,9 @@ class Tool:
 
     def printout(self, verbose=False):
         colors.print_red(colors.bold(self.name) + ' // ' + self.category['name'])
-        colors.print_bold(colors.green('DOWNLOADED - ' + colors.RESET + colors.yellow(str(self.path))) if self.is_downloaded()
-                          else colors.colored('NOT_DOWNLOADED', colors.MAGENTA))
+        colors.print_bold(
+                    colors.green('DOWNLOADED - ' + colors.RESET + colors.yellow(str(self.path))) if self.is_downloaded()
+                    else colors.colored('NOT_DOWNLOADED', colors.MAGENTA))
         print(self.url)
         print(self.description)
         if verbose:
@@ -355,14 +353,13 @@ class Tool:
                 print(self.tool_readme)
 
     def use(self):
-        import pty
-
-        os.chdir(self.path)
-        print('Spawning a new shell for ' + self.name)
+        print('Switching to ' + self.name)
         print(self.path)
 
-        # FIXME: port to windows
-        pty.spawn('/bin/bash')
+        # FIXME: port to windows?
+        os.chdir(self.path)
+        os.environ['PS1'] = colors.red(f"red-totem/{self.category['alias']}/{self.name} >> ")
+        os.system('/bin/sh -i')
 
 
 def download_tool(tool_name, tools):
@@ -515,7 +512,7 @@ def search_in_tools(search, tools):
     for tool in tools:
         pattern = search.lower()
         if pattern in tool.name.lower() \
-                    or pattern in tool.description.lower()\
+                    or pattern in tool.description.lower() \
                     or pattern in tool.category['name'].lower():
             matched_tools.append(tool)
     matched_tools_count = len(matched_tools)
@@ -541,11 +538,11 @@ if __name__ == "__main__":
     if options.drop_deprecated:
         drop_deprecated_tools(deprecated_tools)
 
-    logging.info(colors.green('## Red-Teaming-Toolkit initialized'))
-    logging.info('%s categories discovered', len(categories))
-    logging.info('%s tools synchronized', len(tools))
-    logging.info('%s tools downloaded', len(downloaded_tools))
-    logging.info('%s scripts synchronized', len(scripts))
+    print(colors.red('## red-totem initialized'))
+    print(f'{len(categories)} categories discovered')
+    print(f'{len(tools)} tools synchronized')
+    print(f'{len(downloaded_tools)} tools downloaded')
+    print(f'{len(scripts)} scripts synchronized')
 
     try:
         if options.search:
