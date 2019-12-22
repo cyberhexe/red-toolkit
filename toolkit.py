@@ -358,7 +358,7 @@ class Tool:
 
         # FIXME: port to windows?
         os.chdir(self.path)
-        os.environ['PS1'] = colors.red(f"red-toolkit/{self.category['alias']}/{self.name} >> ")
+        os.environ['PS1'] = colors.red(f"[$PWD]\n{self.category['alias']}/{self.name} >> ")
         os.system('/bin/sh -i')
 
 
@@ -538,7 +538,7 @@ if __name__ == "__main__":
     if options.drop_deprecated:
         drop_deprecated_tools(deprecated_tools)
 
-    print(colors.red('## red-totem initialized'))
+    print(colors.red('## red-toolkit initialized'))
     print(f'{len(categories)} categories discovered')
     print(f'{len(tools)} tools synchronized')
     print(f'{len(downloaded_tools)} tools downloaded')
