@@ -87,6 +87,7 @@ ________________________________________________________________________________
 * **Pandoras-Box** (OSCP) This repo will contain random scripts that I used/use during my offensive testing. It can contain scripts ranging from extremely stupid and basic stuf to some extremely awesome and elite stuff.... Stay tuned :) https://github.com/paranoidninja/Pandoras-Box.git
 * **Evil-Droid** Evil-Droid is a framework that create & generate & embed apk payload to penetrate android platforms. https://github.com/M4sc3r4n0/Evil-Droid
 * **PhoneSploit** Using open ADB ports we can exploit an android device  https://github.com/metachar/PhoneSploit
+* **massadb**  A python script to probe a number of android devices for an open ADB port https://github.com/derstolz/massadb
 * **TheFatRat** An Easy tool to Generate Backdoor for bypass AV and Easy Tool For Post exploitation attack like browser attack,dll . This tool compiles a malware with popular payload  and then the compiled malware can be execute on windows, android, mac . . https://github.com/Screetsec/TheFatRat
 * **NetWorm** Python network worm that spreads on the local network and gives the attacker control of these machines. https://github.com/pylyf/NetWorm
 * **cryptondie** CryptonDie is a ransomware developed for study purposes.  https://github.com/zer0dx/cryptondie
