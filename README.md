@@ -10,6 +10,7 @@ ________________________________________________________________________________
 * [Weaponization](#weaponization)
 * [Delivery](#delivery)
 * [Command and Control](#command-and-control)
+* [Man In the Middle](#man-in-the-middle)
 * [Lateral Movement](#lateral-movement)
 * [Establish Foothold](#establish-foothold)
 * [Escalate Privileges](#escalate-privileges)
@@ -170,6 +171,7 @@ ________________________________________________________________________________
 
 ## Command and Control
 ### Remote Access Tools
+* **android-backdoor-dashboard** Android Meterpreter Backdoor Command & Control https://github.com/derstolz/android-backdoor-dashboard
 * **flask-reverse-shell** Python HTTPS reverse shell with Flask https://github.com/derstolz/flask-reverse-shell
 * **tsh** Tiny SHell - An open-source UNIX backdoor https://github.com/creaktive/tsh
 * **KeyPlexer** Keyplexer is a Remote Access Trojan (RAT) written in Python. It combines the functionalities of Keylogger with remote access abilities. Meaning, that not only the program records all movements of the user, but also has access to the machine live through the created backdoor or Trojan. https://github.com/nairuzabulhul/KeyPlexer
@@ -215,6 +217,10 @@ ________________________________________________________________________________
 * **RedFile** a flask wsgi application that serves files with intelligence, good for serving conditional RedTeam payloads. https://github.com/outflanknl/RedFile
 * **keyserver** Easily serve HTTP and DNS keys for proper payload protection. https://github.com/leoloobeek/keyserver
 * **HTran** is a connection bouncer, a kind of proxy server. A “listener” program is hacked stealthily onto an unsuspecting host anywhere on the Internet. https://github.com/HiwinCN/HTran
+
+
+## Man In the Middle
+* **js-mitm-proxy** https://github.com/ondrakrat/js-mitm-proxy
 
 ## Lateral Movement
 * **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/derstolz/atbomb
