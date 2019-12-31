@@ -1,6 +1,7 @@
 # Red Teaming/Adversary Simulation Toolkit
 
-A collection of open source and commercial penetration testing tools. This repository will help you during your red team engagement.
+A collection of open source and commercial penetration testing tools. 
+This repository will help you during your red team engagement.
 _________________________________________________________________________________________________________
 
 <img src="https://i.imgur.com/4sKzx1A.jpg" width="800">
@@ -15,12 +16,17 @@ ________________________________________________________________________________
 * [Establish Foothold](#establish-foothold)
 * [Escalate Privileges](#escalate-privileges)
 * [Data Exfiltration](#data-exfiltration)
-* [Misc](#misc)
+* [Cloud Computing](#cloud-computing)
+* [Log Aggregation](#log-aggregation)
+* [Scripts](#scripts)
+* [Binaries](#binaries)
 * [References](#references)
 
 
 ## Reconnaissance
 ### Active Intelligence Gathering
+* **AutoRecon** AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of the network https://github.com/Tib3rius/AutoRecon
+* **enumapis** Enumerate javascript endpoints on a web-page from the given URL https://github.com/infosec-au/enumapis
 * **async-intrusion** Asynchronic python scripts for network reconnaissance https://github.com/derstolz/async-intrusion
 * **XSStrike** XSStrike is a Cross Site Scripting detection suite equipped with four hand written parsers, an intelligent payload generator, a powerful fuzzing engine and an incredibly fast crawler. https://github.com/s0md3v/XSStrike
 * **Osmedeus** Fully automated offensive security framework for reconnaissance and vulnerability scanning https://github.com/j3ssie/Osmedeus
@@ -76,6 +82,7 @@ ________________________________________________________________________________
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
 ## Weaponization
+* **ReverseTCPShell** A reverse shell with bbfuscation, AV evasion, FW and EDR bypassing. https://github.com/ZHacker13/ReverseTCPShell
 * **PayloadsAllTheThings**  A list of useful payloads and bypass for Web Application Security and Pentest/CTF  https://github.com/swisskyrepo/PayloadsAllTheThings
 * **TIDoS-Framework** The Offensive Manual Web Application Penetration Testing Framework. https://github.com/0xInfection/TIDoS-Framework
 * **webshells** A collection of web shells https://github.com/tennc/webshell
@@ -154,9 +161,11 @@ ________________________________________________________________________________
 * **Donut** is a shellcode generation tool that creates position-independant shellcode payloads from .NET Assemblies. This shellcode may be used to inject the Assembly into arbitrary Windows processes. https://github.com/TheWover/donut
 
 ## Delivery
+* **red-transfers** A script to quickly generate a lot of echo uninteractive commands to be executed on the compromised system. Both downloading and uplocading are supported. https://github.com/derstolz/red-transfers
 * **flask-filebox** Basic file upload Web UI. Make sure to update config.py according to your needs. https://github.com/mtalimanchuk/flask-filebox
 
 ### Phishing
+* **HiddenEye** All-in-one tool to generate a phishing page https://github.com/DarkSecDevelopers/HiddenEye
 * **Phishery** is a Simple SSL Enabled HTTP server with the primary purpose of phishing credentials via Basic Authentication.  https://github.com/ryhanson/phishery
 * **King Phisher** is a tool for testing and promoting user awareness by simulating real world phishing attacks. https://github.com/securestate/king-phisher
 * **FiercePhish** is a full-fledged phishing framework to manage all phishing engagements. It allows you to track separate phishing campaigns, schedule sending of emails, and much more. https://github.com/Raikia/FiercePhish
@@ -171,6 +180,7 @@ ________________________________________________________________________________
 
 ## Command and Control
 ### Remote Access Tools
+* **L3MON** Remote Android Management Suite https://github.com/etechd/L3MON
 * **android-backdoor-dashboard** Android Meterpreter Backdoor Command & Control https://github.com/derstolz/android-backdoor-dashboard
 * **flask-reverse-shell** Python HTTPS reverse shell with Flask https://github.com/derstolz/flask-reverse-shell
 * **tsh** Tiny SHell - An open-source UNIX backdoor https://github.com/creaktive/tsh
@@ -295,6 +305,8 @@ ________________________________________________________________________________
 * **kekeo** is a little toolbox I have started to manipulate Microsoft Kerberos in C (and for fun). https://github.com/gentilkiwi/kekeo
 
 ### Local Escalation
+* **linux-smart-enumeration** Linux Privilege Escalation Enumeration Script (with colored output) https://github.com/diego-treitos/linux-smart-enumeration
+* **Powerless** Windows Privilege Escalation Enumeration Script (only cmd, no powershell) https://github.com/M4ximuss/Powerless
 * **Privesc** Windows batch script that finds misconfiguration issues which can lead to privilege escalation.  https://github.com/enjoiz/Privesc
 * **windows-privesc-check** Windows-privesc-check is standalone executable that runs on Windows systems. It tries to find misconfigurations that could allow local unprivileged users to escalate privileges to other users or to access local apps (e.g. databases)  https://github.com/pentestmonkey/windows-privesc-check
 * **Linux_Exploit_Suggester** Linux exploit suggester for Privilege Escalation && Local Enumeration  https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
@@ -308,7 +320,6 @@ ________________________________________________________________________________
 * **Tokenvator** a tool to elevate privilege with Windows Tokens. https://github.com/0xbadjuju/Tokenvator
 
 ## Data Exfiltration
-* **red-transfers** A script to quickly generate a lot of echo uninteractive commands to be executed on the compomised system. Both downloading and uplocading are supported. https://github.com/derstolz/red-transfers
 * **CloakifyFactory** & the Cloakify Toolset - Data Exfiltration & Infiltration In Plain Sight; Evade DLP/MLS Devices; Social Engineering of Analysts; Defeat Data Whitelisting Controls; Evade AV Detection. https://github.com/TryCatchHCF/Cloakify
 * **DET** (is provided AS IS), is a proof of concept to perform Data Exfiltration using either single or multiple channel(s) at the same time. https://github.com/sensepost/DET
 * **DNSExfiltrator** allows for transfering (exfiltrate) a file over a DNS request covert channel. This is basically a data leak testing tool allowing to exfiltrate data over a covert channel. https://github.com/Arno0x/DNSExfiltrator
@@ -320,7 +331,6 @@ ________________________________________________________________________________
 ## Social Engineering
 * **FakeID** Fake identity generator https://github.com/Manisso/FakeID
 
-## Misc
 ### Anonymization
 * **torghost** Tor anonymizer https://github.com/susmithHCK/torghost
 * **docker-onion-nmap** Scan .onion hidden services with nmap using Tor, proxychains and dnsmasq in a minimal alpine Docker container. https://github.com/milesrichardson/docker-onion-nmap
@@ -408,6 +418,9 @@ ________________________________________________________________________________
   * https://github.com/xorrior/Random-CSharpTools
   * https://github.com/leechristensen/Random
   * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
+  
+ ### Binaries
+ * **accesschk.exe**  accesschk.exe is a Microsoft Sysinternals tool that is great for auditing privileges on your systems https://web.archive.org/web/20080530012252/http://live.sysinternals.com/accesschk.exe
 
 ## References
 * **Cheatsheet-God** Penetration Testing Biggest Reference Bank - OSCP / PTP & PTX Cheatsheet https://github.com/OlivierLaflamme/Cheatsheet-God
