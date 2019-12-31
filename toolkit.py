@@ -6,36 +6,6 @@ from pathlib import Path
 
 from git.repo.base import Repo
 
-print("""MMMMMMMMMMMMMMMNmdhyyssooosssyhhdmNMMMMMMMMMMMMMMM
-MMMMMMMMmhs+:-``````````````````````.-/ohMMMMMMMMM
-MMMMMMN/`````````````````````````````````-hMMMMMMM
-MMMMMM+````````````````````````````````````sMMMMMM
-MMMMMd````.-::--.````````````````.--::-.````hMMMMM
-MMMMM+``-ydmmmdhs/.````````````-+yhmmmmh+```.MMMMM
-MMMMM.`-o/:::/oydNNy-````````/hMmhy+/:::++```hMMMM
-MMMMm```````````-/ohd/``````ydy+:.```````````+MMMM
-MMMMh```````.-:-.`.:/```````./-``..-.````````:MMMM
-MMMMy`.```/osyhhddy+-.``````--+shhhyso+-`````.MMMM
-MMMMs``/+ysyhdmmmddd+`.````.`yddmNNNmdsys//``.MMMM
-MMMMs`..``.:/++///-```-````-``.:///+++:.`.--`-MMMM
-MMMMy````````````````--````:.````````````````/MMMM
-MMMMd```````````````---````--.```````````````oMMMM
-MMMMN```````````....`..````-``.`.````````````hMMMM
-MMMMM:`:-....----`.``..````-```..----....-:`.MMMMM
-MMMMMs`-+:mm-```````+::...-:+:```````:mh-+-`+MMMMM
-MMMMMN.`-/-mN:``````:dMMhmMMy-`````.yMs./-``mMMMMM
-MMMMMMs``-/-hMmdddmNMMN+``oMMMNmmddNm/-/-``oMMMMMM
-MMMMMMM:``./:-:/:::/sy+++++oys//::/:.:/.``-MMMMMMM
-MMMMMMMN:```--.````            `````-:```.mMMMMMMM
-MMMMMMMMMo```.-```````.yhho````````-.```/NMMMMMMMM
-MMMMMMMMMMm+```.```````+MM-```````.```-hMMMMMMMMMM
-MMMMMMMMMMMMm+`````````dMMs`````````:hMMMMMMMMMMMM
-MMMMMMMMMMMMMMm+```````mMMs```````+dMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMNs.````sMM/````-sNMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMh+.`-Mm``-odMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMmdmmmNMMMMMMMMMMMMMMMMMMMMMM
-""")
-
 
 def get_arguments():
     parser = ArgumentParser()
@@ -288,7 +258,7 @@ git_sources = [
     'bitbucket.com'
 ]
 
-prefix = colors.colored('red-toolkit >> ', colors.RED)
+prefix = colors.colored('/red-toolkit $ ', colors.RED)
 
 
 class Tool:
@@ -525,6 +495,37 @@ def search_in_tools(search, tools):
 
 
 if __name__ == "__main__":
+    colors.print_red("""
+NNNNNNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNmmmdhddmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNN
+NNNNNNNNNNNNNmmmmmmmmhyyhdmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNN
+NNNNNNNNNNNmmmmmmmmmmmmmdyssydmmmmmmmmmmmmddmmdmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNN
+NNNNNNNNNNNmmmmmmmmmmmmmmmmmhs+sydmmmmmmmmmmddmmdddmmmmmmmmmmmmmmmmmmmmNNNNNNN
+hhhhhhhhhhhdddmmmmmmmmmmmmmmmmmhs++sdmmmmmmmmddddmmddmmmmmmmmmmmmmmmmmmNNNNNNN
+dhhhhyyyyssssooosssyhdmmmmmmmmmmmmds//ohmmmmmmmdddddmdddmmmmmmmmmmmmmmmmNNNNNN
+hhyyyyyyssoosoo+++/////oydmddmmmmddddhs//sddmmmmmmdddddmmmmmmmmmmmmmmmmmmNNNNN
+ddddddddhhysooo+++////:/::++:ohmmdddddddh+-+ydmmmmmddddmdddmmmmmmmmmmmmmmmNNNN
+NNNNNmmmmmmmmmdhyyo+/:::::::---/sdo/hdddddds::sdddmmmddddmmmmmmmmmmmmmmmmmNNNN
+NNNNNmmmmmmmmmmmmmmmmdhyo+:---:------+hdddoydy:-oddmmmmdddmmmmmmmmmmmmmmmmmNNN
+NNNNNmmmmmmmmmmmmmmmmmmmmmdhso/--......:oy+-/hds:-oddmmmmmddmmmmmmmmmmmmmmmNNN
+NNNNNmmmmmmmmmmmmmmmmmmmmmddddddys/:...--...--sddooyddmmmmmmddmmmmmmmmmmmmmmmN
+NNNNmmmmmmmmmmmmmmmmmmmmmmmddddddddddyo/-.-.---+ssssshmmmmmmmmddmmmmmmmmmmmmNm
+NNNNNmmmmmmmmmmmmmmmmmmmmmmddddddddddddddhs+:--------:ymmmmmmmmmmmmmmmmmmmmmmm
+NNNNNmmmmmmmmmmmmmmmmmmmmmmmdddddddddddddddddo--:-----:ommmmmmmmmmmmmmmmmmmmmN
+NNNNNmmmmmmmmmmmmmmmmmmmmmmmdddddddddddddddddo--:----++-+dmmmmmmmmmmmmmmmmmmmm
+NNNNNmmmmmmmmmmmmmmmmmmmmmmmmmdddddddddddddddh:----:--//:/hmmmmmmmmmmmmmmmmmmm
+NNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmddddddddddddddddyo/-:::::::smmmmmmmmmmmmmmmmNNN
+NNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmddddddddddddddddmdhs+:/://+hmmmmmmmmmmmmmmmNN
+NNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmdy+////+ydmmmmmmmmNNNNmm
+NNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmds+++++syhdmmmNNNNNNN
+NNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmyo++shdmmmmNNNNNNN
+NNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmhymmmmmNNNNNNNNN
+NNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNN
+NNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNN
+NNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNNN
+    """)
+
     readme = 'README.md'
 
     scripts = get_scripts_from_readme(readme)
@@ -539,10 +540,10 @@ if __name__ == "__main__":
         drop_deprecated_tools(deprecated_tools)
 
     print(colors.red('## red-toolkit initialized'))
-    print(f'{len(categories)} categories discovered')
-    print(f'{len(tools)} tools synchronized')
-    print(f'{len(downloaded_tools)} tools downloaded')
-    print(f'{len(scripts)} scripts synchronized')
+    print(f'{colors.bold(len(categories))} categories')
+    print(f'{colors.bold(len(tools))} tools')
+    print(f'{colors.bold(len(downloaded_tools))} tools')
+    print(f'{colors.bold(len(scripts))} scripts')
 
     try:
         if options.search:
