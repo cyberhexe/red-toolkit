@@ -305,6 +305,7 @@ ________________________________________________________________________________
 * **kekeo** is a little toolbox I have started to manipulate Microsoft Kerberos in C (and for fun). https://github.com/gentilkiwi/kekeo
 
 ### Local Escalation
+* **AutoLocalPrivilegeEscalation** An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically https://github.com/ngalongc/AutoLocalPrivilegeEscalation
 * **linux-smart-enumeration** Linux Privilege Escalation Enumeration Script (with colored output) https://github.com/diego-treitos/linux-smart-enumeration
 * **Powerless** Windows Privilege Escalation Enumeration Script (only cmd, no powershell) https://github.com/M4ximuss/Powerless
 * **Privesc** Windows batch script that finds misconfiguration issues which can lead to privilege escalation.  https://github.com/enjoiz/Privesc
