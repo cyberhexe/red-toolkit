@@ -317,7 +317,7 @@ class Tool:
                     colors.green('DOWNLOADED - ' + colors.RESET + colors.yellow(str(self.path))) if self.is_downloaded()
                     else colors.colored('NOT_DOWNLOADED', colors.MAGENTA))
         print(self.url)
-        print(self.description)
+        colors.print_bold(self.description)
         if verbose:
             if self.tool_readme:
                 print(self.tool_readme)
@@ -486,7 +486,7 @@ def search_in_tools(search, tools):
                     or pattern in tool.category['name'].lower():
             matched_tools.append(tool)
     matched_tools_count = len(matched_tools)
-    logging.info("%s tools found", matched_tools_count)
+    logging.info("%s tools have been found", matched_tools_count)
     if matched_tools_count > 0:
         print_categories(matched_tools)
     for tool in matched_tools:
@@ -495,7 +495,7 @@ def search_in_tools(search, tools):
 
 
 if __name__ == "__main__":
-    colors.print_red("""
+    colors.print_bold("""
 NNNNNNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNNNNNNN
 NNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNNNN
 NNNNNNNNNNNNNNmmmdhddmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNN
@@ -539,7 +539,7 @@ NNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNNN
     if options.drop_deprecated:
         drop_deprecated_tools(deprecated_tools)
 
-    print(colors.red('## red-toolkit initialized'))
+    print(colors.bold('## red-toolkit initialized'))
     print(f'{colors.bold(len(categories))} categories')
     print(f'{colors.bold(len(tools))} tools')
     print(f'{colors.bold(len(downloaded_tools))} tools')
