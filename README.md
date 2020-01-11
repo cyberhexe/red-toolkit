@@ -25,6 +25,8 @@ ________________________________________________________________________________
 
 ## Reconnaissance
 ### Active Intelligence Gathering
+* **nullinux** Nullinux is an internal penetration testing tool for Linux that can be used to enumerate OS information, domain information, shares, directories, and users through SMB https://github.com/m8r0wn/nullinux
+* **hakrevdns** Small, fast, simple tool for performing reverse DNS lookups en masse. https://github.com/hakluke/hakrevdns
 * **AutoRecon** AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of the network https://github.com/Tib3rius/AutoRecon
 * **enumapis** Enumerate javascript endpoints on a web-page from the given URL https://github.com/infosec-au/enumapis
 * **async-intrusion** Asynchronic python scripts for network reconnaissance https://github.com/derstolz/async-intrusion
@@ -82,6 +84,8 @@ ________________________________________________________________________________
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
 ## Weaponization
+* **spotter** potter is a tool to wrap payloads in environmentally-keyed, AES256-encrypted launchers. These keyed launchers provide a way to ensure your payload is running on its intended target, as well as provide a level of protection for the launcher itself. https://github.com/matterpreter/spotter
+* **misc** Collection of things I've written on pentests to make life easier. https://github.com/matterpreter/misc
 * **getDA.sh** This script checks for a few common, easy to leverage vulnerabilites I find testers using to get Domain Administrator access when stealth doesn't matter. https://github.com/matterpreter/getDA.sh
 * **ReverseTCPShell** A reverse shell with bbfuscation, AV evasion, FW and EDR bypassing. https://github.com/ZHacker13/ReverseTCPShell
 * **PayloadsAllTheThings**  A list of useful payloads and bypass for Web Application Security and Pentest/CTF  https://github.com/swisskyrepo/PayloadsAllTheThings
@@ -306,6 +310,7 @@ ________________________________________________________________________________
 * **kekeo** is a little toolbox I have started to manipulate Microsoft Kerberos in C (and for fun). https://github.com/gentilkiwi/kekeo
 
 ### Local Escalation
+* **JAWS** JAWS is PowerShell script designed to help penetration testers (and CTFers) quickly identify potential privilege escalation vectors on Windows systems. It is written using PowerShell 2.0 so 'should' run on every Windows version since Windows 7. https://github.com/411Hall/JAWS
 * **AutoLocalPrivilegeEscalation** An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically https://github.com/ngalongc/AutoLocalPrivilegeEscalation
 * **linux-smart-enumeration** Linux Privilege Escalation Enumeration Script (with colored output) https://github.com/diego-treitos/linux-smart-enumeration
 * **Powerless** Windows Privilege Escalation Enumeration Script (only cmd, no powershell) https://github.com/M4ximuss/Powerless
@@ -421,11 +426,13 @@ ________________________________________________________________________________
   * https://github.com/xorrior/Random-CSharpTools
   * https://github.com/leechristensen/Random
   * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
+  * https://github.com/kevthehermit/pentest/blob/master/linux-enum-mod.sh
   
  ### Binaries
  * **accesschk.exe**  accesschk.exe is a Microsoft Sysinternals tool that is great for auditing privileges on your systems https://web.archive.org/web/20080530012252/http://live.sysinternals.com/accesschk.exe
 
 ## References
+* **the-hacking-trove** This website can definitely help you during your penetration test, technical security audit, PWK/OSCP Lab or exam, CTF, challenge, training, etc. by providing cheat sheets, tools, examples, references, etc. https://noraj.gitlab.io/the-hacking-trove/
 * **Cheatsheet-God** Penetration Testing Biggest Reference Bank - OSCP / PTP & PTX Cheatsheet https://github.com/OlivierLaflamme/Cheatsheet-God
 * **RedTeam-Tactics-and-Techniques** This is publicly accessible personal notes at https://ired.team about my pentesting / red teaming experiments in a controlled environment that involve playing with various tools and techniques used by penetration testers, red teams and advanced adversaries. https://github.com/mantvydasb/RedTeam-Tactics-and-Techniques
 * **Awesome-WAF** Everything awesome about web application firewalls (WAFs). https://github.com/0xInfection/Awesome-WAF
