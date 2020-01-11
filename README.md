@@ -82,6 +82,7 @@ ________________________________________________________________________________
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
 ## Weaponization
+* **getDA.sh** This script checks for a few common, easy to leverage vulnerabilites I find testers using to get Domain Administrator access when stealth doesn't matter. https://github.com/matterpreter/getDA.sh
 * **ReverseTCPShell** A reverse shell with bbfuscation, AV evasion, FW and EDR bypassing. https://github.com/ZHacker13/ReverseTCPShell
 * **PayloadsAllTheThings**  A list of useful payloads and bypass for Web Application Security and Pentest/CTF  https://github.com/swisskyrepo/PayloadsAllTheThings
 * **TIDoS-Framework** The Offensive Manual Web Application Penetration Testing Framework. https://github.com/0xInfection/TIDoS-Framework
@@ -233,7 +234,6 @@ ________________________________________________________________________________
 * **js-mitm-proxy** https://github.com/ondrakrat/js-mitm-proxy
 
 ## Lateral Movement
-* **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/derstolz/atbomb
 * **evil-winrm** This program can be used on any Microsoft Windows Servers with this feature enabled (usually at port 5985), of course only if you have credentials and permissions to use it. https://github.com/Hackplayers/evil-winrm
 * **CrackMapExec** is a swiss army knife for pentesting networks. https://github.com/byt3bl33d3r/CrackMapExec
 * **Invoke-Phant0m** This script walks thread stacks of Event Log Service process (spesific svchost.exe) and identify Event Log Threads to kill Event Log Service Threads. So the system will not be able to collect logs and at the same time the Event Log Service will appear to be running. https://github.com/Und3rf10w/Invoke-Phant0m
@@ -284,6 +284,7 @@ ________________________________________________________________________________
 ## Establish Foothold
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
 * **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
+* **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/derstolz/atbomb
 * **Blade** is a webshell connection tool based on console, currently under development and aims to be a choice of replacement of Chooper. https://github.com/wonderqs/Blade
 * **PowerLurk** is a PowerShell toolset for building malicious WMI Event Subsriptions. https://github.com/Sw4mpf0x/PowerLurk
 * **DAMP** The Discretionary ACL Modification Project: Persistence Through Host-based Security Descriptor Modification. https://github.com/HarmJ0y/DAMP
@@ -381,6 +382,7 @@ ________________________________________________________________________________
 * **kali-cloud-build** This script bootstraps a barebones Kali installation to create either an Amazon machine image or a Google Compute Engine image. The image contains no latent logfiles no .bash_history or even the apt package cache. https://github.com/Und3rf10w/kali-cloud-build
 
 ### C# Offensive Framework
+* **OffensiveCSharp** This is a collection of C# tooling and POCs I've created for use on operations. Each project is designed to use no external libraries. Open each project's .SLN in Visual Studio and compile as "Release". https://github.com/matterpreter/OffensiveCSharp
 * **SharpSploit** is a .NET post-exploitation library written in C# that aims to highlight the attack surface of .NET and make the use of offensive .NET easier for red teamers. https://github.com/cobbr/SharpSploit
 * **SharpWeb** .NET 2.0 CLR project to retrieve saved browser credentials from Google Chrome, Mozilla Firefox and Microsoft Internet Explorer/Edge. https://github.com/djhohnstein/SharpWeb
 * **reconerator** C# Targeted Attack Reconnissance Tools. https://github.com/stufus/reconerator
