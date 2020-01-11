@@ -55,6 +55,7 @@ ________________________________________________________________________________
 
 
 ### Passive Intelligence Gathering
+* **git-vuln-finder** Finding potential software vulnerabilities from git commit messages https://github.com/cve-search/git-vuln-finder
 * **Ultimate-Dork** Dork Web Crawler https://github.com/jaxBCD/Ultimate-Dork
 * **Amass** In-depth Attack Surface Mapping and Asset Discovery https://github.com/OWASP/Amass
 * **ODIN** Automated network asset, email, and social media profile discovery and cataloguing https://github.com/chrismaddalena/ODIN
