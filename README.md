@@ -8,6 +8,7 @@ ________________________________________________________________________________
 
 ## Contents
 * [Reconnaissance](#reconnaissance)
+* [Wordlists](#wordlists)
 * [Weaponization](#weaponization)
 * [Delivery](#delivery)
 * [Command and Control](#command-and-control)
@@ -84,8 +85,11 @@ ________________________________________________________________________________
 * **SpiderFoot** the open source footprinting and intelligence-gathering tool. https://github.com/smicallef/spiderfoot
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
-## Weaponization
+## Wordlists
+* **SecLists** It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more. https://github.com/danielmiessler/SecLists
 * **fuzzdb** Dictionary of attack patterns and primitives for black-box application fault injection and resource discovery. https://github.com/fuzzdb-project/fuzzdb
+
+## Weaponization
 * **spotter** potter is a tool to wrap payloads in environmentally-keyed, AES256-encrypted launchers. These keyed launchers provide a way to ensure your payload is running on its intended target, as well as provide a level of protection for the launcher itself. https://github.com/matterpreter/spotter
 * **misc** Collection of things I've written on pentests to make life easier. https://github.com/matterpreter/misc
 * **getDA.sh** This script checks for a few common, easy to leverage vulnerabilites I find testers using to get Domain Administrator access when stealth doesn't matter. https://github.com/matterpreter/getDA.sh
