@@ -7,23 +7,35 @@ ________________________________________________________________________________
 <img src="https://i.imgur.com/4sKzx1A.jpg" width="800">
 
 ## Contents
-* [Reconnaissance](#reconnaissance)
+* [Active Intelligence Gathering](#active=intelligence-gathering)
+* [Passive Intelligence Gathering](#passive=intelligence-gathering)
 * [Weaponization](#weaponization)
 * [Delivery](#delivery)
-* [Command and Control](#command-and-control)
+* [Phishing](#phishing)
+* [Remote Access Tools](#remote-access-tools)
+* [Staging](#staging)
 * [Man In the Middle](#man-in-the-middle)
 * [Lateral Movement](#lateral-movement)
+* [Pivoting and Tunneling](#pivoting-and-tunneling)
 * [Establish Foothold](#establish-foothold)
-* [Escalate Privileges](#escalate-privileges)
+* [Domain Privileges Escalation](#domain-privileges-escalation)
+* [Local Privileges Escalation](#local-privileges-escalation)
 * [Data Exfiltration](#data-exfiltration)
-* [Cloud Computing](#cloud-computing)
+* [Social Engineering](#social-engineering)
+* [Anonymization](#anonymization)
+* [Adversary Simulation](#adversary-simulation)
+* [Wireless Networks](#Wireless Networks)
+* [Embedded & Peripheral Devices Hacking](#embedded-peripheral-devices-hacking)
+* [Software For Team Communication](#software-for-team-communication)
 * [Log Aggregation](#log-aggregation)
-* [Scripts](#scripts)
+* [Cloud Computing](#cloud-computing)
+* [Labs](#labs)
 * [Binaries](#binaries)
 * [References](#references)
+* [Scripts](#scripts)
 
 
-## Reconnaissance
+
 ### Active Intelligence Gathering
 * **nullinux** Nullinux is an internal penetration testing tool for Linux that can be used to enumerate OS information, domain information, shares, directories, and users through SMB https://github.com/m8r0wn/nullinux
 * **hakrevdns** Small, fast, simple tool for performing reverse DNS lookups en masse. https://github.com/hakluke/hakrevdns
@@ -84,7 +96,13 @@ ________________________________________________________________________________
 * **SpiderFoot** the open source footprinting and intelligence-gathering tool. https://github.com/smicallef/spiderfoot
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
-## Weaponization
+### Weaponization
+* **OffensiveCSharp** This is a collection of C# tooling and POCs I've created for use on operations. Each project is designed to use no external libraries. Open each project's .SLN in Visual Studio and compile as "Release". https://github.com/matterpreter/OffensiveCSharp
+* **SharpSploit** is a .NET post-exploitation library written in C# that aims to highlight the attack surface of .NET and make the use of offensive .NET easier for red teamers. https://github.com/cobbr/SharpSploit
+* **SharpWeb** .NET 2.0 CLR project to retrieve saved browser credentials from Google Chrome, Mozilla Firefox and Microsoft Internet Explorer/Edge. https://github.com/djhohnstein/SharpWeb
+* **reconerator** C# Targeted Attack Reconnissance Tools. https://github.com/stufus/reconerator
+* **SharpView** C# implementation of harmj0y's PowerView. https://github.com/tevora-threat/SharpView
+* **Watson** is a (.NET 2.0 compliant) C# implementation of Sherlock. https://github.com/rasta-mouse/Watson
 * **spotter** potter is a tool to wrap payloads in environmentally-keyed, AES256-encrypted launchers. These keyed launchers provide a way to ensure your payload is running on its intended target, as well as provide a level of protection for the launcher itself. https://github.com/matterpreter/spotter
 * **misc** Collection of things I've written on pentests to make life easier. https://github.com/matterpreter/misc
 * **getDA.sh** This script checks for a few common, easy to leverage vulnerabilites I find testers using to get Domain Administrator access when stealth doesn't matter. https://github.com/matterpreter/getDA.sh
@@ -166,7 +184,7 @@ ________________________________________________________________________________
 * **CScriptShell** CScriptShell, a Powershell Host running within cscript.exe. This code let's you Bypass Application Whitelisting and Powershell.exe restrictions and gives you a shell that almost looks and feels like a normal Powershell session (Get-Credential, PSSessions -> Works). https://github.com/Cn33liz/CScriptShell
 * **Donut** is a shellcode generation tool that creates position-independant shellcode payloads from .NET Assemblies. This shellcode may be used to inject the Assembly into arbitrary Windows processes. https://github.com/TheWover/donut
 
-## Delivery
+### Delivery
 * **red-transfers** A script to quickly generate a lot of echo uninteractive commands to be executed on the compromised system. Both downloading and uplocading are supported. https://github.com/derstolz/red-transfers
 * **flask-filebox** Basic file upload Web UI. Make sure to update config.py according to your needs. https://github.com/mtalimanchuk/flask-filebox
 
@@ -184,7 +202,6 @@ ________________________________________________________________________________
 * **Modlishka** is a flexible and powerful reverse proxy, that will take your ethical phishing campaigns to the next level. https://github.com/drk1wi/Modlishka
 * **Evilginx** is a man-in-the-middle attack framework used for phishing credentials and session cookies of any web service. https://github.com/kgretzky/evilginx2
 
-## Command and Control
 ### Remote Access Tools
 * **L3MON** Remote Android Management Suite https://github.com/etechd/L3MON
 * **android-backdoor-dashboard** Android Meterpreter Backdoor Command & Control https://github.com/derstolz/android-backdoor-dashboard
@@ -235,10 +252,10 @@ ________________________________________________________________________________
 * **HTran** is a connection bouncer, a kind of proxy server. A “listener” program is hacked stealthily onto an unsuspecting host anywhere on the Internet. https://github.com/HiwinCN/HTran
 
 
-## Man In the Middle
+### Man In the Middle
 * **js-mitm-proxy** https://github.com/ondrakrat/js-mitm-proxy
 
-## Lateral Movement
+### Lateral Movement
 * **evil-winrm** This program can be used on any Microsoft Windows Servers with this feature enabled (usually at port 5985), of course only if you have credentials and permissions to use it. https://github.com/Hackplayers/evil-winrm
 * **CrackMapExec** is a swiss army knife for pentesting networks. https://github.com/byt3bl33d3r/CrackMapExec
 * **Invoke-Phant0m** This script walks thread stacks of Event Log Service process (spesific svchost.exe) and identify Event Log Threads to kill Event Log Service Threads. So the system will not be able to collect logs and at the same time the Event Log Service will appear to be running. https://github.com/Und3rf10w/Invoke-Phant0m
@@ -274,7 +291,7 @@ ________________________________________________________________________________
 * **PAExec** lets you launch Windows programs on remote Windows computers without needing to install software on the remote computer first. https://www.poweradmin.com/paexec/
 * **nishang** Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security, penetration testing and red teaming. Nishang is useful during all phases of penetration testing. https://github.com/samratashok/nishang
 
-## Pivoting and Tunneling
+### Pivoting and Tunneling
 * **dns-tcp-proxy** A python script to tunnel the DNS queries through a TCP proxy https://github.com/derstolz/dns-tcp-proxy
 * **rpivot** This is a method of traversing NAT connections. Rpivot is a reverse socks proxy tool that allows you to tunnel traffic via socks proxy. It connects back to your machine and binds a socks proxy on it. It works just like `ssh -D` but in opposite direction https://github.com/artkond/rpivot
 * **redsocks** Redsocks is the tool that allows you to proxify(redirect) network traffic through a SOCKS4, SOCKS5 or HTTPs proxy server. It works on the lowest level, the kernel level (iptables). The other possible way is to use application level proxy, when the proxy client is implemented in the same language as an application is written in. Redsocks operates on the lowest system level, that’s why all running application don’t even have an idea that network traffic is sent through a proxy server, as a result it is called a transparent proxy redirector. https://github.com/darkk/redsocks
@@ -286,7 +303,7 @@ ________________________________________________________________________________
 * **win-sshd** A native windows ssh2 server https://github.com/saju/win-sshd
 * **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
 
-## Establish Foothold
+### Establish Foothold
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
 * **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
 * **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/derstolz/atbomb
@@ -294,8 +311,7 @@ ________________________________________________________________________________
 * **PowerLurk** is a PowerShell toolset for building malicious WMI Event Subsriptions. https://github.com/Sw4mpf0x/PowerLurk
 * **DAMP** The Discretionary ACL Modification Project: Persistence Through Host-based Security Descriptor Modification. https://github.com/HarmJ0y/DAMP
 
-## Escalate Privileges
-### Domain Escalation
+### Domain Privileges Escalation
 * **linikatz** linikatz is a tool to attack AD on UNIX https://github.com/portcullislabs/linikatz
 * **Invoke-ACLpwn** is a tool that automates the discovery and pwnage of ACLs in Active Directory that are unsafe configured. https://github.com/fox-it/Invoke-ACLPwn
 * **BloodHound** uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment. https://github.com/BloodHoundAD/BloodHound
@@ -310,7 +326,7 @@ ________________________________________________________________________________
 * **Rubeus** is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpy's Kekeo project. https://github.com/GhostPack/Rubeus
 * **kekeo** is a little toolbox I have started to manipulate Microsoft Kerberos in C (and for fun). https://github.com/gentilkiwi/kekeo
 
-### Local Escalation
+### Local Privileges Escalation
 * **JAWS** JAWS is PowerShell script designed to help penetration testers (and CTFers) quickly identify potential privilege escalation vectors on Windows systems. It is written using PowerShell 2.0 so 'should' run on every Windows version since Windows 7. https://github.com/411Hall/JAWS
 * **AutoLocalPrivilegeEscalation** An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically https://github.com/ngalongc/AutoLocalPrivilegeEscalation
 * **linux-smart-enumeration** Linux Privilege Escalation Enumeration Script (with colored output) https://github.com/diego-treitos/linux-smart-enumeration
@@ -327,7 +343,7 @@ ________________________________________________________________________________
 * **Sherlock** a powerShell script to quickly find missing software patches for local privilege escalation vulnerabilities. https://github.com/rasta-mouse/Sherlock
 * **Tokenvator** a tool to elevate privilege with Windows Tokens. https://github.com/0xbadjuju/Tokenvator
 
-## Data Exfiltration
+### Data Exfiltration
 * **CloakifyFactory** & the Cloakify Toolset - Data Exfiltration & Infiltration In Plain Sight; Evade DLP/MLS Devices; Social Engineering of Analysts; Defeat Data Whitelisting Controls; Evade AV Detection. https://github.com/TryCatchHCF/Cloakify
 * **DET** (is provided AS IS), is a proof of concept to perform Data Exfiltration using either single or multiple channel(s) at the same time. https://github.com/sensepost/DET
 * **DNSExfiltrator** allows for transfering (exfiltrate) a file over a DNS request covert channel. This is basically a data leak testing tool allowing to exfiltrate data over a covert channel. https://github.com/Arno0x/DNSExfiltrator
@@ -336,7 +352,7 @@ ________________________________________________________________________________
 * **LNKUp** This tool will allow you to generate LNK payloads. Upon rendering or being run, they will exfiltrate data. https://github.com/Plazmaz/LNKUp
 * **Powershell RAT** python based backdoor that uses Gmail to exfiltrate data as an e-mail attachment. https://github.com/Viralmaniar/Powershell-RAT
 
-## Social Engineering
+### Social Engineering
 * **FakeID** Fake identity generator https://github.com/Manisso/FakeID
 
 ### Anonymization
@@ -387,14 +403,6 @@ ________________________________________________________________________________
 ### Cloud Computing
 * **kali-cloud-build** This script bootstraps a barebones Kali installation to create either an Amazon machine image or a Google Compute Engine image. The image contains no latent logfiles no .bash_history or even the apt package cache. https://github.com/Und3rf10w/kali-cloud-build
 
-### C# Offensive Framework
-* **OffensiveCSharp** This is a collection of C# tooling and POCs I've created for use on operations. Each project is designed to use no external libraries. Open each project's .SLN in Visual Studio and compile as "Release". https://github.com/matterpreter/OffensiveCSharp
-* **SharpSploit** is a .NET post-exploitation library written in C# that aims to highlight the attack surface of .NET and make the use of offensive .NET easier for red teamers. https://github.com/cobbr/SharpSploit
-* **SharpWeb** .NET 2.0 CLR project to retrieve saved browser credentials from Google Chrome, Mozilla Firefox and Microsoft Internet Explorer/Edge. https://github.com/djhohnstein/SharpWeb
-* **reconerator** C# Targeted Attack Reconnissance Tools. https://github.com/stufus/reconerator
-* **SharpView** C# implementation of harmj0y's PowerView. https://github.com/tevora-threat/SharpView
-* **Watson** is a (.NET 2.0 compliant) C# implementation of Sherlock. https://github.com/rasta-mouse/Watson
-
 ### Labs
 * **Detection Lab** This lab has been designed with defenders in mind. Its primary purpose is to allow the user to quickly build a Windows domain that comes pre-loaded with security tooling and some best practices when it comes to system logging configurations. https://github.com/clong/DetectionLab
 * **Modern Windows Attacks and Defense Lab** This is the lab configuration for the Modern Windows Attacks and Defense class that Sean Metcalf (@pyrotek3) and I teach. https://github.com/jaredhaight/WindowsAttackAndDefenseLab
@@ -402,34 +410,7 @@ ________________________________________________________________________________
 * **Invoke-ADLabDeployer** Automated deployment of Windows and Active Directory test lab networks. Useful for red and blue teams. https://github.com/outflanknl/Invoke-ADLabDeployer
 * **Sheepl** Creating realistic user behaviour for supporting tradecraft development within lab environments. https://github.com/SpiderLabs/sheepl
 
-### Scripts
-  * https://github.com/Und3rf10w
-  * https://github.com/invokethreatguy/CSASC
-  * https://github.com/secgroundzero/CS-Aggressor-Scripts
-  * https://github.com/Und3rf10w/Aggressor-scripts
-  * https://github.com/harleyQu1nn/AggressorScripts
-  * https://github.com/rasta-mouse/Aggressor-Script
-  * https://github.com/RhinoSecurityLabs/Aggressor-Scripts
-  * https://github.com/bluscreenofjeff/AggressorScripts
-  * https://github.com/001SPARTaN/aggressor_scripts
-  * https://github.com/FortyNorthSecurity/AggressorAssessor
-  * https://github.com/ramen0x3f/AggressorScripts
-  * https://github.com/FuzzySecurity/PowerShell-Suite
-  * https://github.com/nettitude/Powershell
-  * https://github.com/Mr-Un1k0d3r/RedTeamPowershellScripts
-  * https://github.com/threatexpress/red-team-scripts
-  * https://github.com/SadProcessor/SomeStuff
-  * https://github.com/rvrsh3ll/Misc-Powershell-Scripts
-  * https://github.com/enigma0x3/Misc-PowerShell-Stuff
-  * https://github.com/ChrisTruncer/PenTestScripts
-  * https://github.com/bluscreenofjeff/Scripts
-  * https://github.com/xorrior/RandomPS-Scripts
-  * https://github.com/xorrior/Random-CSharpTools
-  * https://github.com/leechristensen/Random
-  * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
-  * https://github.com/kevthehermit/pentest/blob/master/linux-enum-mod.sh
-  
- ### Binaries
+### Binaries
  * **accesschk.exe**  accesschk.exe is a Microsoft Sysinternals tool that is great for auditing privileges on your systems https://web.archive.org/web/20080530012252/http://live.sysinternals.com/accesschk.exe
 
 ## References
@@ -460,6 +441,33 @@ ________________________________________________________________________________
 * **CBEST Implementation Guide** CBEST is a framework to deliver controlled, bespoke, intelligence-led cyber security tests. The tests replicate behaviours of threat actors, assessed by the UK Government and commercial intelligence providers as posing a genuine threat to systemically important financial institutions. https://www.crest-approved.org/wp-content/uploads/2014/07/CBEST-Implementation-Guide.pdf
 * **Red Team: Adversarial Attack Simulation Exercise Guidelines for the Financial Industry in Singapore** The Association of Banks in Singapore (ABS), with support from the Monetary Authority of Singapore (MAS), has developed a set of cybersecurity assessment guidelines today to strengthen the cyber resilience of the financial sector in Singapore. Known as the Adversarial Attack Simulation Exercises (AASE) Guidelines or “Red Teaming” Guidelines, the Guidelines provide financial institutions (FIs) with best practices and guidance on planning and conducting Red Teaming exercises to enhance their security testing. https://abs.org.sg/docs/library/abs-red-team-adversarial-attack-simulation-exercises-guidelines-v1-06766a69f299c69658b7dff00006ed795.pdf
 
+### Scripts
+  * https://github.com/Und3rf10w
+  * https://github.com/invokethreatguy/CSASC
+  * https://github.com/secgroundzero/CS-Aggressor-Scripts
+  * https://github.com/Und3rf10w/Aggressor-scripts
+  * https://github.com/harleyQu1nn/AggressorScripts
+  * https://github.com/rasta-mouse/Aggressor-Script
+  * https://github.com/RhinoSecurityLabs/Aggressor-Scripts
+  * https://github.com/bluscreenofjeff/AggressorScripts
+  * https://github.com/001SPARTaN/aggressor_scripts
+  * https://github.com/FortyNorthSecurity/AggressorAssessor
+  * https://github.com/ramen0x3f/AggressorScripts
+  * https://github.com/FuzzySecurity/PowerShell-Suite
+  * https://github.com/nettitude/Powershell
+  * https://github.com/Mr-Un1k0d3r/RedTeamPowershellScripts
+  * https://github.com/threatexpress/red-team-scripts
+  * https://github.com/SadProcessor/SomeStuff
+  * https://github.com/rvrsh3ll/Misc-Powershell-Scripts
+  * https://github.com/enigma0x3/Misc-PowerShell-Stuff
+  * https://github.com/ChrisTruncer/PenTestScripts
+  * https://github.com/bluscreenofjeff/Scripts
+  * https://github.com/xorrior/RandomPS-Scripts
+  * https://github.com/xorrior/Random-CSharpTools
+  * https://github.com/leechristensen/Random
+  * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
+  * https://github.com/kevthehermit/pentest/blob/master/linux-enum-mod.sh
+  
 
 ## License
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)

@@ -9,20 +9,34 @@ from git.repo.base import Repo
 
 def get_arguments():
     parser = ArgumentParser()
-    parser.add_argument('--search', dest='search', required=False,
+    parser.add_argument('--search',
+                        dest='search',
+                        required=False,
                         help='Optional. A query to search within the toolkit.')
-    parser.add_argument('--download', dest='download', required=False,
+    parser.add_argument('--download',
+                        dest='download',
+                        required=False,
                         help='Optional. Download a tool by it\'s name. The tool will be downloaded in a newly created '
                              'directory. Pass DOWNLOAD_ALL to download everything.')
-    parser.add_argument('--update', dest='update', required=False, help='Optional. Update a given tool. '
-                                                                        'Pass UPDATE_ALL to update all downloaded '
-                                                                        'tools')
-    parser.add_argument('--show', dest='show', required=False,
+    parser.add_argument('--update',
+                        dest='update',
+                        required=False,
+                        help='Optional. Update a given tool. '
+                             'Pass UPDATE_ALL to update all downloaded '
+                             'tools')
+    parser.add_argument('--show',
+                        dest='show',
+                        required=False,
                         help='Optional. Show details about the downloaded tool.')
-    parser.add_argument('--drop-deprecated', action='store_true', required=False,
+    parser.add_argument('--drop-deprecated',
+                        action='store_true',
+                        required=False,
                         help='Optional. Define when the toolkit should clean up deprecated tools (a tool will be '
                              'marked as deprecated when it doesn\'t stored anymore in the root README.md file)')
-    parser.add_argument('--logging', dest='logging', choices=['INFO', 'DEBUG', 'WARNING', 'ERROR'], default='INFO',
+    parser.add_argument('--logging',
+                        dest='logging',
+                        choices=['INFO', 'DEBUG', 'WARNING', 'ERROR'],
+                        default='INFO',
                         help='Optional. Logging level.')
     options = parser.parse_args()
 
@@ -258,7 +272,7 @@ git_sources = [
     'bitbucket.com'
 ]
 
-prefix = colors.colored('/red-toolkit $ ', colors.RED)
+prefix = colors.colored('/red-toolkit $ ', colors.BG_RED)
 
 
 class Tool:
@@ -289,8 +303,8 @@ class Tool:
         self.description = line.split('**')[2].split('http')[0].strip()
         self.url = line.split(' ')[-1]
         self.category = self.find_category(self.url, file_content_as_string)
-        self.path = Path(os.getcwd() + '/' + self.category['alias'] + '/' + self.name)
-        self.tool_readme = self.fetch_tool_readme(str(self.path), self.name) if self.is_downloaded() else None
+        self.path = Path(f"{os.getcwd()}/{self.category['alias']}/{self.name}")
+        self.tool_readme = self.fetch_tool_readme(f'{self.path}', self.name) if self.is_downloaded() else None
 
     def is_downloaded(self):
         return os.path.exists(self.path) and os.listdir(self.path)
@@ -312,12 +326,25 @@ class Tool:
             logging.error(colors.red('Update failed: ' + str(e)))
 
     def printout(self, verbose=False):
-        colors.print_red(colors.bold(self.name) + ' // ' + self.category['name'])
-        colors.print_bold(
-                    colors.green('DOWNLOADED - ' + colors.RESET + colors.yellow(str(self.path))) if self.is_downloaded()
-                    else colors.colored('NOT_DOWNLOADED', colors.MAGENTA))
-        print(self.url)
-        colors.print_bold(self.description)
+        if not self.is_downloaded():
+            name = colors.bold(self.name)
+            category = colors.bold(self.category['name'])
+            status_message = colors.bold('NOT_DOWNLOADED')
+            url = self.url
+            description = colors.bold(self.description)
+        else:
+            name = colors.red(self.name)
+            category = colors.red(self.category['name'])
+            status_message = colors.green(f'DOWNLOADED - {self.path}')
+            url = colors.red(self.url)
+            description = colors.red(self.description)
+
+
+        colors.print_bold(f"Name: {name}")
+        colors.print_bold(f"Category: {category}")
+        colors.print_bold(f"Status: {status_message}")
+        colors.print_bold(f'URL: {url}')
+        colors.print_bold(f'Description: {description}')
         if verbose:
             if self.tool_readme:
                 print(self.tool_readme)
@@ -491,7 +518,7 @@ def search_in_tools(search, tools):
         print_categories(matched_tools)
     for tool in matched_tools:
         tool.printout()
-        colors.print_bold('*' * 60)
+        colors.print_bold(os.linesep + '_' * 60)
 
 
 if __name__ == "__main__":
@@ -539,7 +566,6 @@ NNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNNN
     if options.drop_deprecated:
         drop_deprecated_tools(deprecated_tools)
 
-    print(colors.bold('## red-toolkit initialized'))
     print(f'{colors.bold(len(categories))} categories')
     print(f'{colors.bold(len(tools))} tools')
     print(f'{colors.bold(len(downloaded_tools))} tools')
