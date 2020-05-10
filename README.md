@@ -2,9 +2,9 @@
 
 A collection of open source and commercial penetration testing tools. 
 This repository will help you during your red team engagement.
-_________________________________________________________________________________________________________
 
-<img src="https://i.imgur.com/4sKzx1A.jpg" width="800">
+Use toolkit.py script to maintain your collection.
+_________________________________________________________________________________________________________
 
 ## Contents
 * [Active Intelligence Gathering](#active=intelligence-gathering)
@@ -12,16 +12,16 @@ ________________________________________________________________________________
 * [Weaponization](#weaponization)
 * [Delivery](#delivery)
 * [Phishing](#phishing)
+* [Social Engineering](#social-engineering)
 * [Remote Access Tools](#remote-access-tools)
 * [Staging](#staging)
 * [Man In the Middle](#man-in-the-middle)
-* [Lateral Movement](#lateral-movement)
-* [Pivoting and Tunneling](#pivoting-and-tunneling)
 * [Establish Foothold](#establish-foothold)
-* [Domain Privileges Escalation](#domain-privileges-escalation)
+* [Pivoting and Tunneling](#pivoting-and-tunneling)
+* [Lateral Movement](#lateral-movement)
 * [Local Privileges Escalation](#local-privileges-escalation)
+* [Domain Privileges Escalation](#domain-privileges-escalation)
 * [Data Exfiltration](#data-exfiltration)
-* [Social Engineering](#social-engineering)
 * [Anonymization](#anonymization)
 * [Adversary Simulation](#adversary-simulation)
 * [Wireless Networks](#Wireless Networks)
@@ -33,6 +33,7 @@ ________________________________________________________________________________
 * [Binaries](#binaries)
 * [References](#references)
 * [Scripts](#scripts)
+* [Wordlists](#wordlists)
 
 
 
@@ -65,7 +66,6 @@ ________________________________________________________________________________
 * **dirsearch** is a simple command line tool designed to brute force directories and files in websites. https://github.com/maurosoria/dirsearch
 * **masscan-web-ui** MASSCAN Web UI from Offensive Security https://github.com/offensive-security/masscan-web-ui
 
-
 ### Passive Intelligence Gathering
 * **git-vuln-finder** Finding potential software vulnerabilities from git commit messages https://github.com/cve-search/git-vuln-finder
 * **Ultimate-Dork** Dork Web Crawler https://github.com/jaxBCD/Ultimate-Dork
@@ -81,7 +81,7 @@ ________________________________________________________________________________
 * **GoogleScraper** Scraping search engines professionally https://github.com/NikolaiT/GoogleScraper
 * **cloud_enum** Multi-cloud OSINT tool. Enumerate public resources in AWS, Azure, and Google Cloud. https://github.com/initstring/cloud_enum
 * **SiteBroker** A cross-platform python based utility for information gathering and penetration automation! https://github.com/Anon-Exploiter/SiteBroker
-* **Social Mapper** OSINT Social Media Mapping Tool, takes a list of names & images (or LinkedIn company name) and performs automated target searching on a huge scale across multiple social media sites. Not restricted by APIs as it instruments a browser using Selenium. Outputs reports to aid in correlating targets across sites. https://github.com/SpiderLabs/social_mapper
+* **Social Mapper** OSINT Social Media RMapping Tool, takes a list of names & images (or LinkedIn company name) and performs automated target searching on a huge scale across multiple social media sites. Not restricted by APIs as it instruments a browser using Selenium. Outputs reports to aid in correlating targets across sites. https://github.com/SpiderLabs/social_mapper
 * **skiptracer** OSINT scraping framework, utilizes some basic python webscraping (BeautifulSoup) of PII paywall sites to compile passive information on a target on a ramen noodle budget. https://github.com/xillwillx/skiptracer
 * **FOCA** (Fingerprinting Organizations with Collected Archives) is a tool used mainly to find metadata and hidden information in the documents its scans. https://github.com/ElevenPaths/FOCA
 * **Metagoofil** is a tool for extracting metadata of public documents (pdf,doc,xls,ppt,etc) availables in the target websites. https://github.com/laramies/metagoofil
@@ -96,13 +96,12 @@ ________________________________________________________________________________
 * **SpiderFoot** the open source footprinting and intelligence-gathering tool. https://github.com/smicallef/spiderfoot
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
-### Weaponization
+## Weaponization
 * **OffensiveCSharp** This is a collection of C# tooling and POCs I've created for use on operations. Each project is designed to use no external libraries. Open each project's .SLN in Visual Studio and compile as "Release". https://github.com/matterpreter/OffensiveCSharp
 * **SharpSploit** is a .NET post-exploitation library written in C# that aims to highlight the attack surface of .NET and make the use of offensive .NET easier for red teamers. https://github.com/cobbr/SharpSploit
 * **SharpWeb** .NET 2.0 CLR project to retrieve saved browser credentials from Google Chrome, Mozilla Firefox and Microsoft Internet Explorer/Edge. https://github.com/djhohnstein/SharpWeb
 * **reconerator** C# Targeted Attack Reconnissance Tools. https://github.com/stufus/reconerator
 * **SharpView** C# implementation of harmj0y's PowerView. https://github.com/tevora-threat/SharpView
-* **Watson** is a (.NET 2.0 compliant) C# implementation of Sherlock. https://github.com/rasta-mouse/Watson
 * **spotter** potter is a tool to wrap payloads in environmentally-keyed, AES256-encrypted launchers. These keyed launchers provide a way to ensure your payload is running on its intended target, as well as provide a level of protection for the launcher itself. https://github.com/matterpreter/spotter
 * **misc** Collection of things I've written on pentests to make life easier. https://github.com/matterpreter/misc
 * **getDA.sh** This script checks for a few common, easy to leverage vulnerabilites I find testers using to get Domain Administrator access when stealth doesn't matter. https://github.com/matterpreter/getDA.sh
@@ -202,6 +201,9 @@ ________________________________________________________________________________
 * **Modlishka** is a flexible and powerful reverse proxy, that will take your ethical phishing campaigns to the next level. https://github.com/drk1wi/Modlishka
 * **Evilginx** is a man-in-the-middle attack framework used for phishing credentials and session cookies of any web service. https://github.com/kgretzky/evilginx2
 
+### Social Engineering
+* **FakeID** Fake identity generator https://github.com/Manisso/FakeID
+
 ### Remote Access Tools
 * **L3MON** Remote Android Management Suite https://github.com/etechd/L3MON
 * **android-backdoor-dashboard** Android Meterpreter Backdoor Command & Control https://github.com/derstolz/android-backdoor-dashboard
@@ -255,6 +257,26 @@ ________________________________________________________________________________
 ### Man In the Middle
 * **js-mitm-proxy** https://github.com/ondrakrat/js-mitm-proxy
 
+### Establish Foothold
+* **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
+* **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
+* **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/derstolz/atbomb
+* **Blade** is a webshell connection tool based on console, currently under development and aims to be a choice of replacement of Chooper. https://github.com/wonderqs/Blade
+* **PowerLurk** is a PowerShell toolset for building malicious WMI Event Subsriptions. https://github.com/Sw4mpf0x/PowerLurk
+* **DAMP** The Discretionary ACL Modification Project: Persistence Through Host-based Security Descriptor Modification. https://github.com/HarmJ0y/DAMP
+
+### Pivoting and Tunneling
+* **dns-tcp-proxy** A python script to tunnel the DNS queries through a TCP proxy https://github.com/derstolz/dns-tcp-proxy
+* **rpivot** This is a method of traversing NAT connections. Rpivot is a reverse socks proxy tool that allows you to tunnel traffic via socks proxy. It connects back to your machine and binds a socks proxy on it. It works just like `ssh -D` but in opposite direction https://github.com/artkond/rpivot
+* **redsocks** Redsocks is the tool that allows you to proxify(redirect) network traffic through a SOCKS4, SOCKS5 or HTTPs proxy server. It works on the lowest level, the kernel level (iptables). The other possible way is to use application level proxy, when the proxy client is implemented in the same language as an application is written in. Redsocks operates on the lowest system level, that’s why all running application don’t even have an idea that network traffic is sent through a proxy server, as a result it is called a transparent proxy redirector. https://github.com/darkk/redsocks
+* **Tunna** is a set of tools which will wrap and tunnel any TCP communication over HTTP. It can be used to bypass network restrictions in fully firewalled environments. https://github.com/SECFORCE/Tunna
+* **http-tunnel** A program to tunnel TCP connection through HTTP connection. https://github.com/khuevu/http-tunnel
+* **microsocks** a SOCKS5 service that you can run on your remote boxes to tunnel connections through them, if for some reason SSH doesn't cut it for you. https://github.com/derstolz/microsocks
+* **pyrexecd** PyRexecd is a standalone SSH server for Windows. https://github.com/euske/pyrexecd.git
+* **3proxy** is a tiny free proxy server https://github.com/z3APA3A/3proxy
+* **win-sshd** A native windows ssh2 server https://github.com/saju/win-sshd
+* **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
+
 ### Lateral Movement
 * **evil-winrm** This program can be used on any Microsoft Windows Servers with this feature enabled (usually at port 5985), of course only if you have credentials and permissions to use it. https://github.com/Hackplayers/evil-winrm
 * **CrackMapExec** is a swiss army knife for pentesting networks. https://github.com/byt3bl33d3r/CrackMapExec
@@ -291,25 +313,23 @@ ________________________________________________________________________________
 * **PAExec** lets you launch Windows programs on remote Windows computers without needing to install software on the remote computer first. https://www.poweradmin.com/paexec/
 * **nishang** Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security, penetration testing and red teaming. Nishang is useful during all phases of penetration testing. https://github.com/samratashok/nishang
 
-### Pivoting and Tunneling
-* **dns-tcp-proxy** A python script to tunnel the DNS queries through a TCP proxy https://github.com/derstolz/dns-tcp-proxy
-* **rpivot** This is a method of traversing NAT connections. Rpivot is a reverse socks proxy tool that allows you to tunnel traffic via socks proxy. It connects back to your machine and binds a socks proxy on it. It works just like `ssh -D` but in opposite direction https://github.com/artkond/rpivot
-* **redsocks** Redsocks is the tool that allows you to proxify(redirect) network traffic through a SOCKS4, SOCKS5 or HTTPs proxy server. It works on the lowest level, the kernel level (iptables). The other possible way is to use application level proxy, when the proxy client is implemented in the same language as an application is written in. Redsocks operates on the lowest system level, that’s why all running application don’t even have an idea that network traffic is sent through a proxy server, as a result it is called a transparent proxy redirector. https://github.com/darkk/redsocks
-* **Tunna** is a set of tools which will wrap and tunnel any TCP communication over HTTP. It can be used to bypass network restrictions in fully firewalled environments. https://github.com/SECFORCE/Tunna
-* **http-tunnel** A program to tunnel TCP connection through HTTP connection. https://github.com/khuevu/http-tunnel
-* **microsocks** a SOCKS5 service that you can run on your remote boxes to tunnel connections through them, if for some reason SSH doesn't cut it for you. https://github.com/derstolz/microsocks
-* **pyrexecd** PyRexecd is a standalone SSH server for Windows. https://github.com/euske/pyrexecd.git
-* **3proxy** is a tiny free proxy server https://github.com/z3APA3A/3proxy
-* **win-sshd** A native windows ssh2 server https://github.com/saju/win-sshd
-* **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
-
-### Establish Foothold
-* **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
-* **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
-* **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/derstolz/atbomb
-* **Blade** is a webshell connection tool based on console, currently under development and aims to be a choice of replacement of Chooper. https://github.com/wonderqs/Blade
-* **PowerLurk** is a PowerShell toolset for building malicious WMI Event Subsriptions. https://github.com/Sw4mpf0x/PowerLurk
-* **DAMP** The Discretionary ACL Modification Project: Persistence Through Host-based Security Descriptor Modification. https://github.com/HarmJ0y/DAMP
+### Local Privileges Escalation
+* **JAWS** JAWS is PowerShell script designed to help penetration testers (and CTFers) quickly identify potential privilege escalation vectors on Windows systems. It is written using PowerShell 2.0 so 'should' run on every Windows version since Windows 7. https://github.com/411Hall/JAWS
+* **AutoLocalPrivilegeEscalation** An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically https://github.com/ngalongc/AutoLocalPrivilegeEscalation
+* **linux-smart-enumeration** Linux Privilege Escalation Enumeration Script (with colored output) https://github.com/diego-treitos/linux-smart-enumeration
+* **Powerless** Windows Privilege Escalation Enumeration Script (only cmd, no powershell) https://github.com/M4ximuss/Powerless
+* **Privesc** Windows batch script that finds misconfiguration issues which can lead to privilege escalation.  https://github.com/enjoiz/Privesc
+* **windows-privesc-check** Windows-privesc-check is standalone executable that runs on Windows systems. It tries to find misconfigurations that could allow local unprivileged users to escalate privileges to other users or to access local apps (e.g. databases)  https://github.com/pentestmonkey/windows-privesc-check
+* **Linux_Exploit_Suggester** Linux exploit suggester for Privilege Escalation && Local Enumeration  https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
+* **linux-kernel-exploits** A number of Linux kernel exploits for Privilege Escalation && Local Enumeration https://github.com/SecWiki/linux-kernel-exploits
+* **LinEnum** Scripted Local Linux Enumeration & Privilege Escalation Checks https://github.com/rebootuser/LinEnum
+* **wesng** WES-NG is a tool based on the output of Windows' `systeminfo` utility which provides the list of vulnerabilities the OS is vulnerable to, including any exploits for these vulnerabilities. Every Windows OS between Windows XP and Windows 10, including their Windows Server counterparts, is supported. https://github.com/bitsadmin/wesng
+* **Windows-Exploit-Suggester** This tool compares a targets patch levels against the Microsoft vulnerability database in order to detect potential missing patches on the target. It also notifies the user if there are public exploits and Metasploit modules available for the missing bulletins. https://github.com/GDSSecurity/Windows-Exploit-Suggester
+* **UACMe** is an open source assessment tool that contains many methods for bypassing Windows User Account Control on multiple versions of the operating system. https://github.com/hfiref0x/UACME
+* **windows-kernel-exploits** a collection windows kernel exploit. https://github.com/SecWiki/windows-kernel-exploits
+* **Sherlock** a powerShell script to quickly find missing software patches for local privilege escalation vulnerabilities. https://github.com/rasta-mouse/Sherlock
+* **Watson** is a (.NET 2.0 compliant) C# implementation of Sherlock. https://github.com/rasta-mouse/Watson
+* **Tokenvator** a tool to elevate privilege with Windows Tokens. https://github.com/0xbadjuju/Tokenvator
 
 ### Domain Privileges Escalation
 * **linikatz** linikatz is a tool to attack AD on UNIX https://github.com/portcullislabs/linikatz
@@ -326,23 +346,6 @@ ________________________________________________________________________________
 * **Rubeus** is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpy's Kekeo project. https://github.com/GhostPack/Rubeus
 * **kekeo** is a little toolbox I have started to manipulate Microsoft Kerberos in C (and for fun). https://github.com/gentilkiwi/kekeo
 
-### Local Privileges Escalation
-* **JAWS** JAWS is PowerShell script designed to help penetration testers (and CTFers) quickly identify potential privilege escalation vectors on Windows systems. It is written using PowerShell 2.0 so 'should' run on every Windows version since Windows 7. https://github.com/411Hall/JAWS
-* **AutoLocalPrivilegeEscalation** An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically https://github.com/ngalongc/AutoLocalPrivilegeEscalation
-* **linux-smart-enumeration** Linux Privilege Escalation Enumeration Script (with colored output) https://github.com/diego-treitos/linux-smart-enumeration
-* **Powerless** Windows Privilege Escalation Enumeration Script (only cmd, no powershell) https://github.com/M4ximuss/Powerless
-* **Privesc** Windows batch script that finds misconfiguration issues which can lead to privilege escalation.  https://github.com/enjoiz/Privesc
-* **windows-privesc-check** Windows-privesc-check is standalone executable that runs on Windows systems. It tries to find misconfigurations that could allow local unprivileged users to escalate privileges to other users or to access local apps (e.g. databases)  https://github.com/pentestmonkey/windows-privesc-check
-* **Linux_Exploit_Suggester** Linux exploit suggester for Privilege Escalation && Local Enumeration  https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
-* **linux-kernel-exploits** A number of Linux kernel exploits for Privilege Escalation && Local Enumeration https://github.com/SecWiki/linux-kernel-exploits
-* **LinEnum** Scripted Local Linux Enumeration & Privilege Escalation Checks https://github.com/rebootuser/LinEnum
-* **wesng** WES-NG is a tool based on the output of Windows' `systeminfo` utility which provides the list of vulnerabilities the OS is vulnerable to, including any exploits for these vulnerabilities. Every Windows OS between Windows XP and Windows 10, including their Windows Server counterparts, is supported. https://github.com/bitsadmin/wesng
-* **Windows-Exploit-Suggester** This tool compares a targets patch levels against the Microsoft vulnerability database in order to detect potential missing patches on the target. It also notifies the user if there are public exploits and Metasploit modules available for the missing bulletins. https://github.com/GDSSecurity/Windows-Exploit-Suggester
-* **UACMe** is an open source assessment tool that contains many methods for bypassing Windows User Account Control on multiple versions of the operating system. https://github.com/hfiref0x/UACME
-* **windows-kernel-exploits** a collection windows kernel exploit. https://github.com/SecWiki/windows-kernel-exploits
-* **Sherlock** a powerShell script to quickly find missing software patches for local privilege escalation vulnerabilities. https://github.com/rasta-mouse/Sherlock
-* **Tokenvator** a tool to elevate privilege with Windows Tokens. https://github.com/0xbadjuju/Tokenvator
-
 ### Data Exfiltration
 * **CloakifyFactory** & the Cloakify Toolset - Data Exfiltration & Infiltration In Plain Sight; Evade DLP/MLS Devices; Social Engineering of Analysts; Defeat Data Whitelisting Controls; Evade AV Detection. https://github.com/TryCatchHCF/Cloakify
 * **DET** (is provided AS IS), is a proof of concept to perform Data Exfiltration using either single or multiple channel(s) at the same time. https://github.com/sensepost/DET
@@ -351,9 +354,6 @@ ________________________________________________________________________________
 * **Egress-Assess** is a tool used to test egress data detection capabilities. https://github.com/ChrisTruncer/Egress-Assess
 * **LNKUp** This tool will allow you to generate LNK payloads. Upon rendering or being run, they will exfiltrate data. https://github.com/Plazmaz/LNKUp
 * **Powershell RAT** python based backdoor that uses Gmail to exfiltrate data as an e-mail attachment. https://github.com/Viralmaniar/Powershell-RAT
-
-### Social Engineering
-* **FakeID** Fake identity generator https://github.com/Manisso/FakeID
 
 ### Anonymization
 * **torghost** Tor anonymizer https://github.com/susmithHCK/torghost
@@ -467,7 +467,8 @@ ________________________________________________________________________________
   * https://github.com/leechristensen/Random
   * https://github.com/mgeeky/Penetration-Testing-Tools/tree/master/social-engineering
   * https://github.com/kevthehermit/pentest/blob/master/linux-enum-mod.sh
-  
 
-## License
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+### Wordlists
+* **SecLists** It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more. https://github.com/danielmiessler/SecLists
+* **fuzzdb** Dictionary of attack patterns and primitives for black-box application fault injection and resource discovery. https://github.com/fuzzdb-project/fuzzdb
+  
