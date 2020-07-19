@@ -306,6 +306,7 @@ class Tool:
         self.path = Path(f"{os.getcwd()}/{self.category['alias']}/{self.name}")
         self.tool_readme = self.fetch_tool_readme(f'{self.path}', self.name) if self.is_downloaded() else None
 
+
     def is_downloaded(self):
         return os.path.exists(self.path) and os.listdir(self.path)
 
@@ -332,12 +333,14 @@ class Tool:
             status_message = colors.bold('NOT_DOWNLOADED')
             url = self.url
             description = colors.bold(self.description)
+            readme = colors.bold("-")
         else:
-            name = colors.red(self.name)
+            name = colors.green(self.name)
             category = colors.red(self.category['name'])
             status_message = colors.green(f'DOWNLOADED - {self.path}')
             url = colors.red(self.url)
-            description = colors.red(self.description)
+            description = colors.green(self.description)
+            readme = colors.colored(self.tool_readme, colors.BLUE)
 
 
         colors.print_bold(f"Name: {name}")
@@ -345,9 +348,8 @@ class Tool:
         colors.print_bold(f"Status: {status_message}")
         colors.print_bold(f'URL: {url}')
         colors.print_bold(f'Description: {description}')
-        if verbose:
-            if self.tool_readme:
-                print(self.tool_readme)
+        colors.print_bold(f'Readme: {readme}')
+
 
     def use(self):
         print('Switching to ' + self.name)
