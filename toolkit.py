@@ -568,7 +568,7 @@ NNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNNNN
 
     print(f'{colors.bold(len(categories))} categories')
     print(f'{colors.bold(len(tools))} tools')
-    print(f'{colors.bold(len(downloaded_tools))} tools')
+    print(f'{colors.bold(len(downloaded_tools))} downloaded tools')
     print(f'{colors.bold(len(scripts))} scripts')
 
     try:
