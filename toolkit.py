@@ -135,8 +135,8 @@ class BatchAsyncDownloader:
 
     def update_tools(self, tools: list):
         self.generate_and_run_commands(
-                    [t for t in tools if t.is_downloaded() and t.is_git_repository()],
-                    SynchronizationMode.UPDATE)
+            [t for t in tools if t.is_downloaded() and t.is_git_repository()],
+            SynchronizationMode.UPDATE)
 
     """
        Clones a list of tools
@@ -144,8 +144,8 @@ class BatchAsyncDownloader:
 
     def download_tools(self, tools: list):
         self.generate_and_run_commands(
-                    [t for t in tools if not t.is_downloaded() and any(host in t.url for host in git_sources)],
-                    SynchronizationMode.DOWNLOAD)
+            [t for t in tools if not t.is_downloaded() and any(host in t.url for host in git_sources)],
+            SynchronizationMode.DOWNLOAD)
 
     """
        Spawn a process to download/update a tool
@@ -166,7 +166,7 @@ class BatchAsyncDownloader:
 
         logging.debug('Executing %s command: %s', mode, str(command))
         process = await asyncio.create_subprocess_exec(
-                    *command, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            *command, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
 
         tool_name = tool.name
@@ -256,9 +256,9 @@ class BatchAsyncDownloader:
             end = time.time()
             rounded_end = "{0:.4f}".format(round(end - start_time, 4))
             logging.info(
-                        f"Async tools {'downloader' if mode == SynchronizationMode.DOWNLOAD else 'updater'} ran in "
-                        f"about" +
-                        f" {rounded_end} seconds")
+                f"Async tools {'downloader' if mode == SynchronizationMode.DOWNLOAD else 'updater'} ran in "
+                f"about" +
+                f" {rounded_end} seconds")
 
 
 options = get_arguments()
@@ -332,22 +332,23 @@ class Tool:
             status_message = colors.bold('NOT_DOWNLOADED')
             url = self.url
             description = colors.bold(self.description)
+            readme = colors.bold("-")
         else:
-            name = colors.red(self.name)
+            name = colors.green(self.name)
             category = colors.red(self.category['name'])
             status_message = colors.green(f'DOWNLOADED - {self.path}')
             url = colors.red(self.url)
-            description = colors.red(self.description)
-
+            description = colors.green(self.description)
+            readme = colors.colored(self.tool_readme if self.tool_readme else
+                                    self.fetch_tool_readme(self.path, self.name),
+                                    colors.BLUE)
 
         colors.print_bold(f"Name: {name}")
         colors.print_bold(f"Category: {category}")
         colors.print_bold(f"Status: {status_message}")
         colors.print_bold(f'URL: {url}')
         colors.print_bold(f'Description: {description}')
-        if verbose:
-            if self.tool_readme:
-                print(self.tool_readme)
+        colors.print_bold(f'Readme: {readme}')
 
     def use(self):
         print('Switching to ' + self.name)
@@ -509,8 +510,8 @@ def search_in_tools(search, tools):
     for tool in tools:
         pattern = search.lower()
         if pattern in tool.name.lower() \
-                    or pattern in tool.description.lower() \
-                    or pattern in tool.category['name'].lower():
+                or pattern in tool.description.lower() \
+                or pattern in tool.category['name'].lower():
             matched_tools.append(tool)
     matched_tools_count = len(matched_tools)
     logging.info("%s tools have been found", matched_tools_count)

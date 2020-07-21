@@ -7,8 +7,8 @@ Use toolkit.py script to maintain your collection.
 _________________________________________________________________________________________________________
 
 ## Contents
-* [Active Intelligence Gathering](#active=intelligence-gathering)
-* [Passive Intelligence Gathering](#passive=intelligence-gathering)
+* [Active Intelligence Gathering](#active-intelligence-gathering)
+* [Passive Intelligence Gathering](#passive-intelligence-gathering)
 * [Weaponization](#weaponization)
 * [Delivery](#delivery)
 * [Phishing](#phishing)
@@ -23,6 +23,7 @@ ________________________________________________________________________________
 * [Domain Privileges Escalation](#domain-privileges-escalation)
 * [Data Exfiltration](#data-exfiltration)
 * [Anonymization](#anonymization)
+* [Malware Analysis](#malware-analysis)
 * [Adversary Simulation](#adversary-simulation)
 * [Wireless Networks](#wireless-networks)
 * [Embedded & Peripheral Devices Hacking](#embedded-peripheral-devices-hacking)
@@ -67,6 +68,8 @@ ________________________________________________________________________________
 * **masscan-web-ui** MASSCAN Web UI from Offensive Security https://github.com/offensive-security/masscan-web-ui
 
 ### Passive Intelligence Gathering
+* **DumpsterDiver** DumpsterDiver is a tool, which can analyze big volumes of data in search of hardcoded secrets like keys (e.g. AWS Access Key, Azure Share Key or SSH keys) or passwords. https://github.com/securing/DumpsterDiver
+* **Photon** The extensive range of options provided by Photon lets you crawl the web exactly the way you want. https://github.com/s0md3v/Photon
 * **git-vuln-finder** Finding potential software vulnerabilities from git commit messages https://github.com/cve-search/git-vuln-finder
 * **Ultimate-Dork** Dork Web Crawler https://github.com/jaxBCD/Ultimate-Dork
 * **Amass** In-depth Attack Surface Mapping and Asset Discovery https://github.com/OWASP/Amass
@@ -359,6 +362,9 @@ ________________________________________________________________________________
 * **torghost** Tor anonymizer https://github.com/susmithHCK/torghost
 * **docker-onion-nmap** Scan .onion hidden services with nmap using Tor, proxychains and dnsmasq in a minimal alpine Docker container. https://github.com/milesrichardson/docker-onion-nmap
 * **kali-anonsurf** Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well. https://github.com/Und3rf10w/kali-anonsurf
+
+### Malware Analysis
+* **capa** capa detects capabilities in executable files. You run it against a PE file or shellcode and it tells you what it thinks the program can do. For example, it might suggest that the file is a backdoor, is capable of installing services, or relies on HTTP to communicate. https://github.com/fireeye/capa
 
 ### Adversary Simulation
 * **MITRE CALDERA** - An automated adversary emulation system that performs post-compromise adversarial behavior within Windows Enterprise networks. https://github.com/mitre/caldera
