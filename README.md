@@ -68,6 +68,7 @@ ________________________________________________________________________________
 * **masscan-web-ui** MASSCAN Web UI from Offensive Security https://github.com/offensive-security/masscan-web-ui
 
 ### Passive Intelligence Gathering
+* **DumpsterDiver** DumpsterDiver is a tool, which can analyze big volumes of data in search of hardcoded secrets like keys (e.g. AWS Access Key, Azure Share Key or SSH keys) or passwords. https://github.com/securing/DumpsterDiver
 * **Photon** The extensive range of options provided by Photon lets you crawl the web exactly the way you want. https://github.com/s0md3v/Photon
 * **git-vuln-finder** Finding potential software vulnerabilities from git commit messages https://github.com/cve-search/git-vuln-finder
 * **Ultimate-Dork** Dork Web Crawler https://github.com/jaxBCD/Ultimate-Dork
