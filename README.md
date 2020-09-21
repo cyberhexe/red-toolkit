@@ -39,6 +39,7 @@ ________________________________________________________________________________
 
 
 ### Active Intelligence Gathering
+* **Vanquish**  Vanquish is Kali Linux based Enumeration Orchestrator. Vanquish leverages the opensource enumeration tools on Kali to perform multiple active information gathering phases.  https://github.com/frizb/Vanquish
 * **nullinux** Nullinux is an internal penetration testing tool for Linux that can be used to enumerate OS information, domain information, shares, directories, and users through SMB https://github.com/m8r0wn/nullinux
 * **hakrevdns** Small, fast, simple tool for performing reverse DNS lookups en masse. https://github.com/hakluke/hakrevdns
 * **AutoRecon** AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of the network https://github.com/Tib3rius/AutoRecon
@@ -66,10 +67,13 @@ ________________________________________________________________________________
 * **dnsrecon** a tool DNS Enumeration Script. https://github.com/darkoperator/dnsrecon
 * **dirsearch** is a simple command line tool designed to brute force directories and files in websites. https://github.com/maurosoria/dirsearch
 * **masscan-web-ui** MASSCAN Web UI from Offensive Security https://github.com/offensive-security/masscan-web-ui
+* **jwt-hack** JWT cracking tool https://github.com/hahwul/jwt-hack
 
 ### Passive Intelligence Gathering
+* **darkshot** Darkshot is a scraper tool on steroids, to analyze all of the +2 Billions pictures publicly available on Lightshot. It uses OCR to analyze pictures and auto-categorize them thanks to keywords and detection functions. https://github.com/mxrch/darkshot
+* **fav-up** Lookups for real IP starting from the favicon icon and using Shodan. https://github.com/pielco11/fav-up
+* **lenz** Geolocate all active TCP/ UDP socket conn peer(s) on console map. https://github.com/itzmeanjan/lenz
 * **threat-actor-intelligence-server** A simple ReST server to lookup threat actors (by name, synonym or UUID) and returning the corresponding MISP galaxy information about the known threat actors. https://github.com/MISP/threat-actor-intelligence-server
-* **DumpsterDiver** DumpsterDiver is a tool, which can analyze big volumes of data in search of hardcoded secrets like keys (e.g. AWS Access Key, Azure Share Key or SSH keys) or passwords. https://github.com/securing/DumpsterDiver
 * **Photon** The extensive range of options provided by Photon lets you crawl the web exactly the way you want. https://github.com/s0md3v/Photon
 * **git-vuln-finder** Finding potential software vulnerabilities from git commit messages https://github.com/cve-search/git-vuln-finder
 * **Ultimate-Dork** Dork Web Crawler https://github.com/jaxBCD/Ultimate-Dork
@@ -101,6 +105,7 @@ ________________________________________________________________________________
 * **datasploit** is an OSINT Framework to perform various recon techniques on Companies, People, Phone Number, Bitcoin Addresses, etc., aggregate all the raw data, and give data in multiple formats. https://github.com/DataSploit/datasploit
 
 ## Weaponization
+* **android-malware** A collection of android malware samples. https://github.com/ashishb/android-malware
 * **OffensiveCSharp** This is a collection of C# tooling and POCs I've created for use on operations. Each project is designed to use no external libraries. Open each project's .SLN in Visual Studio and compile as "Release". https://github.com/matterpreter/OffensiveCSharp
 * **SharpSploit** is a .NET post-exploitation library written in C# that aims to highlight the attack surface of .NET and make the use of offensive .NET easier for red teamers. https://github.com/cobbr/SharpSploit
 * **SharpWeb** .NET 2.0 CLR project to retrieve saved browser credentials from Google Chrome, Mozilla Firefox and Microsoft Internet Explorer/Edge. https://github.com/djhohnstein/SharpWeb
@@ -282,6 +287,10 @@ ________________________________________________________________________________
 * **sshuttle** Transparent proxy server that works as a poor man's VPN. Forwards over ssh. Doesn't require admin. Works with Linux and MacOS. Supports DNS tunneling. https://github.com/sshuttle/sshuttle
 
 ### Lateral Movement
+* **TREVORspray** A featureful Python O365 sprayer based on MSOLSpray which uses the Microsoft Graph API https://github.com/blacklanternsecurity/TREVORspray
+* **rshijack** tcp connection hijacker. The way this works is by sniffing for a packet of a specific connection, then read the SEQ and ACK fields. Using that information, it's possible to send a packet on a raw socket that is accepted by the remote server as valid. https://github.com/kpcyrd/rshijack
+* **DumpsterDiver** DumpsterDiver is a tool, which can analyze big volumes of data in search of hardcoded secrets like keys (e.g. AWS Access Key, Azure Share Key or SSH keys) or passwords. https://github.com/securing/DumpsterDiver
+* **aes-finder** Utility to find AES keys in running process memory. Works for 128, 192 and 256-bit keys. https://github.com/mmozeiko/aes-finder
 * **evil-winrm** This program can be used on any Microsoft Windows Servers with this feature enabled (usually at port 5985), of course only if you have credentials and permissions to use it. https://github.com/Hackplayers/evil-winrm
 * **CrackMapExec** is a swiss army knife for pentesting networks. https://github.com/byt3bl33d3r/CrackMapExec
 * **Invoke-Phant0m** This script walks thread stacks of Event Log Service process (spesific svchost.exe) and identify Event Log Threads to kill Event Log Service Threads. So the system will not be able to collect logs and at the same time the Event Log Service will appear to be running. https://github.com/Und3rf10w/Invoke-Phant0m
@@ -376,6 +385,8 @@ ________________________________________________________________________________
 * **Red Team Automation (RTA)** - RTA provides a framework of scripts designed to allow blue teams to test their detection capabilities against malicious tradecraft, modeled after MITRE ATT&CK. https://github.com/endgameinc/RTA
 
 ### Wireless Networks
+* **opendrop** An open AirDrop Apple implementation written on Python https://github.com/seemoo-lab/opendrop
+* **bluescan** A powerful Bluetooth scanner. https://github.com/fO-000/bluescan
 * **WiFiBroot** A WiFi Pentest Cracking tool for WPA/WPA2 (Handshake, PMKID, Cracking, EAPOL, Deauthentication) https://github.com/hash3liZer/WiFiBroot
 * **apple_bleee** These scripts are experimental PoCs that show what an attacker get from Apple devices if they sniff Bluetooth traffic. https://github.com/hexway/apple_bleee
 * **IMSI-catcher** This program shows you IMSI numbers, country, brand and operator of cellphones around you. https://github.com/marcinguy/IMSI-catcher
