@@ -39,6 +39,7 @@ ________________________________________________________________________________
 
 
 ### Active Intelligence Gathering
+* **FinalRecon** All-in-one information gathering tool https://github.com/thewhiteh4t/FinalRecon
 * **Vanquish**  Vanquish is Kali Linux based Enumeration Orchestrator. Vanquish leverages the opensource enumeration tools on Kali to perform multiple active information gathering phases.  https://github.com/frizb/Vanquish
 * **nullinux** Nullinux is an internal penetration testing tool for Linux that can be used to enumerate OS information, domain information, shares, directories, and users through SMB https://github.com/m8r0wn/nullinux
 * **hakrevdns** Small, fast, simple tool for performing reverse DNS lookups en masse. https://github.com/hakluke/hakrevdns
