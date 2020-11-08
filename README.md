@@ -71,6 +71,7 @@ ________________________________________________________________________________
 * **jwt-hack** JWT cracking tool https://github.com/hahwul/jwt-hack
 
 ### Passive Intelligence Gathering
+* **Maryam** OWASP Maryam is an Open-source intelligence(OSINT) and Web-based Footprinting optional/modular framework based on the Recon-ng core and written in Python. https://github.com/saeeddhqan/Maryam
 * **darkshot** Darkshot is a scraper tool on steroids, to analyze all of the +2 Billions pictures publicly available on Lightshot. It uses OCR to analyze pictures and auto-categorize them thanks to keywords and detection functions. https://github.com/mxrch/darkshot
 * **fav-up** Lookups for real IP starting from the favicon icon and using Shodan. https://github.com/pielco11/fav-up
 * **lenz** Geolocate all active TCP/ UDP socket conn peer(s) on console map. https://github.com/itzmeanjan/lenz
