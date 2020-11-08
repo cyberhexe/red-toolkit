@@ -269,7 +269,6 @@ ________________________________________________________________________________
 * **js-mitm-proxy** https://github.com/ondrakrat/js-mitm-proxy
 
 ### Establish Foothold
-* **ShellPop** Shellpop is all about popping shells. With this tool you can generate easy and sophisticated reverse or bind shell commands to help you during penetration tests. https://github.com/0x00-0x00/ShellPop
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
 * **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
 * **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/derstolz/atbomb
