@@ -45,7 +45,7 @@ ________________________________________________________________________________
 * **hakrevdns** Small, fast, simple tool for performing reverse DNS lookups en masse. https://github.com/hakluke/hakrevdns
 * **AutoRecon** AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of the network https://github.com/Tib3rius/AutoRecon
 * **enumapis** Enumerate javascript endpoints on a web-page from the given URL https://github.com/infosec-au/enumapis
-* **async-intrusion** Asynchronic python scripts for network reconnaissance https://github.com/derstolz/async-intrusion
+* **async-intrusion** Asynchronic python scripts for network reconnaissance https://github.com/cyberhexe/async-intrusion
 * **XSStrike** XSStrike is a Cross Site Scripting detection suite equipped with four hand written parsers, an intelligent payload generator, a powerful fuzzing engine and an incredibly fast crawler. https://github.com/s0md3v/XSStrike
 * **Osmedeus** Fully automated offensive security framework for reconnaissance and vulnerability scanning https://github.com/j3ssie/Osmedeus
 * **cve-2019-1040-scanner** Checks for CVE-2019-1040 vulnerability over SMB. https://github.com/fox-it/cve-2019-1040-scanner
@@ -84,7 +84,7 @@ ________________________________________________________________________________
 * **ODIN** Automated network asset, email, and social media profile discovery and cataloguing https://github.com/chrismaddalena/ODIN
 * **Awesome-Asset-Discovery** List of Awesome Open Source Intelligence Resources https://github.com/redhuntlabs/Awesome-Asset-Discovery
 * **gitrob** Gitrob is a tool to help find potentially sensitive files pushed to public repositories on Github. Gitrob will clone repositories belonging to a user or organization down to a configurable depth and iterate through the commit history and flag files that match signatures for potentially sensitive files. https://github.com/michenriksen/gitrob
-* **security-focus-dataset** A tool to scrape the security-focus, a public exploits database. https://github.com/derstolz/security-focus-dataset
+* **security-focus-dataset** A tool to scrape the security-focus, a public exploits database. https://github.com/cyberhexe/security-focus-dataset
 * **shodan-eye** Shodan Eye This tool collects all the information about all devices directly connected to the internet using the specified keywords that you enter. https://github.com/BullsEye0/shodan-eye
 * **userrecon-py** Find usernames in **187** social networks. https://github.com/decoxviii/userrecon-py
 * **sherlock-js** Node-JS enumeration tool to find accounts in social networks by a given username. https://github.com/GitSquared/sherlock-js
@@ -130,7 +130,7 @@ ________________________________________________________________________________
 * **Pandoras-Box** (OSCP) This repo will contain random scripts that I used/use during my offensive testing. It can contain scripts ranging from extremely stupid and basic stuf to some extremely awesome and elite stuff.... Stay tuned :) https://github.com/paranoidninja/Pandoras-Box.git
 * **Evil-Droid** Evil-Droid is a framework that create & generate & embed apk payload to penetrate android platforms. https://github.com/M4sc3r4n0/Evil-Droid
 * **PhoneSploit** Using open ADB ports we can exploit an android device  https://github.com/metachar/PhoneSploit
-* **massadb**  A python script to probe a number of android devices for an open ADB port https://github.com/derstolz/massadb
+* **massadb**  A python script to probe a number of android devices for an open ADB port https://github.com/cyberhexe/massadb
 * **TheFatRat** An Easy tool to Generate Backdoor for bypass AV and Easy Tool For Post exploitation attack like browser attack,dll . This tool compiles a malware with popular payload  and then the compiled malware can be execute on windows, android, mac . . https://github.com/Screetsec/TheFatRat
 * **NetWorm** Python network worm that spreads on the local network and gives the attacker control of these machines. https://github.com/pylyf/NetWorm
 * **cryptondie** CryptonDie is a ransomware developed for study purposes.  https://github.com/zer0dx/cryptondie
@@ -152,7 +152,7 @@ ________________________________________________________________________________
 * **Malicious Macro Generator Utility** Simple utility design to generate obfuscated macro that also include a AV / Sandboxes escape mechanism. https://github.com/Mr-Un1k0d3r/MaliciousMacroGenerator
 * **Invoke-Obfuscation** PowerShell Obfuscator. https://github.com/danielbohannon/Invoke-Obfuscation
 * **Invoke-CradleCrafter** PowerShell remote download cradle generator and obfuscator. https://github.com/danielbohannon/Invoke-CradleCrafter
-* **eternalblue** EternalBlue MS17-010 scanner / sendNexecute exploit https://github.com/derstolz/eternalblue.git
+* **eternalblue** EternalBlue MS17-010 scanner / sendNexecute exploit https://github.com/cyberhexe/eternalblue.git
 * **Invoke-DOSfuscation** cmd.exe Command Obfuscation Generator & Detection Test Harness. https://github.com/danielbohannon/Invoke-DOSfuscation
 * **Unicorn** is a simple tool for using a PowerShell downgrade attack and inject shellcode straight into memory. https://github.com/trustedsec/unicorn
 * **PyFuscation** Obfuscate powershell scripts by replacing Function names, Variables and Parameters. https://github.com/CBHue/PyFuscation
@@ -196,7 +196,7 @@ ________________________________________________________________________________
 * **Donut** is a shellcode generation tool that creates position-independant shellcode payloads from .NET Assemblies. This shellcode may be used to inject the Assembly into arbitrary Windows processes. https://github.com/TheWover/donut
 
 ### Delivery
-* **red-transfers** A script to quickly generate a lot of echo uninteractive commands to be executed on the compromised system. Both downloading and uplocading are supported. https://github.com/derstolz/red-transfers
+* **red-transfers** A script to quickly generate a lot of echo uninteractive commands to be executed on the compromised system. Both downloading and uplocading are supported. https://github.com/cyberhexe/red-transfers
 * **flask-filebox** Basic file upload Web UI. Make sure to update config.py according to your needs. https://github.com/mtalimanchuk/flask-filebox
 
 ### Phishing
@@ -218,8 +218,8 @@ ________________________________________________________________________________
 
 ### Remote Access Tools
 * **L3MON** Remote Android Management Suite https://github.com/etechd/L3MON
-* **android-backdoor-dashboard** Android Meterpreter Backdoor Command & Control https://github.com/derstolz/android-backdoor-dashboard
-* **flask-reverse-shell** Python HTTPS reverse shell with Flask https://github.com/derstolz/flask-reverse-shell
+* **android-backdoor-dashboard** Android Meterpreter Backdoor Command & Control https://github.com/cyberhexe/android-backdoor-dashboard
+* **flask-reverse-shell** Python HTTPS reverse shell with Flask https://github.com/cyberhexe/flask-reverse-shell
 * **tsh** Tiny SHell - An open-source UNIX backdoor https://github.com/creaktive/tsh
 * **KeyPlexer** Keyplexer is a Remote Access Trojan (RAT) written in Python. It combines the functionalities of Keylogger with remote access abilities. Meaning, that not only the program records all movements of the user, but also has access to the machine live through the created backdoor or Trojan. https://github.com/nairuzabulhul/KeyPlexer
 * **Empire** is a post-exploitation framework that includes a pure-PowerShell2.0 Windows agent, and a pure Python 2.6/2.7 Linux/OS X agent. https://github.com/EmpireProject/Empire
@@ -272,18 +272,18 @@ ________________________________________________________________________________
 ### Establish Foothold
 * **TinyShell** Web Shell Framework. https://github.com/threatexpress/tinyshell
 * **reGeorg** the successor to reDuh, pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn. https://github.com/sensepost/reGeorg
-* **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/derstolz/atbomb
+* **atbomb** A script to quickly generate a lot of AT statements to be executed on the compromised Windows machine https://github.com/cyberhexe/atbomb
 * **Blade** is a webshell connection tool based on console, currently under development and aims to be a choice of replacement of Chooper. https://github.com/wonderqs/Blade
 * **PowerLurk** is a PowerShell toolset for building malicious WMI Event Subsriptions. https://github.com/Sw4mpf0x/PowerLurk
 * **DAMP** The Discretionary ACL Modification Project: Persistence Through Host-based Security Descriptor Modification. https://github.com/HarmJ0y/DAMP
 
 ### Pivoting and Tunneling
-* **dns-tcp-proxy** A python script to tunnel the DNS queries through a TCP proxy https://github.com/derstolz/dns-tcp-proxy
+* **dns-tcp-proxy** A python script to tunnel the DNS queries through a TCP proxy https://github.com/cyberhexe/dns-tcp-proxy
 * **rpivot** This is a method of traversing NAT connections. Rpivot is a reverse socks proxy tool that allows you to tunnel traffic via socks proxy. It connects back to your machine and binds a socks proxy on it. It works just like `ssh -D` but in opposite direction https://github.com/artkond/rpivot
 * **redsocks** Redsocks is the tool that allows you to proxify(redirect) network traffic through a SOCKS4, SOCKS5 or HTTPs proxy server. It works on the lowest level, the kernel level (iptables). The other possible way is to use application level proxy, when the proxy client is implemented in the same language as an application is written in. Redsocks operates on the lowest system level, that’s why all running application don’t even have an idea that network traffic is sent through a proxy server, as a result it is called a transparent proxy redirector. https://github.com/darkk/redsocks
 * **Tunna** is a set of tools which will wrap and tunnel any TCP communication over HTTP. It can be used to bypass network restrictions in fully firewalled environments. https://github.com/SECFORCE/Tunna
 * **http-tunnel** A program to tunnel TCP connection through HTTP connection. https://github.com/khuevu/http-tunnel
-* **microsocks** a SOCKS5 service that you can run on your remote boxes to tunnel connections through them, if for some reason SSH doesn't cut it for you. https://github.com/derstolz/microsocks
+* **microsocks** a SOCKS5 service that you can run on your remote boxes to tunnel connections through them, if for some reason SSH doesn't cut it for you. https://github.com/cyberhexe/microsocks
 * **pyrexecd** PyRexecd is a standalone SSH server for Windows. https://github.com/euske/pyrexecd.git
 * **3proxy** is a tiny free proxy server https://github.com/z3APA3A/3proxy
 * **win-sshd** A native windows ssh2 server https://github.com/saju/win-sshd
